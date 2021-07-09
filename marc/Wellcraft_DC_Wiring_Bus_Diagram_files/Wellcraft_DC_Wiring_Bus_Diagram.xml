@@ -1,0 +1,1040 @@
+<VisioDocument xmlns="urn:schemas-microsoft-com:office:visio">
+	<DocumentProperties>
+		<Title>Wellcraft Wiring Diagram</Title>
+		<HyperlinkBase href=""></HyperlinkBase>
+	</DocumentProperties>
+	<Pages>
+		<Page ID="0" Name="Page-1" NameU="Page-1">
+			<Shapes>
+				<Shape ID="2" UniqueID="{B8FA6C72-525E-45DC-8618-32903155F233}" Name="Straight bus.2" NameU="Straight bus.2" Master="0">
+					<XForm>
+						<PinX Unit="IN">7.199999999999998</PinX>
+						<PinY Unit="IN">3.600000000000001</PinY>
+					</XForm>
+					<Prop ID="1" Name="Manufacturer" NameU="Manufacturer">
+						<Value></Value>
+						<Label>Manufacturer</Label>
+					</Prop>
+					<Prop ID="2" Name="ProductNumber" NameU="ProductNumber">
+						<Value></Value>
+						<Label>Product Number</Label>
+					</Prop>
+					<Prop ID="3" Name="PartNumber" NameU="PartNumber">
+						<Value></Value>
+						<Label>Part Number</Label>
+					</Prop>
+					<Prop ID="4" Name="ProductDescription" NameU="ProductDescription">
+						<Value></Value>
+						<Label>Product Description</Label>
+					</Prop>
+					<Prop ID="5" Name="AssetNumber" NameU="AssetNumber">
+						<Value></Value>
+						<Label>Asset Number</Label>
+					</Prop>
+					<Prop ID="6" Name="SerialNumber" NameU="SerialNumber">
+						<Value></Value>
+						<Label>Serial Number</Label>
+					</Prop>
+					<Prop ID="7" Name="Location" NameU="Location">
+						<Value></Value>
+						<Label>Location</Label>
+					</Prop>
+					<Prop ID="8" Name="Building" NameU="Building">
+						<Value></Value>
+						<Label>Building</Label>
+					</Prop>
+					<Prop ID="9" Name="Room" NameU="Room">
+						<Value></Value>
+						<Label>Room</Label>
+					</Prop>
+					<Prop ID="10" Name="Department" NameU="Department">
+						<Value></Value>
+						<Label>Department</Label>
+					</Prop>
+				</Shape>
+				<Shape ID="4" UniqueID="{9ECA8479-8D9B-48EB-AB8B-D8DEE465D5FD}" Name="Straight bus.4" NameU="Straight bus.4" Master="0">
+					<XForm>
+						<PinX Unit="IN">7.599999999999999</PinX>
+						<PinY Unit="IN">3.600000000000001</PinY>
+					</XForm>
+					<Prop ID="1" Name="Manufacturer" NameU="Manufacturer">
+						<Value></Value>
+						<Label>Manufacturer</Label>
+					</Prop>
+					<Prop ID="2" Name="ProductNumber" NameU="ProductNumber">
+						<Value></Value>
+						<Label>Product Number</Label>
+					</Prop>
+					<Prop ID="3" Name="PartNumber" NameU="PartNumber">
+						<Value></Value>
+						<Label>Part Number</Label>
+					</Prop>
+					<Prop ID="4" Name="ProductDescription" NameU="ProductDescription">
+						<Value></Value>
+						<Label>Product Description</Label>
+					</Prop>
+					<Prop ID="5" Name="AssetNumber" NameU="AssetNumber">
+						<Value></Value>
+						<Label>Asset Number</Label>
+					</Prop>
+					<Prop ID="6" Name="SerialNumber" NameU="SerialNumber">
+						<Value></Value>
+						<Label>Serial Number</Label>
+					</Prop>
+					<Prop ID="7" Name="Location" NameU="Location">
+						<Value></Value>
+						<Label>Location</Label>
+					</Prop>
+					<Prop ID="8" Name="Building" NameU="Building">
+						<Value></Value>
+						<Label>Building</Label>
+					</Prop>
+					<Prop ID="9" Name="Room" NameU="Room">
+						<Value></Value>
+						<Label>Room</Label>
+					</Prop>
+					<Prop ID="10" Name="Department" NameU="Department">
+						<Value></Value>
+						<Label>Department</Label>
+					</Prop>
+				</Shape>
+				<Shape ID="1" UniqueID="{517B7F86-1398-4DB1-A9ED-E36F7F1905CA}" Name="Straight bus.1" NameU="Straight bus.1" Master="0">
+					<XForm>
+						<PinX Unit="IN">9.199999999999999</PinX>
+						<PinY Unit="IN">3.600000000000001</PinY>
+					</XForm>
+					<Prop ID="1" Name="Manufacturer" NameU="Manufacturer">
+						<Value></Value>
+						<Label>Manufacturer</Label>
+					</Prop>
+					<Prop ID="2" Name="ProductNumber" NameU="ProductNumber">
+						<Value></Value>
+						<Label>Product Number</Label>
+					</Prop>
+					<Prop ID="3" Name="PartNumber" NameU="PartNumber">
+						<Value></Value>
+						<Label>Part Number</Label>
+					</Prop>
+					<Prop ID="4" Name="ProductDescription" NameU="ProductDescription">
+						<Value></Value>
+						<Label>Product Description</Label>
+					</Prop>
+					<Prop ID="5" Name="AssetNumber" NameU="AssetNumber">
+						<Value></Value>
+						<Label>Asset Number</Label>
+					</Prop>
+					<Prop ID="6" Name="SerialNumber" NameU="SerialNumber">
+						<Value></Value>
+						<Label>Serial Number</Label>
+					</Prop>
+					<Prop ID="7" Name="Location" NameU="Location">
+						<Value></Value>
+						<Label>Location</Label>
+					</Prop>
+					<Prop ID="8" Name="Building" NameU="Building">
+						<Value></Value>
+						<Label>Building</Label>
+					</Prop>
+					<Prop ID="9" Name="Room" NameU="Room">
+						<Value></Value>
+						<Label>Room</Label>
+					</Prop>
+					<Prop ID="10" Name="Department" NameU="Department">
+						<Value></Value>
+						<Label>Department</Label>
+					</Prop>
+				</Shape>
+				<Shape ID="3" UniqueID="{7C0AC160-A459-410C-A8F2-E0E668CEED16}" Name="Straight bus.3" NameU="Straight bus.3" Master="0">
+					<XForm>
+						<PinX Unit="IN">9.600000000000001</PinX>
+						<PinY Unit="IN">3.600000000000001</PinY>
+					</XForm>
+					<Prop ID="1" Name="Manufacturer" NameU="Manufacturer">
+						<Value></Value>
+						<Label>Manufacturer</Label>
+					</Prop>
+					<Prop ID="2" Name="ProductNumber" NameU="ProductNumber">
+						<Value></Value>
+						<Label>Product Number</Label>
+					</Prop>
+					<Prop ID="3" Name="PartNumber" NameU="PartNumber">
+						<Value></Value>
+						<Label>Part Number</Label>
+					</Prop>
+					<Prop ID="4" Name="ProductDescription" NameU="ProductDescription">
+						<Value></Value>
+						<Label>Product Description</Label>
+					</Prop>
+					<Prop ID="5" Name="AssetNumber" NameU="AssetNumber">
+						<Value></Value>
+						<Label>Asset Number</Label>
+					</Prop>
+					<Prop ID="6" Name="SerialNumber" NameU="SerialNumber">
+						<Value></Value>
+						<Label>Serial Number</Label>
+					</Prop>
+					<Prop ID="7" Name="Location" NameU="Location">
+						<Value></Value>
+						<Label>Location</Label>
+					</Prop>
+					<Prop ID="8" Name="Building" NameU="Building">
+						<Value></Value>
+						<Label>Building</Label>
+					</Prop>
+					<Prop ID="9" Name="Room" NameU="Room">
+						<Value></Value>
+						<Label>Room</Label>
+					</Prop>
+					<Prop ID="10" Name="Department" NameU="Department">
+						<Value></Value>
+						<Label>Department</Label>
+					</Prop>
+				</Shape>
+				<Shape ID="5" UniqueID="{C6072BE8-15B0-447A-97BF-63A14352D3F8}" Name="Straight bus.5" NameU="Straight bus.5" Master="0">
+					<XForm>
+						<PinX Unit="IN">3.600000000000000</PinX>
+						<PinY Unit="IN">3.600000000000000</PinY>
+					</XForm>
+					<Prop ID="1" Name="Manufacturer" NameU="Manufacturer">
+						<Value></Value>
+						<Label>Manufacturer</Label>
+					</Prop>
+					<Prop ID="2" Name="ProductNumber" NameU="ProductNumber">
+						<Value></Value>
+						<Label>Product Number</Label>
+					</Prop>
+					<Prop ID="3" Name="PartNumber" NameU="PartNumber">
+						<Value></Value>
+						<Label>Part Number</Label>
+					</Prop>
+					<Prop ID="4" Name="ProductDescription" NameU="ProductDescription">
+						<Value></Value>
+						<Label>Product Description</Label>
+					</Prop>
+					<Prop ID="5" Name="AssetNumber" NameU="AssetNumber">
+						<Value></Value>
+						<Label>Asset Number</Label>
+					</Prop>
+					<Prop ID="6" Name="SerialNumber" NameU="SerialNumber">
+						<Value></Value>
+						<Label>Serial Number</Label>
+					</Prop>
+					<Prop ID="7" Name="Location" NameU="Location">
+						<Value></Value>
+						<Label>Location</Label>
+					</Prop>
+					<Prop ID="8" Name="Building" NameU="Building">
+						<Value></Value>
+						<Label>Building</Label>
+					</Prop>
+					<Prop ID="9" Name="Room" NameU="Room">
+						<Value></Value>
+						<Label>Room</Label>
+					</Prop>
+					<Prop ID="10" Name="Department" NameU="Department">
+						<Value></Value>
+						<Label>Department</Label>
+					</Prop>
+				</Shape>
+				<Shape ID="6" UniqueID="{700D4360-A3B5-4A4E-BCBF-88FC41F7F8AB}" Name="Straight bus.6" NameU="Straight bus.6" Master="0">
+					<XForm>
+						<PinX Unit="IN">4.000000000000000</PinX>
+						<PinY Unit="IN">3.600000000000000</PinY>
+					</XForm>
+					<Prop ID="1" Name="Manufacturer" NameU="Manufacturer">
+						<Value></Value>
+						<Label>Manufacturer</Label>
+					</Prop>
+					<Prop ID="2" Name="ProductNumber" NameU="ProductNumber">
+						<Value></Value>
+						<Label>Product Number</Label>
+					</Prop>
+					<Prop ID="3" Name="PartNumber" NameU="PartNumber">
+						<Value></Value>
+						<Label>Part Number</Label>
+					</Prop>
+					<Prop ID="4" Name="ProductDescription" NameU="ProductDescription">
+						<Value></Value>
+						<Label>Product Description</Label>
+					</Prop>
+					<Prop ID="5" Name="AssetNumber" NameU="AssetNumber">
+						<Value></Value>
+						<Label>Asset Number</Label>
+					</Prop>
+					<Prop ID="6" Name="SerialNumber" NameU="SerialNumber">
+						<Value></Value>
+						<Label>Serial Number</Label>
+					</Prop>
+					<Prop ID="7" Name="Location" NameU="Location">
+						<Value></Value>
+						<Label>Location</Label>
+					</Prop>
+					<Prop ID="8" Name="Building" NameU="Building">
+						<Value></Value>
+						<Label>Building</Label>
+					</Prop>
+					<Prop ID="9" Name="Room" NameU="Room">
+						<Value></Value>
+						<Label>Room</Label>
+					</Prop>
+					<Prop ID="10" Name="Department" NameU="Department">
+						<Value></Value>
+						<Label>Department</Label>
+					</Prop>
+				</Shape>
+				<Shape ID="7" UniqueID="{71E32FE3-F3CA-4904-A704-48A166CE66C5}" Name="Token-ring" NameU="Token-ring" Master="2">
+					<Text>Battery Switch</Text>
+					<XForm>
+						<PinX Unit="IN">1.600000000000000</PinX>
+						<PinY Unit="IN">3.625000000000000</PinY>
+					</XForm>
+					<Prop ID="1" Name="Manufacturer" NameU="Manufacturer">
+						<Value></Value>
+						<Label>Manufacturer</Label>
+					</Prop>
+					<Prop ID="2" Name="ProductNumber" NameU="ProductNumber">
+						<Value></Value>
+						<Label>Product Number</Label>
+					</Prop>
+					<Prop ID="3" Name="PartNumber" NameU="PartNumber">
+						<Value></Value>
+						<Label>Part Number</Label>
+					</Prop>
+					<Prop ID="4" Name="ProductDescription" NameU="ProductDescription">
+						<Value></Value>
+						<Label>Product Description</Label>
+					</Prop>
+					<Prop ID="5" Name="AssetNumber" NameU="AssetNumber">
+						<Value></Value>
+						<Label>Asset Number</Label>
+					</Prop>
+					<Prop ID="6" Name="SerialNumber" NameU="SerialNumber">
+						<Value></Value>
+						<Label>Serial Number</Label>
+					</Prop>
+					<Prop ID="7" Name="Location" NameU="Location">
+						<Value></Value>
+						<Label>Location</Label>
+					</Prop>
+					<Prop ID="8" Name="Building" NameU="Building">
+						<Value></Value>
+						<Label>Building</Label>
+					</Prop>
+					<Prop ID="9" Name="Room" NameU="Room">
+						<Value></Value>
+						<Label>Room</Label>
+					</Prop>
+					<Prop ID="10" Name="Department" NameU="Department">
+						<Value></Value>
+						<Label>Department</Label>
+					</Prop>
+				</Shape>
+				<Shape ID="10" UniqueID="{333B1115-0D50-4C7C-AB03-FDF832188E06}" Name="Host" NameU="Host" Master="3">
+					<Text>Battery</Text>
+					<XForm>
+						<PinX Unit="IN">1.150000000000000</PinX>
+						<PinY Unit="IN">4.700000000000000</PinY>
+					</XForm>
+					<Prop ID="1" Name="Manufacturer" NameU="Manufacturer">
+						<Value></Value>
+						<Label>Manufacturer</Label>
+					</Prop>
+					<Prop ID="2" Name="ProductNumber" NameU="ProductNumber">
+						<Value></Value>
+						<Label>Product Number</Label>
+					</Prop>
+					<Prop ID="3" Name="PartNumber" NameU="PartNumber">
+						<Value></Value>
+						<Label>Part Number</Label>
+					</Prop>
+					<Prop ID="4" Name="ProductDescription" NameU="ProductDescription">
+						<Value></Value>
+						<Label>Product Description</Label>
+					</Prop>
+					<Prop ID="5" Name="AssetNumber" NameU="AssetNumber">
+						<Value></Value>
+						<Label>Asset Number</Label>
+					</Prop>
+					<Prop ID="6" Name="SerialNumber" NameU="SerialNumber">
+						<Value></Value>
+						<Label>Serial Number</Label>
+					</Prop>
+					<Prop ID="7" Name="Location" NameU="Location">
+						<Value></Value>
+						<Label>Location</Label>
+					</Prop>
+					<Prop ID="8" Name="Building" NameU="Building">
+						<Value></Value>
+						<Label>Building</Label>
+					</Prop>
+					<Prop ID="9" Name="Room" NameU="Room">
+						<Value></Value>
+						<Label>Room</Label>
+					</Prop>
+					<Prop ID="10" Name="Department" NameU="Department">
+						<Value></Value>
+						<Label>Department</Label>
+					</Prop>
+				</Shape>
+				<Shape ID="25" UniqueID="{CB141E97-BF1D-4E17-BC39-F6A6AE4F611F}" Name="Sheet.25" NameU="Sheet.25">
+					<Text>Positive +</Text>
+					<XForm>
+						<PinX Unit="IN">1.722222222244990</PinX>
+						<PinY Unit="IN">5.599999999986340</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="26" UniqueID="{F99E14B0-72E0-4307-B33B-31CAA50E78C2}" Name="Sheet.26" NameU="Sheet.26">
+					<Text>Negative -</Text>
+					<XForm>
+						<PinX Unit="IN">1.522222222222222</PinX>
+						<PinY Unit="IN">2.711111111111111</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="27" UniqueID="{56B11D62-26DF-43C7-AB99-66F6449D6EBB}" Name="Dynamic connector" NameU="Dynamic connector" Master="4">
+					<XForm>
+						<PinX Unit="IN">1.474999999964142</PinX>
+						<PinY Unit="IN">4.525000000000000</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="28" UniqueID="{A3630491-96BB-4061-BDE7-4BB53011B4E4}" Name="Dynamic connector.28" NameU="Dynamic connector.28" Master="4">
+					<XForm>
+						<PinX Unit="IN">2.075000000035858</PinX>
+						<PinY Unit="IN">3.775000000000000</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="29" UniqueID="{0CA27200-FB65-401B-900B-DE6CD8396B70}" Name="Sheet.29" NameU="Sheet.29">
+					<XForm>
+						<PinX Unit="IN">5.600000000000000</PinX>
+						<PinY Unit="IN">3.200000000000000</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="31" UniqueID="{73CAC5C3-F0AD-419E-8B3B-654D3F77B6B4}" Name="Sheet.31" NameU="Sheet.31">
+					<Text>Wellcraft_DC_Wiring_Bus_Diagram</Text>
+					<XForm>
+						<PinX Unit="IN">6.000000000000000</PinX>
+						<PinY Unit="IN">7.000000000000001</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="32" UniqueID="{D092E28B-EF88-4773-A553-AAA4512E7558}" Name="Sheet.32" NameU="Sheet.32">
+					<Text>+</Text>
+					<XForm>
+						<PinX Unit="IN">3.010000000000000</PinX>
+						<PinY Unit="IN">4.227777777777778</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="33" UniqueID="{A84FA9D2-7709-42FB-901B-04F449D3287C}" Name="Sheet.33" NameU="Sheet.33">
+					<Text>-</Text>
+					<XForm>
+						<PinX Unit="IN">3.010000000000000</PinX>
+						<PinY Unit="IN">3.017777777777778</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="34" UniqueID="{7EFE1376-594C-4107-BC2C-22EB8204B4AB}" Name="Sheet.34" NameU="Sheet.34">
+					<Text>Auto Bilge</Text>
+					<XForm>
+						<PinX Unit="IN">3.400000000000000</PinX>
+						<PinY Unit="IN">4.291666666666666</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="35" UniqueID="{0EE9D035-0021-40E4-85F3-5AFC537B4EB7}" Name="Sheet.35" NameU="Sheet.35">
+					<Text>Anchor Lt</Text>
+					<XForm>
+						<PinX Unit="IN">3.830000000000000</PinX>
+						<PinY Unit="IN">2.987777777777778</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="36" UniqueID="{3047A89A-2817-4887-BBA3-FFEFDE1168FB}" Name="Sheet.36" NameU="Sheet.36">
+					<Text>Unused</Text>
+					<XForm>
+						<PinX Unit="IN">4.200000000000000</PinX>
+						<PinY Unit="IN">4.227777777777778</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="37" UniqueID="{7657A9B7-D2A2-402E-9708-3461FDF117C7}" Name="Sheet.37" NameU="Sheet.37">
+					<Text>+</Text>
+					<XForm>
+						<PinX Unit="IN">4.610000000000000</PinX>
+						<PinY Unit="IN">4.227777777777778</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="39" UniqueID="{E854AC87-97CF-4EFC-A4C6-5E1ACABBD4D0}" Name="Sheet.39" NameU="Sheet.39">
+					<Text>+</Text>
+					<XForm>
+						<PinX Unit="IN">6.600000000000001</PinX>
+						<PinY Unit="IN">4.227777777777778</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="40" UniqueID="{C4395933-5EEB-4AA1-BE0C-B42644EDAC43}" Name="Sheet.40" NameU="Sheet.40">
+					<Text>-</Text>
+					<XForm>
+						<PinX Unit="IN">6.600000000000001</PinX>
+						<PinY Unit="IN">3.017777777777778</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="38" UniqueID="{768CE756-3DA0-4846-A1EE-44ACD988A394}" Name="Sheet.38" NameU="Sheet.38">
+					<Text>-</Text>
+					<XForm>
+						<PinX Unit="IN">4.622222222222223</PinX>
+						<PinY Unit="IN">3.017777777777778</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="41" UniqueID="{5B1ADEF5-33D5-4A13-AED2-5F1A5127FA40}" Name="Sheet.41" NameU="Sheet.41">
+					<Text>Lights</Text>
+					<XForm>
+						<PinX Unit="IN">7.000000000000000</PinX>
+						<PinY Unit="IN">4.217777777777778</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="42" UniqueID="{B27F0F5D-BBF9-42ED-8576-43E0155F5BB8}" Name="Sheet.42" NameU="Sheet.42">
+					<Text>Manual Bilge</Text>
+					<XForm>
+						<PinX Unit="IN">7.400000000000000</PinX>
+						<PinY Unit="IN">2.900000000000000</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="43" UniqueID="{5A2588E7-6237-420C-80F5-75F6318412E3}" Name="Sheet.43" NameU="Sheet.43">
+					<Text>Wiper</Text>
+					<XForm>
+						<PinX Unit="IN">7.810000000000001</PinX>
+						<PinY Unit="IN">4.227777777777778</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="44" UniqueID="{0AC9CDB4-B4D4-4988-B5A3-BA8D55AE86F1}" Name="Sheet.44" NameU="Sheet.44">
+					<Text>Fuel</Text>
+					<XForm>
+						<PinX Unit="IN">8.172222222222223</PinX>
+						<PinY Unit="IN">2.988888888888889</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="45" UniqueID="{CF4A7E2E-76BC-4D34-9DB4-F251E8C7D777}" Name="Sheet.45" NameU="Sheet.45">
+					<XForm>
+						<PinX Unit="IN">7.000000000000000</PinX>
+						<PinY Unit="IN">3.200000000000000</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="46" UniqueID="{445F8BF4-2AB7-4921-A9FC-25D34A111DED}" Name="Sheet.46" NameU="Sheet.46">
+					<XForm>
+						<PinX Unit="IN">8.200000000000001</PinX>
+						<PinY Unit="IN">3.200000000000000</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="47" UniqueID="{CCB4C07D-69D1-46A4-82E3-233EB9A21923}" Name="Sheet.47" NameU="Sheet.47">
+					<XForm>
+						<PinX Unit="IN">7.800000000000001</PinX>
+						<PinY Unit="IN">4.000000000000000</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="48" UniqueID="{D03F9E15-395B-448B-97AE-1CB9461C512A}" Name="Sheet.48" NameU="Sheet.48">
+					<XForm>
+						<PinX Unit="IN">7.800000000000001</PinX>
+						<PinY Unit="IN">3.200000000000000</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="49" UniqueID="{CEFD6B28-B708-4204-BB36-4F2A10B364A3}" Name="Sheet.49" NameU="Sheet.49">
+					<XForm>
+						<PinX Unit="IN">7.400000000000000</PinX>
+						<PinY Unit="IN">4.000000000000000</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="50" UniqueID="{8ADA3C7E-B10A-44CF-A1EC-411FF158EC69}" Name="Sheet.50" NameU="Sheet.50">
+					<XForm>
+						<PinX Unit="IN">7.000000000000000</PinX>
+						<PinY Unit="IN">4.000000000000000</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="51" UniqueID="{F8CBA331-6D43-4A3E-9E3E-6B50CEC796AF}" Name="Sheet.51" NameU="Sheet.51">
+					<XForm>
+						<PinX Unit="IN">6.600000000000001</PinX>
+						<PinY Unit="IN">3.200000000000000</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="52" UniqueID="{DC70D5E1-F3F6-4E90-BE8C-B6636CD84F8C}" Name="Sheet.52" NameU="Sheet.52">
+					<XForm>
+						<PinX Unit="IN">6.600000000000001</PinX>
+						<PinY Unit="IN">4.000000000000000</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="53" UniqueID="{7D053008-5AC7-451D-8A41-BD4723E223C8}" Name="Sheet.53" NameU="Sheet.53">
+					<Text>Bow Lt</Text>
+					<XForm>
+						<PinX Unit="IN">6.977777777777778</PinX>
+						<PinY Unit="IN">2.911111111111111</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="54" UniqueID="{06BFCC3D-8656-4118-A9AD-6C7C2C93DC41}" Name="Sheet.54" NameU="Sheet.54">
+					<XForm>
+						<PinX Unit="IN">4.600000000000001</PinX>
+						<PinY Unit="IN">4.000000000000000</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="55" UniqueID="{9161A6A7-A21B-451E-B469-C28580D553A2}" Name="Sheet.55" NameU="Sheet.55">
+					<XForm>
+						<PinX Unit="IN">4.600000000000001</PinX>
+						<PinY Unit="IN">3.200000000000000</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="56" UniqueID="{1F80749F-B723-466D-A6F7-5236A86BB684}" Name="Sheet.56" NameU="Sheet.56">
+					<XForm>
+						<PinX Unit="IN">3.800000000000000</PinX>
+						<PinY Unit="IN">3.200000000000000</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="57" UniqueID="{12AEB659-2ABC-4199-B8BF-21AD6C435EB8}" Name="Sheet.57" NameU="Sheet.57">
+					<XForm>
+						<PinX Unit="IN">3.400000000000000</PinX>
+						<PinY Unit="IN">4.000000000000000</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="58" UniqueID="{80B529B9-05B1-4B66-9CBA-C9FD4D54AA27}" Name="Sheet.58" NameU="Sheet.58">
+					<XForm>
+						<PinX Unit="IN">3.400000000000000</PinX>
+						<PinY Unit="IN">3.200000000000000</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="59" UniqueID="{08B59DF7-5AD4-45B5-A41E-7D88E89CC413}" Name="Sheet.59" NameU="Sheet.59">
+					<XForm>
+						<PinX Unit="IN">3.000000000000000</PinX>
+						<PinY Unit="IN">4.000000000000000</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="60" UniqueID="{5D55E78A-4F09-4BE0-A29B-0EB6E45C56E6}" Name="Sheet.60" NameU="Sheet.60">
+					<XForm>
+						<PinX Unit="IN">3.000000000000000</PinX>
+						<PinY Unit="IN">3.200000000000000</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="61" UniqueID="{DCC4EEA8-C8BA-403F-A0F4-8B098020B62E}" Name="Sheet.61" NameU="Sheet.61">
+					<XForm>
+						<PinX Unit="IN">1.960000000000001</PinX>
+						<PinY Unit="IN">3.740000000000001</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="62" UniqueID="{D1DF9770-7822-43DF-B00D-FF282F1C64CF}" Name="Sheet.62" NameU="Sheet.62">
+					<XForm>
+						<PinX Unit="IN">1.800000000000000</PinX>
+						<PinY Unit="IN">3.960000000000000</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="63" UniqueID="{86887649-9FDE-4606-950A-49A3240B59F0}" Name="Sheet.63" NameU="Sheet.63">
+					<XForm>
+						<PinX Unit="IN">1.160000000000001</PinX>
+						<PinY Unit="IN">5.060000000000000</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="64" UniqueID="{A6C93764-59E6-400A-AA94-CDED0CD99B75}" Name="Sheet.64" NameU="Sheet.64">
+					<XForm>
+						<PinX Unit="IN">1.160000000000001</PinX>
+						<PinY Unit="IN">4.359999999999999</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="65" UniqueID="{5E0B7C46-2111-44B0-9ECC-A93675C7A9AF}" Name="Sheet.65" NameU="Sheet.65">
+					<XForm>
+						<PinX Unit="IN">5.700000000000000</PinX>
+						<PinY Unit="IN">5.600000000000001</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="66" UniqueID="{AB8C8ECE-C22A-420F-9AC6-4E5FBD3645E4}" Name="Sheet.66" NameU="Sheet.66">
+					<Text>Stern</Text>
+					<XForm>
+						<PinX Unit="IN">4.210000000000000</PinX>
+						<PinY Unit="IN">5.397777777777778</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="67" UniqueID="{2C150CFC-8C9D-4C92-8C30-C1D4A9FD25B2}" Name="Sheet.67" NameU="Sheet.67">
+					<Text>Bow</Text>
+					<XForm>
+						<PinX Unit="IN">7.210000000000000</PinX>
+						<PinY Unit="IN">5.387777777777778</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="68" UniqueID="{06CDD4D0-A25E-4DE6-87DE-9D13D2657F2E}" Name="Sheet.68" NameU="Sheet.68">
+					<Text>Last Updated: Monday, May 27, 2002</Text>
+					<XForm>
+						<PinX Unit="IN">8.943888888888889</PinX>
+						<PinY Unit="IN">6.405003564517773</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="69" UniqueID="{C053A51B-A19A-42F8-BCB0-70EAE27E64DA}" Name="Patch bay" NameU="Patch bay" Master="7">
+					<XForm>
+						<PinX Unit="IN">2.400000000000000</PinX>
+						<PinY Unit="IN">3.850000000000000</PinY>
+					</XForm>
+					<Prop ID="1" Name="Manufacturer" NameU="Manufacturer">
+						<Value></Value>
+						<Label>Manufacturer</Label>
+					</Prop>
+					<Prop ID="2" Name="ProductNumber" NameU="ProductNumber">
+						<Value></Value>
+						<Label>Product Number</Label>
+					</Prop>
+					<Prop ID="3" Name="PartNumber" NameU="PartNumber">
+						<Value></Value>
+						<Label>Part Number</Label>
+					</Prop>
+					<Prop ID="4" Name="ProductDescription" NameU="ProductDescription">
+						<Value></Value>
+						<Label>Product Description</Label>
+					</Prop>
+					<Prop ID="5" Name="AssetNumber" NameU="AssetNumber">
+						<Value></Value>
+						<Label>Asset Number</Label>
+					</Prop>
+					<Prop ID="6" Name="SerialNumber" NameU="SerialNumber">
+						<Value></Value>
+						<Label>Serial Number</Label>
+					</Prop>
+					<Prop ID="7" Name="Location" NameU="Location">
+						<Value></Value>
+						<Label>Location</Label>
+					</Prop>
+					<Prop ID="8" Name="Building" NameU="Building">
+						<Value></Value>
+						<Label>Building</Label>
+					</Prop>
+					<Prop ID="9" Name="Room" NameU="Room">
+						<Value></Value>
+						<Label>Room</Label>
+					</Prop>
+					<Prop ID="10" Name="Department" NameU="Department">
+						<Value></Value>
+						<Label>Department</Label>
+					</Prop>
+				</Shape>
+				<Shape ID="77" UniqueID="{4D388AFC-473D-4C49-BD26-385B351DE18F}" Name="Sheet.77" NameU="Sheet.77">
+					<Text>30 Amp Inline Fuse</Text>
+					<XForm>
+						<PinX Unit="IN">2.400000000000000</PinX>
+						<PinY Unit="IN">4.111111111111111</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="78" UniqueID="{B0E9A20C-DCE2-4136-8E20-79DD7CBFEDBB}" Name="Sheet.78" NameU="Sheet.78">
+					<Text>+ + + + + + + + + + + + + + + </Text>
+					<XForm>
+						<PinX Unit="IN">5.600000000000001</PinX>
+						<PinY Unit="IN">3.988888888888890</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="30" UniqueID="{6C872EFF-C697-4DBD-ACC6-D9B96C53EB1C}" Name="Sheet.30" NameU="Sheet.30">
+					<XForm>
+						<PinX Unit="IN">1.900000000000000</PinX>
+						<PinY Unit="IN">3.903799495648010</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="79" UniqueID="{55B99F3D-722A-4BCF-8D10-B046FCD67EAF}" Name="Straight bus.79" NameU="Straight bus.79" Master="0">
+					<XForm>
+						<PinX Unit="IN">4.399999999999998</PinX>
+						<PinY Unit="IN">1.400000000000000</PinY>
+					</XForm>
+					<Prop ID="1" Name="Manufacturer" NameU="Manufacturer">
+						<Value></Value>
+						<Label>Manufacturer</Label>
+					</Prop>
+					<Prop ID="2" Name="ProductNumber" NameU="ProductNumber">
+						<Value></Value>
+						<Label>Product Number</Label>
+					</Prop>
+					<Prop ID="3" Name="PartNumber" NameU="PartNumber">
+						<Value></Value>
+						<Label>Part Number</Label>
+					</Prop>
+					<Prop ID="4" Name="ProductDescription" NameU="ProductDescription">
+						<Value></Value>
+						<Label>Product Description</Label>
+					</Prop>
+					<Prop ID="5" Name="AssetNumber" NameU="AssetNumber">
+						<Value></Value>
+						<Label>Asset Number</Label>
+					</Prop>
+					<Prop ID="6" Name="SerialNumber" NameU="SerialNumber">
+						<Value></Value>
+						<Label>Serial Number</Label>
+					</Prop>
+					<Prop ID="7" Name="Location" NameU="Location">
+						<Value></Value>
+						<Label>Location</Label>
+					</Prop>
+					<Prop ID="8" Name="Building" NameU="Building">
+						<Value></Value>
+						<Label>Building</Label>
+					</Prop>
+					<Prop ID="9" Name="Room" NameU="Room">
+						<Value></Value>
+						<Label>Room</Label>
+					</Prop>
+					<Prop ID="10" Name="Department" NameU="Department">
+						<Value></Value>
+						<Label>Department</Label>
+					</Prop>
+				</Shape>
+				<Shape ID="80" UniqueID="{5C641852-84E7-4EA5-99F6-729429EE51F5}" Name="Straight bus.80" NameU="Straight bus.80" Master="0">
+					<XForm>
+						<PinX Unit="IN">4.799999999999998</PinX>
+						<PinY Unit="IN">1.400000000000000</PinY>
+					</XForm>
+					<Prop ID="1" Name="Manufacturer" NameU="Manufacturer">
+						<Value></Value>
+						<Label>Manufacturer</Label>
+					</Prop>
+					<Prop ID="2" Name="ProductNumber" NameU="ProductNumber">
+						<Value></Value>
+						<Label>Product Number</Label>
+					</Prop>
+					<Prop ID="3" Name="PartNumber" NameU="PartNumber">
+						<Value></Value>
+						<Label>Part Number</Label>
+					</Prop>
+					<Prop ID="4" Name="ProductDescription" NameU="ProductDescription">
+						<Value></Value>
+						<Label>Product Description</Label>
+					</Prop>
+					<Prop ID="5" Name="AssetNumber" NameU="AssetNumber">
+						<Value></Value>
+						<Label>Asset Number</Label>
+					</Prop>
+					<Prop ID="6" Name="SerialNumber" NameU="SerialNumber">
+						<Value></Value>
+						<Label>Serial Number</Label>
+					</Prop>
+					<Prop ID="7" Name="Location" NameU="Location">
+						<Value></Value>
+						<Label>Location</Label>
+					</Prop>
+					<Prop ID="8" Name="Building" NameU="Building">
+						<Value></Value>
+						<Label>Building</Label>
+					</Prop>
+					<Prop ID="9" Name="Room" NameU="Room">
+						<Value></Value>
+						<Label>Room</Label>
+					</Prop>
+					<Prop ID="10" Name="Department" NameU="Department">
+						<Value></Value>
+						<Label>Department</Label>
+					</Prop>
+				</Shape>
+				<Shape ID="81" UniqueID="{F0A97B47-9EC2-4DFD-AAC8-FE66E397C363}" Name="Straight bus.81" NameU="Straight bus.81" Master="0">
+					<XForm>
+						<PinX Unit="IN">6.399999999999999</PinX>
+						<PinY Unit="IN">1.400000000000000</PinY>
+					</XForm>
+					<Prop ID="1" Name="Manufacturer" NameU="Manufacturer">
+						<Value></Value>
+						<Label>Manufacturer</Label>
+					</Prop>
+					<Prop ID="2" Name="ProductNumber" NameU="ProductNumber">
+						<Value></Value>
+						<Label>Product Number</Label>
+					</Prop>
+					<Prop ID="3" Name="PartNumber" NameU="PartNumber">
+						<Value></Value>
+						<Label>Part Number</Label>
+					</Prop>
+					<Prop ID="4" Name="ProductDescription" NameU="ProductDescription">
+						<Value></Value>
+						<Label>Product Description</Label>
+					</Prop>
+					<Prop ID="5" Name="AssetNumber" NameU="AssetNumber">
+						<Value></Value>
+						<Label>Asset Number</Label>
+					</Prop>
+					<Prop ID="6" Name="SerialNumber" NameU="SerialNumber">
+						<Value></Value>
+						<Label>Serial Number</Label>
+					</Prop>
+					<Prop ID="7" Name="Location" NameU="Location">
+						<Value></Value>
+						<Label>Location</Label>
+					</Prop>
+					<Prop ID="8" Name="Building" NameU="Building">
+						<Value></Value>
+						<Label>Building</Label>
+					</Prop>
+					<Prop ID="9" Name="Room" NameU="Room">
+						<Value></Value>
+						<Label>Room</Label>
+					</Prop>
+					<Prop ID="10" Name="Department" NameU="Department">
+						<Value></Value>
+						<Label>Department</Label>
+					</Prop>
+				</Shape>
+				<Shape ID="82" UniqueID="{39F1FC6D-20AC-4B28-B969-6D2B03AE00BA}" Name="Straight bus.82" NameU="Straight bus.82" Master="0">
+					<XForm>
+						<PinX Unit="IN">6.800000000000001</PinX>
+						<PinY Unit="IN">1.400000000000000</PinY>
+					</XForm>
+					<Prop ID="1" Name="Manufacturer" NameU="Manufacturer">
+						<Value></Value>
+						<Label>Manufacturer</Label>
+					</Prop>
+					<Prop ID="2" Name="ProductNumber" NameU="ProductNumber">
+						<Value></Value>
+						<Label>Product Number</Label>
+					</Prop>
+					<Prop ID="3" Name="PartNumber" NameU="PartNumber">
+						<Value></Value>
+						<Label>Part Number</Label>
+					</Prop>
+					<Prop ID="4" Name="ProductDescription" NameU="ProductDescription">
+						<Value></Value>
+						<Label>Product Description</Label>
+					</Prop>
+					<Prop ID="5" Name="AssetNumber" NameU="AssetNumber">
+						<Value></Value>
+						<Label>Asset Number</Label>
+					</Prop>
+					<Prop ID="6" Name="SerialNumber" NameU="SerialNumber">
+						<Value></Value>
+						<Label>Serial Number</Label>
+					</Prop>
+					<Prop ID="7" Name="Location" NameU="Location">
+						<Value></Value>
+						<Label>Location</Label>
+					</Prop>
+					<Prop ID="8" Name="Building" NameU="Building">
+						<Value></Value>
+						<Label>Building</Label>
+					</Prop>
+					<Prop ID="9" Name="Room" NameU="Room">
+						<Value></Value>
+						<Label>Room</Label>
+					</Prop>
+					<Prop ID="10" Name="Department" NameU="Department">
+						<Value></Value>
+						<Label>Department</Label>
+					</Prop>
+				</Shape>
+				<Shape ID="83" UniqueID="{3CB4F824-C1DD-45CA-836E-ED8593C115FE}" Name="Sheet.83" NameU="Sheet.83">
+					<Text>Switched Power Under Helm</Text>
+					<XForm>
+						<PinX Unit="IN">5.622222222222223</PinX>
+						<PinY Unit="IN">2.400000000000000</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="84" UniqueID="{7BFDC4A4-081B-4026-BAF9-749C5F100CFF}" Name="Sheet.84" NameU="Sheet.84">
+					<XForm>
+						<PinX Unit="IN">7.400000000000000</PinX>
+						<PinY Unit="IN">1.800000000000000</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="86" UniqueID="{BEFD508B-DB9F-4358-9574-F81622DCE570}" Name="Sheet.86" NameU="Sheet.86">
+					<XForm>
+						<PinX Unit="IN">7.000000000000000</PinX>
+						<PinY Unit="IN">1.800000000000000</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="85" UniqueID="{457197E9-2989-4200-B039-B81AD0623073}" Name="Sheet.85" NameU="Sheet.85">
+					<XForm>
+						<PinX Unit="IN">6.600000000000001</PinX>
+						<PinY Unit="IN">1.800000000000000</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="87" UniqueID="{611E9300-86F5-474E-B8A0-3A9852196D81}" Name="Sheet.87" NameU="Sheet.87">
+					<XForm>
+						<PinX Unit="IN">3.800000000000000</PinX>
+						<PinY Unit="IN">1.800000000000000</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="88" UniqueID="{D04AEA1F-C504-47CF-A53A-65996CD9747D}" Name="Sheet.88" NameU="Sheet.88">
+					<XForm>
+						<PinX Unit="IN">6.200000000000000</PinX>
+						<PinY Unit="IN">1.800000000000000</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="89" UniqueID="{30C6986D-F839-4E8C-A0C7-C832E7A67FEC}" Name="Sheet.89" NameU="Sheet.89">
+					<XForm>
+						<PinX Unit="IN">7.400000000000000</PinX>
+						<PinY Unit="IN">1.000000000000000</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="90" UniqueID="{0C7E8AC3-41C0-4DDD-A872-D90CBE8E8F66}" Name="Sheet.90" NameU="Sheet.90">
+					<XForm>
+						<PinX Unit="IN">3.800000000000000</PinX>
+						<PinY Unit="IN">1.000000000000000</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="91" UniqueID="{D7CD2286-2B64-4E7A-A325-F385CB1BCDD5}" Name="Sheet.91" NameU="Sheet.91">
+					<Text>Fuel</Text>
+					<XForm>
+						<PinX Unit="IN">6.977777777777778</PinX>
+						<PinY Unit="IN">2.011111111111112</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="92" UniqueID="{CE139F21-23B0-47A9-871B-14A9F100A435}" Name="Sheet.92" NameU="Sheet.92">
+					<Text>Tach</Text>
+					<XForm>
+						<PinX Unit="IN">6.600000000000001</PinX>
+						<PinY Unit="IN">2.011111111111112</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="93" UniqueID="{36A0E7FC-D0FA-416B-AE39-ED86996C8ECE}" Name="Sheet.93" NameU="Sheet.93">
+					<Text>Trim</Text>
+					<XForm>
+						<PinX Unit="IN">6.200000000000000</PinX>
+						<PinY Unit="IN">2.011111111111112</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="94" UniqueID="{C8C8ABC8-2EA2-4FBF-9BD8-EC8D5B69AC54}" Name="Sheet.94" NameU="Sheet.94">
+					<Text>Compass</Text>
+					<XForm>
+						<PinX Unit="IN">7.472222222222222</PinX>
+						<PinY Unit="IN">2.011111111111112</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="95" UniqueID="{1554B9B5-FF60-46FE-8702-66366011F9BA}" Name="Sheet.95" NameU="Sheet.95">
+					<Text>12V Outlet</Text>
+					<XForm>
+						<PinX Unit="IN">7.400000000000000</PinX>
+						<PinY Unit="IN">0.761111111111111</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="96" UniqueID="{D1209E7A-01AB-4124-9FB8-B66A61926AE1}" Name="Sheet.96" NameU="Sheet.96">
+					<Text>Ignition Switched Power</Text>
+					<XForm>
+						<PinX Unit="IN">3.777777777777778</PinX>
+						<PinY Unit="IN">0.750000000000000</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="97" UniqueID="{B3BC224E-3F9A-47DA-830C-C4198107CEBD}" Name="Sheet.97" NameU="Sheet.97">
+					<Text>Running (Bow) Lights Switch</Text>
+					<XForm>
+						<PinX Unit="IN">3.777777777777778</PinX>
+						<PinY Unit="IN">2.038888888888889</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="98" UniqueID="{DA51393A-A5F6-4A5C-A0EA-1BEE7E6A0766}" Name="Sheet.98" NameU="Sheet.98">
+					<XForm>
+						<PinX Unit="IN">9.000000000000000</PinX>
+						<PinY Unit="IN">3.200000000000000</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="99" UniqueID="{1D236FBD-867A-40F9-8747-568316AD90AE}" Name="Sheet.99" NameU="Sheet.99">
+					<XForm>
+						<PinX Unit="IN">9.000000000000000</PinX>
+						<PinY Unit="IN">4.000000000000000</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="100" UniqueID="{2AFA3E61-3852-4D76-ABA1-B37C92321FAE}" Name="Sheet.100" NameU="Sheet.100">
+					<XForm>
+						<PinX Unit="IN">8.600000000000000</PinX>
+						<PinY Unit="IN">3.200000000000000</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="101" UniqueID="{7F331A13-06F3-4FE2-AB48-2D04A7541AA8}" Name="Sheet.101" NameU="Sheet.101">
+					<Text>Compass</Text>
+					<XForm>
+						<PinX Unit="IN">8.622222222222224</PinX>
+						<PinY Unit="IN">2.988888888888889</PinY>
+					</XForm>
+				</Shape>
+				<Shape ID="102" UniqueID="{9809F7F2-7DD6-4302-A8A5-C6703D51EC8E}" Name="Sheet.102" NameU="Sheet.102">
+					<Text>VHF</Text>
+					<XForm>
+						<PinX Unit="IN">9.000000000000000</PinX>
+						<PinY Unit="IN">4.211111111111112</PinY>
+					</XForm>
+				</Shape>
+			</Shapes>
+		</Page>
+	</Pages>
+</VisioDocument>
