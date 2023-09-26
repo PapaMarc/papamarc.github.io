@@ -11,13 +11,21 @@
 
 <h1>Here's Elizabeth...</h1>
 
-<button onclick="playSound()">Press for proper background Theme Music</button>
+<button onclick="togglePlayPause()">Press for proper background Theme Music</button>
 
 <script>
-    function playSound() {
         var audio = new Audio('http://www.sitcomsonline.com/sounds/sanfordandsonlp.wav');
-        audio.play();
-    }
+        var isPlaying = false;
+
+        function togglePlayPause() {
+            if (isPlaying) {
+                audio.pause();
+                isPlaying = false;
+            } else {
+                audio.play();
+                isPlaying = true;
+            }
+        }
 </script>
 
 <p>1953 1/2 ton Chevy Pickup completely restored ~1990 (frame off restoration)... but still
