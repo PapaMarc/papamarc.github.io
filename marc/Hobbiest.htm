@@ -1,120 +1,129 @@
 <html>
 
 <head>
-<title>(Garmin) GPS, (Aladin/Uwatec) dive computers, (Pfranc) purple connectors, your PC, and you...</title>
+	<!-- Google tag (gtag.js) for Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-955FD8T2S7"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() { dataLayer.push(arguments); }
+		gtag('js', new Date());
 
-<style type="text/css">
+		gtag('config', 'G-955FD8T2S7');
+	</script>
 
 
-#topbar{
-position:absolute;
-border: 1px solid black;
-padding: 2px;
-background-color: lightyellow;
-width: 620px;
-visibility: hidden;
-z-index: 100;
-}
+	<title>(Garmin) GPS, (Aladin/Uwatec) dive computers, (Pfranc) purple connectors, your PC, and you...</title>
 
-</style>
-
-<script type="text/javascript">
-
-/***********************************************
-* Floating Top Bar script- © Dynamic Drive (www.dynamicdrive.com)
-* Sliding routine by Roy Whittle (http://www.javascript-fx.com/)
-* This notice must stay intact for legal use.
-* Visit http://www.dynamicdrive.com/ for full source code
-***********************************************/
-
-var persistclose=0 //set to 0 or 1. 1 means once the bar is manually closed, it will remain closed for browser session
-var startX = 30 //set x offset of bar in pixels
-var startY = 5 //set y offset of bar in pixels
-var verticalpos="fromtop" //enter "fromtop" or "frombottom"
-
-function iecompattest(){
-return (document.compatMode && document.compatMode!="BackCompat")? document.documentElement : document.body
-}
-
-function get_cookie(Name) {
-var search = Name + "="
-var returnvalue = "";
-if (document.cookie.length > 0) {
-offset = document.cookie.indexOf(search)
-if (offset != -1) {
-offset += search.length
-end = document.cookie.indexOf(";", offset);
-if (end == -1) end = document.cookie.length;
-returnvalue=unescape(document.cookie.substring(offset, end))
-}
-}
-return returnvalue;
-}
-
-function closebar(){
-if (persistclose)
-document.cookie="remainclosed=1"
-document.getElementById("topbar").style.visibility="hidden"
-}
-
-function staticbar(){
-	barheight=document.getElementById("topbar").offsetHeight
-	var ns = (navigator.appName.indexOf("Netscape") != -1) || window.opera;
-	var d = document;
-	function ml(id){
-		var el=d.getElementById(id);
-		if (!persistclose || persistclose && get_cookie("remainclosed")=="")
-		el.style.visibility="visible"
-		if(d.layers)el.style=el;
-		el.sP=function(x,y){this.style.left=x+"px";this.style.top=y+"px";};
-		el.x = startX;
-		if (verticalpos=="fromtop")
-		el.y = startY;
-		else{
-		el.y = ns ? pageYOffset + innerHeight : iecompattest().scrollTop + iecompattest().clientHeight;
-		el.y -= startY;
+	<style type="text/css">
+		#topbar {
+			position: absolute;
+			border: 1px solid black;
+			padding: 2px;
+			background-color: lightyellow;
+			width: 620px;
+			visibility: hidden;
+			z-index: 100;
 		}
-		return el;
-	}
-	window.stayTopLeft=function(){
-		if (verticalpos=="fromtop"){
-		var pY = ns ? pageYOffset : iecompattest().scrollTop;
-		ftlObj.y += (pY + startY - ftlObj.y)/8;
-		}
-		else{
-		var pY = ns ? pageYOffset + innerHeight - barheight: iecompattest().scrollTop + iecompattest().clientHeight - barheight;
-		ftlObj.y += (pY - startY - ftlObj.y)/8;
-		}
-		ftlObj.sP(ftlObj.x, ftlObj.y);
-		setTimeout("stayTopLeft()", 10);
-	}
-	ftlObj = ml("topbar");
-	stayTopLeft();
-}
+	</style>
 
-if (window.addEventListener)
-window.addEventListener("load", staticbar, false)
-else if (window.attachEvent)
-window.attachEvent("onload", staticbar)
-else if (document.getElementById)
-window.onload=staticbar
-</script>
+	<script type="text/javascript">
 
-<meta name="Microsoft Theme" content="none, default">
-<meta name="Microsoft Border" content="none, default">
+		/***********************************************
+		* Floating Top Bar script- ï¿½ Dynamic Drive (www.dynamicdrive.com)
+		* Sliding routine by Roy Whittle (http://www.javascript-fx.com/)
+		* This notice must stay intact for legal use.
+		* Visit http://www.dynamicdrive.com/ for full source code
+		***********************************************/
+
+		var persistclose = 0 //set to 0 or 1. 1 means once the bar is manually closed, it will remain closed for browser session
+		var startX = 30 //set x offset of bar in pixels
+		var startY = 5 //set y offset of bar in pixels
+		var verticalpos = "fromtop" //enter "fromtop" or "frombottom"
+
+		function iecompattest() {
+			return (document.compatMode && document.compatMode != "BackCompat") ? document.documentElement : document.body
+		}
+
+		function get_cookie(Name) {
+			var search = Name + "="
+			var returnvalue = "";
+			if (document.cookie.length > 0) {
+				offset = document.cookie.indexOf(search)
+				if (offset != -1) {
+					offset += search.length
+					end = document.cookie.indexOf(";", offset);
+					if (end == -1) end = document.cookie.length;
+					returnvalue = unescape(document.cookie.substring(offset, end))
+				}
+			}
+			return returnvalue;
+		}
+
+		function closebar() {
+			if (persistclose)
+				document.cookie = "remainclosed=1"
+			document.getElementById("topbar").style.visibility = "hidden"
+		}
+
+		function staticbar() {
+			barheight = document.getElementById("topbar").offsetHeight
+			var ns = (navigator.appName.indexOf("Netscape") != -1) || window.opera;
+			var d = document;
+			function ml(id) {
+				var el = d.getElementById(id);
+				if (!persistclose || persistclose && get_cookie("remainclosed") == "")
+					el.style.visibility = "visible"
+				if (d.layers) el.style = el;
+				el.sP = function (x, y) { this.style.left = x + "px"; this.style.top = y + "px"; };
+				el.x = startX;
+				if (verticalpos == "fromtop")
+					el.y = startY;
+				else {
+					el.y = ns ? pageYOffset + innerHeight : iecompattest().scrollTop + iecompattest().clientHeight;
+					el.y -= startY;
+				}
+				return el;
+			}
+			window.stayTopLeft = function () {
+				if (verticalpos == "fromtop") {
+					var pY = ns ? pageYOffset : iecompattest().scrollTop;
+					ftlObj.y += (pY + startY - ftlObj.y) / 8;
+				}
+				else {
+					var pY = ns ? pageYOffset + innerHeight - barheight : iecompattest().scrollTop + iecompattest().clientHeight - barheight;
+					ftlObj.y += (pY - startY - ftlObj.y) / 8;
+				}
+				ftlObj.sP(ftlObj.x, ftlObj.y);
+				setTimeout("stayTopLeft()", 10);
+			}
+			ftlObj = ml("topbar");
+			stayTopLeft();
+		}
+
+		if (window.addEventListener)
+			window.addEventListener("load", staticbar, false)
+		else if (window.attachEvent)
+			window.attachEvent("onload", staticbar)
+		else if (document.getElementById)
+			window.onload = staticbar
+	</script>
+
+	<meta name="Microsoft Theme" content="none, default">
+	<meta name="Microsoft Border" content="none, default">
 </head>
 
 <body>
-</p>
+	</p>
 
 
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-<div id="topbar">
-<a href="" onClick="closebar(); return false"><img src="images/close.gif" border="0" width="16" height="16" /></a>
-<script type="text/javascript"><!--
+	<p>&nbsp;</p>
+	<p>&nbsp;</p>
+	<p>&nbsp;</p>
+	<p>&nbsp;</p>
+	<div id="topbar">
+		<a href="" onClick="closebar(); return false"><img src="images/close.gif" border="0" width="16"
+				height="16" /></a>
+		<script type="text/javascript"><!-
 google_ad_client = "pub-4720458923514771";
 google_ad_width = 728;
 google_ad_height = 90;
@@ -122,191 +131,228 @@ google_ad_format = "728x90_as";
 google_ad_type = "text_image";
 google_ad_channel ="";
 //--></script>
-<script type="text/javascript"
-  src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
-</script>
+		<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+		</script>
 
-<!-- Google add adsense button-->
-<script type="text/javascript"><!--
+		<!-- Google add adsense button-->
+		<script type="text/javascript"><!-
 google_ad_client = "pub-4720458923514771";
 google_ad_width = 110;
 google_ad_height = 32;
 google_ad_format = "110x32_as_rimg";
 google_cpa_choice = "CAAQ0ZGazgEaCNfGe9Y_ARDqKPmNxXQ";
 //--></script>
-<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
-</script>
-<!-- Google add adsense button-->
+		<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+		</script>
+		<!-- Google add adsense button-->
 
-</div>
+	</div>
 
-<p><font size="4">Garmin GPS navigation</font><p>&nbsp;<p>Back in the day, I had a
-classic, original
-<a href="http://www.Garmin.com">Garmin</a> 45 GPS and it was good.&nbsp; THE 
-references at that time were:<ul>
-	<li>&nbsp;<a href="http://vancouver-webpages.com/peter/g45faq.txt">Lane A. 
-	Holdcroft's FAQ</a>, and</li>
-	<li>if you were into being a bit of a hobbiest
-	<a href="http://www.pfranc.com/projects/g45contr/g45_idx.htm">Larry's 
-	p(urple)Plug page</a> bridged the gap of the proprietary garmin power/data 
-	connector with the world of other standardized, easily accessible electronic 
-	components... in short, they provided you the goods, and the instruction on 
-	how to build power, data and power/data cables while at the same time saving 
-	a few bucks. A first in open hardware development and manufacturing.&nbsp; 
-	Great stuff-- hours of fun, followed by years of satisfying use.</li>
-	<li>With respect to software... 
+	<p>
+		<font size="4">Garmin GPS navigation</font>
+	<p>&nbsp;
+	<p>Back in the day, I had a
+		classic, original
+		<a href="http://www.Garmin.com">Garmin</a> 45 GPS and it was good.&nbsp; THE
+		references at that time were:
 	<ul>
-		<li>i still use those cables today in '05 when i connect my GarminIII+ 
-		to my laptop running
-		<a href="http://www.microsoft.com/streets/default.mspx">Microsoft 
-		Streets &amp; Trips</a> when i go road tripping.</li>
-		<li>and for the boaters out there, there's
-		<a href="http://www.nobeltec.com">Nobeltec</a>'s software for
-      state-of-the-art nautical use.&nbsp; This stuff is serious (as the 
-		nautical navigation hardware boys eventually realized as their buyout 
-		history reflects)!</li>
-		</ul>
+		<li>&nbsp;<a href="http://vancouver-webpages.com/peter/g45faq.txt">Lane A.
+				Holdcroft's FAQ</a>, and</li>
+		<li>if you were into being a bit of a hobbiest
+			<a href="http://www.pfranc.com/projects/g45contr/g45_idx.htm">Larry's
+				p(urple)Plug page</a> bridged the gap of the proprietary garmin power/data
+			connector with the world of other standardized, easily accessible electronic
+			components... in short, they provided you the goods, and the instruction on
+			how to build power, data and power/data cables while at the same time saving
+			a few bucks. A first in open hardware development and manufacturing.&nbsp;
+			Great stuff-- hours of fun, followed by years of satisfying use.
+		</li>
+		<li>With respect to software...
+			<ul>
+				<li>i still use those cables today in '05 when i connect my GarminIII+
+					to my laptop running
+					<a href="http://www.microsoft.com/streets/default.mspx">Microsoft
+						Streets &amp; Trips</a> when i go road tripping.
+				</li>
+				<li>and for the boaters out there, there's
+					<a href="http://www.nobeltec.com">Nobeltec</a>'s software for
+					state-of-the-art nautical use.&nbsp; This stuff is serious (as the
+					nautical navigation hardware boys eventually realized as their buyout
+					history reflects)!
+				</li>
+			</ul>
 		</li>
 	</ul>
-	
-	<p>&nbsp;<p><font size="4">ScubaPro/Uwatec/Aladin SCUBA dive computers</font><p>&nbsp;<p>Even as i start 
-	writing this about ScubaPro's line of <a href="http://www.uwatec.com/">
-	Uwatec dive computers</a> i feel compelled to make a mention of
-	<a href="http://www.suunto.com/suunto/main/article_2column.jsp?CONTENT&lt;&gt;cnt_id=10134198673939095&FOLDER&lt;&gt;folder_id=1408474395903548">
-	Suunto dive computers</a> which are hot on the Aladin product line's fins... 
-	the new
-	<a href="http://www.aquanaut.com.au/products/sa.shr/computerbrand_product/1/4/4/0/510">
-	Suunto D9</a> appears to be a force to be reconned with, though i haven't 
-yet dove it and for now stand by my trusty Uwatec Air Z Nitrox, along with a 
-ScubaPro MK20 first stage, and G250HP 2nd stage.&nbsp; I think in general, the 
-lifetime warranty on ScubaPro's regulators (provided you service it every year) is the best 
-in the industry... and this is the equipment i bet on when below the surface.&nbsp; 
-I am also intrigued by the promise of
-<a href="http://www.isracast.com/tech_news/310505_tech.htm">Alon Bodner's work</a>... 
-and I would LOVE to be an alpha tester, though no doubt i'd do so w/the 'kit' i 
-mentioned hooked up to at least a pony bottle as backup should the batteries run 
-low, or the electronics short out, etc.<p>Back to the Aladin line of dive computers... a bit old school 
-	perhaps at this point, but a great friendly model to dive, big enough on your wrist so 
-	that you don't have to strain to see the key limiting factors, etc... and 
-	smart enough they can handle Nitrox, and deco cases for the recreational 
-	diver who's spreading his wings a bit... this line of Aladin models 
-(irrespective of whether it was nitrox enabled, or air integrated as the Air Z 
-Nitrox is) were somewhere between:<ul>
-		<li>the techy <a href="http://www.divecochran.com/">Cochran computers</a> 
-		(good for the SEALs and those
-		<a href="http://oceanexplorer.noaa.gov/technology/diving/technical/technical.html">
-		tech diving</a> w/TriMix, etc) w/more data than you can shake a stick at 
-		which might as a recreational sport diver overcomplicate the key 
-		decisions you need to make at any one time to minimize risk, and the</li>
-		<li>so-GUI-it oozes, color graphical animated displays (various models 
-		not named built of the same core and OEM'ed by various Scuba 
-		manufacturers who needed a dive computer to add to their line) which are 
-		arguably a little too smart for their own good in making key decisions 
-		for you v. giving you the data you want to make life/death decisions for 
-		my taste, AND are missing the more hobbiest community following for 
-		software and downloading harnesses.</li>
-		</ul>
-		<p>So again, back to the Aladin line (could swear i said that before)... 
-		this is a line of proven dive computers (back by a proven dive model) 
-		and for the last decade has been somewhat of the defacto standard in the 
+
+	<p>&nbsp;
+	<p>
+		<font size="4">ScubaPro/Uwatec/Aladin SCUBA dive computers</font>
+	<p>&nbsp;
+	<p>Even as i start
+		writing this about ScubaPro's line of <a href="http://www.uwatec.com/">
+			Uwatec dive computers</a> i feel compelled to make a mention of
+		<a
+			href="http://www.suunto.com/suunto/main/article_2column.jsp?CONTENT&lt;&gt;cnt_id=10134198673939095&FOLDER&lt;&gt;folder_id=1408474395903548">
+			Suunto dive computers</a> which are hot on the Aladin product line's fins...
+		the new
+		<a href="http://www.aquanaut.com.au/products/sa.shr/computerbrand_product/1/4/4/0/510">
+			Suunto D9</a> appears to be a force to be reconned with, though i haven't
+		yet dove it and for now stand by my trusty Uwatec Air Z Nitrox, along with a
+		ScubaPro MK20 first stage, and G250HP 2nd stage.&nbsp; I think in general, the
+		lifetime warranty on ScubaPro's regulators (provided you service it every year) is the best
+		in the industry... and this is the equipment i bet on when below the surface.&nbsp;
+		I am also intrigued by the promise of
+		<a href="http://www.isracast.com/tech_news/310505_tech.htm">Alon Bodner's work</a>...
+		and I would LOVE to be an alpha tester, though no doubt i'd do so w/the 'kit' i
+		mentioned hooked up to at least a pony bottle as backup should the batteries run
+		low, or the electronics short out, etc.
+	<p>Back to the Aladin line of dive computers... a bit old school
+		perhaps at this point, but a great friendly model to dive, big enough on your wrist so
+		that you don't have to strain to see the key limiting factors, etc... and
+		smart enough they can handle Nitrox, and deco cases for the recreational
+		diver who's spreading his wings a bit... this line of Aladin models
+		(irrespective of whether it was nitrox enabled, or air integrated as the Air Z
+		Nitrox is) were somewhere between:
+	<ul>
+		<li>the techy <a href="http://www.divecochran.com/">Cochran computers</a>
+			(good for the SEALs and those
+			<a href="http://oceanexplorer.noaa.gov/technology/diving/technical/technical.html">
+				tech diving</a> w/TriMix, etc) w/more data than you can shake a stick at
+			which might as a recreational sport diver overcomplicate the key
+			decisions you need to make at any one time to minimize risk, and the
+		</li>
+		<li>so-GUI-it oozes, color graphical animated displays (various models
+			not named built of the same core and OEM'ed by various Scuba
+			manufacturers who needed a dive computer to add to their line) which are
+			arguably a little too smart for their own good in making key decisions
+			for you v. giving you the data you want to make life/death decisions for
+			my taste, AND are missing the more hobbiest community following for
+			software and downloading harnesses.</li>
+	</ul>
+	<p>So again, back to the Aladin line (could swear i said that before)...
+		this is a line of proven dive computers (back by a proven dive model)
+		and for the last decade has been somewhat of the defacto standard in the
 		industry.&nbsp; And it has a has a community of hobbiest, PC savvy followers.</p>
-		<ul>
-			<li>Namely, there are folks on the software side of things... while 
+	<ul>
+		<li>Namely, there are folks on the software side of things... while
 			i won't attempt to recreate and maintain
-			<a href="http://www.muenster.de/~matthias/aladin/rightlinks.htm">THE 
-			Linked List</a>; rather i'll point you at a good one.&nbsp; I always found
-			<a href="http://www.temesvari.de/wlog/wlog.htm">Thomas's 
-			W(indows)Log</a>, <a href="http://www.vanwaasen.de/">Jochen's ADLT</a>, 
+			<a href="http://www.muenster.de/~matthias/aladin/rightlinks.htm">THE
+				Linked List</a>; rather i'll point you at a good one.&nbsp; I always found
+			<a href="http://www.temesvari.de/wlog/wlog.htm">Thomas's
+				W(indows)Log</a>, <a href="http://www.vanwaasen.de/">Jochen's ADLT</a>,
 			&amp;
 			<a href="http://subaqua.web.cern.ch/subaqua/techniques/ADTK/ADTK.HTM">
-			Dive Talk</a> worth playing with.&nbsp; </li>
-			<li>And there are the folks on the download harness hardware side, 
+				Dive Talk</a> worth playing with.&nbsp;
+		</li>
+		<li>And there are the folks on the download harness hardware side,
 			starting with
 			<a href="http://www.muenster.de/~matthias/aladin/building.htm">
-			Matthias</a> whose design i built years back and still use to this 
+				Matthias</a> whose design i built years back and still use to this
 			day. And others notably
 			<a href="http://www.tele.ucl.ac.be/PEOPLE/DOUXCHAMPS/aladin/english/bi_oa.html">
-			DDouxchamps</a> who squeezed the BiDi-OpAmp design down via SMD to 
-			fit into a DB9 connector-- still beyond my ability to create at 
-			home.&nbsp; Nevertheless, for a few bucks and a bit of sweat and 
-			persistence these guys enabled you to download your data.&nbsp; This was a 
-			great alternative, in contrast to the several hundred ScubaPro/Uwatec 
+				DDouxchamps</a> who squeezed the BiDi-OpAmp design down via SMD to
+			fit into a DB9 connector-- still beyond my ability to create at
+			home.&nbsp; Nevertheless, for a few bucks and a bit of sweat and
+			persistence these guys enabled you to download your data.&nbsp; This was a
+			great alternative, in contrast to the several hundred ScubaPro/Uwatec
 			charged/es for its bulky, overengineered and now antiquated
 			<a href="http://uwatecusbeta.scubapro.com/products/datatrak_memo_mouse/datatrak_memo_mouse.asp">
-			MemoMouse</a>.&nbsp; While the folks at Uwatec have at this point 
-			moved on to InfraRed (why not straight to BlueTooth, which doesn't 
-			have the line of sight positioning limitation?) for their newest 
-			&quot;Smart&quot; devices, they basically have sold out on all their existing 
-			Aladin line customers, still providing no simple, cheap solution to 
-			download data, nor change the 3 settings via upload that you can't 
-			change on the device's UI (psi/bar, ppO2, buzzer on/off ).&nbsp; I 
-			suppose they know the online community exists for the geeks that 
-			really care about downloading data to their PC anyway... so all's 
-			good in the end i suppose.</li>
-			</ul>
-			<p><font size="4">When worlds collide... Pfranc.com meets the online 
-			Aladin dive community (June '05)</font><p>So fast forward close to ten years from my 
-			original purple connector cable build experience courtesy of Larry, 
-			and my first Aladin download-only OpAmp interface buildout courtest 
-			of Matthias... and I'm living in <a href="http://merware.net/blog">
-			Hong Kong</a>.<p>And out and about on the streets of HK, there are 
-			some computer shops here and there where you can find various USB 
-			dongles (with detailed SMD internals) for ~ US$10-$15.&nbsp; I'm 
-			talking some pretty impressive stuff, like this
-			<a href="http://www.comodow.com/ftjm/ftpd552.htm">Audio adapter</a> 
-			or
-			<a href="http://www.cfih.com/index_product_view.php?did=8801&didpath=/8781/8801&page=1&imgid=87601">
-			BT adapter</a> all crammed into a tiny, colorful finished package.&nbsp; 
-			So i started reaching out to these companies to see if any would be 
-			interested in manufacturing small quantities of the SMD bidi-OpAmp integrated into an existing USB-&gt;DB9 serial converters... eg. 
-			using the existing proven Windows driver as if it were a serial 
-			device... but removing the DB9, adding in the small circuit, and 
-			terminating it in the two wires for connectivity to the dive 
-			computer.&nbsp; All, of course in a nice, small, sealed, finished 
-			package...<p>And so among others with a proven driver, I (re)approached 
-Larry at <a href="http://www.pfranc.com">Pfranc.com</a> and we got to talking 
-about part# <a href="http://pfranc.com/cgi-bin/P/USB_G4">USB_G4</a>... Aladin, 
-meet Pfranc... Pfranc, allow me to introduce you to Aladin.&nbsp; Here's what 
-Larry told me...<p>&lt;in process-- stay tuned&gt;<p>&nbsp;<p><font size="4">'88 
-Mazda RX7 
-diagnostic code test harness</font><p>though no longer an owner, after having my 
-trusty, clean 2nd generation RX7 stolen &amp; gutted like a fish in early '05, that 
-had been with me since '89... i did ~2000 build one of these
-<a href="http://www.teamfc3s.org/info/articles/errorcodes/main.html">onboard 
-diagnostic code test devices</a>, which worked as advertised... these guys know 
-their stuff. 
-<p><font size="4">'88 Mazda RX7 wiper switch revitalizations</font><p>similarly, on a 
-couple occasions during the time i owned that car, i needed to revamp the wiper 
-switches... replacements are quite expensive (even at the junk yards) and the 
-repairs are generally
-<a href="http://tal.ontero.net/home/RX7/Wiper+Switch/index.html">quite straight 
-forward</a> if you have a little time and a willingness to tinker.<p><font size="4">Motorboat rewiring</font><p>during the week of 5/25/02 i 
-rewired the rats nest of decaying wires in my 21' '79 Wellcraft Sunhatch 
-(powered by '82 Evinrude 235), and made this
-<a href="http://www.merware.net/marc/Wellcraft_DC_Wiring_Bus_Diagram_files/WellcraftDCWiringBusDiagram.jpg">
-diagram of the wiring buses</a>.
+				MemoMouse</a>.&nbsp; While the folks at Uwatec have at this point
+			moved on to InfraRed (why not straight to BlueTooth, which doesn't
+			have the line of sight positioning limitation?) for their newest
+			&quot;Smart&quot; devices, they basically have sold out on all their existing
+			Aladin line customers, still providing no simple, cheap solution to
+			download data, nor change the 3 settings via upload that you can't
+			change on the device's UI (psi/bar, ppO2, buzzer on/off ).&nbsp; I
+			suppose they know the online community exists for the geeks that
+			really care about downloading data to their PC anyway... so all's
+			good in the end i suppose.
+		</li>
+	</ul>
+	<p>
+		<font size="4">When worlds collide... Pfranc.com meets the online
+			Aladin dive community (June '05)</font>
+	<p>So fast forward close to ten years from my
+		original purple connector cable build experience courtesy of Larry,
+		and my first Aladin download-only OpAmp interface buildout courtest
+		of Matthias... and I'm living in <a href="http://merware.net/blog">
+			Hong Kong</a>.
+	<p>And out and about on the streets of HK, there are
+		some computer shops here and there where you can find various USB
+		dongles (with detailed SMD internals) for ~ US$10-$15.&nbsp; I'm
+		talking some pretty impressive stuff, like this
+		<a href="http://www.comodow.com/ftjm/ftpd552.htm">Audio adapter</a>
+		or
+		<a href="http://www.cfih.com/index_product_view.php?did=8801&didpath=/8781/8801&page=1&imgid=87601">
+			BT adapter</a> all crammed into a tiny, colorful finished package.&nbsp;
+		So i started reaching out to these companies to see if any would be
+		interested in manufacturing small quantities of the SMD bidi-OpAmp integrated into an existing USB-&gt;DB9
+		serial converters... eg.
+		using the existing proven Windows driver as if it were a serial
+		device... but removing the DB9, adding in the small circuit, and
+		terminating it in the two wires for connectivity to the dive
+		computer.&nbsp; All, of course in a nice, small, sealed, finished
+		package...
+	<p>And so among others with a proven driver, I (re)approached
+		Larry at <a href="http://www.pfranc.com">Pfranc.com</a> and we got to talking
+		about part# <a href="http://pfranc.com/cgi-bin/P/USB_G4">USB_G4</a>... Aladin,
+		meet Pfranc... Pfranc, allow me to introduce you to Aladin.&nbsp; Here's what
+		Larry told me...
+	<p>&lt;in process-- stay tuned&gt;
+	<p>&nbsp;
+	<p>
+		<font size="4">'88
+			Mazda RX7
+			diagnostic code test harness</font>
+	<p>though no longer an owner, after having my
+		trusty, clean 2nd generation RX7 stolen &amp; gutted like a fish in early '05, that
+		had been with me since '89... i did ~2000 build one of these
+		<a href="http://www.teamfc3s.org/info/articles/errorcodes/main.html">onboard
+			diagnostic code test devices</a>, which worked as advertised... these guys know
+		their stuff.
+	<p>
+		<font size="4">'88 Mazda RX7 wiper switch revitalizations</font>
+	<p>similarly, on a
+		couple occasions during the time i owned that car, i needed to revamp the wiper
+		switches... replacements are quite expensive (even at the junk yards) and the
+		repairs are generally
+		<a href="http://tal.ontero.net/home/RX7/Wiper+Switch/index.html">quite straight
+			forward</a> if you have a little time and a willingness to tinker.
+	<p>
+		<font size="4">Motorboat rewiring</font>
+	<p>during the week of 5/25/02 i
+		rewired the rats nest of decaying wires in my 21' '79 Wellcraft Sunhatch
+		(powered by '82 Evinrude 235), and made this
+		<a href="http://www.merware.net/marc/Wellcraft_DC_Wiring_Bus_Diagram_files/WellcraftDCWiringBusDiagram.jpg">
+			diagram of the wiring buses</a>.
 
-<p>Back to <a href="../marc">Marc's Homepage</a>
+	<p>Back to <a href="../marc">Marc's Homepage</a>
 
-<!-- Search Google -->
-<center>
-<form method="get" action="http://www.google.com/custom" target="_top">
-<table bgcolor="#ffffff">
-<tr><td nowrap="nowrap" valign="top" align="left" height="32">
-<a href="http://www.google.com/">
-<img src="http://www.google.com/logos/Logo_25wht.gif" border="0" alt="Google" align="middle"></img></a>
-<input type="text" name="q" size="31" maxlength="255" value=""></input>
-<input type="submit" name="sa" value="Search"></input>
-<input type="hidden" name="client" value="pub-4720458923514771"></input>
-<input type="hidden" name="forid" value="1"></input>
-<input type="hidden" name="ie" value="ISO-8859-1"></input>
-<input type="hidden" name="oe" value="ISO-8859-1"></input>
-<input type="hidden" name="cof" value="GALT:#008000;GL:1;DIV:#336699;VLC:663399;AH:center;BGC:FFFFFF;LBGC:336699;ALC:0000FF;LC:0000FF;T:000000;GFNT:0000FF;GIMP:0000FF;FORID:1;"></input>
-<input type="hidden" name="hl" value="en"></input>
-</td></tr></table>
-</form>
-</center>
-<!-- Search Google -->
+		<!-- Search Google -->
+		<center>
+			<form method="get" action="http://www.google.com/custom" target="_top">
+				<table bgcolor="#ffffff">
+					<tr>
+						<td nowrap="nowrap" valign="top" align="left" height="32">
+							<a href="http://www.google.com/">
+								<img src="http://www.google.com/logos/Logo_25wht.gif" border="0" alt="Google"
+									align="middle"></img></a>
+							<input type="text" name="q" size="31" maxlength="255" value=""></input>
+							<input type="submit" name="sa" value="Search"></input>
+							<input type="hidden" name="client" value="pub-4720458923514771"></input>
+							<input type="hidden" name="forid" value="1"></input>
+							<input type="hidden" name="ie" value="ISO-8859-1"></input>
+							<input type="hidden" name="oe" value="ISO-8859-1"></input>
+							<input type="hidden" name="cof"
+								value="GALT:#008000;GL:1;DIV:#336699;VLC:663399;AH:center;BGC:FFFFFF;LBGC:336699;ALC:0000FF;LC:0000FF;T:000000;GFNT:0000FF;GIMP:0000FF;FORID:1;"></input>
+							<input type="hidden" name="hl" value="en"></input>
+						</td>
+					</tr>
+				</table>
+			</form>
+		</center>
+		<!-- Search Google -->
 
 </body>
+
 </html>
