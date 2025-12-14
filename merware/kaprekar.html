@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>KaprekarApp — MerWare</title>
+    <style>
+        body {
+            font-family: Segoe UI, Helvetica, Arial;
+            line-height: 1.5;
+            color: #222;
+            padding: 30px
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto
+        }
+
+        header {
+            margin-bottom: 20px
+        }
+
+        a.button {
+            display: inline-block;
+            padding: 10px 16px;
+            background: #667eea;
+            color: #fff;
+            border-radius: 6px;
+            text-decoration: none
+        }
+
+        .audio-toggle {
+            display: inline-block;
+            padding: 6px 10px;
+            margin-right: 10px;
+            background: #667eea;
+            color: #fff;
+            border-radius: 6px;
+            border: none;
+            cursor: pointer;
+            font-size: 0.95rem;
+        }
+
+        pre {
+            background: #f4f4f4;
+            padding: 12px;
+            border-radius: 6px;
+            overflow: auto
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>KaprekarApp</h1>
+            <p>A MerWare project — an exploration focused on Kaprekar's Constant.</p>
+            <p><a href="../index.html#portfolio" class="button">← Back to Portfolio</a></p>
+        </header>
+
+        <section>
+            <h2>Overview</h2>
+            <p>KaprekarApp is a free, cross platform Windows Store and Android/Google PlayStore app which puts
+                Kaprekar's algorithm at your fingertips. It's built on .Net and and MAUI frameworks from Microsoft.</p>
+            <section class="lyrics">
+                <h2><button id="bg-toggle" class="audio-toggle" type="button" aria-pressed="false">Background
+                        (Off)</button> music lyrics</h2>
+
+                <h3>Hook (8 bars, chantable)</h3>
+                <p class="hook">
+                    It’s hard out here for a number, grindin’ digits in the street,<br>
+                    Flip the max, subtract the min, till the constant’s what you meet.<br>
+                    Six-one-seven-four, yeah, the code don’t bend or break,<br>
+                    Kaprekar carved the hustle, every loop gon’ seal your fate.<br>
+                    It’s hard out here for a number, gotta ride that algorithm,<br>
+                    Stack ‘em high, stack ‘em low, subtraction’s the rhythm.<br>
+                    Six-one-seven-four, the pimp of the math game,<br>
+                    Kaprekar’s name eternal, every digit knows the same.
+                </p>
+
+                <h3>Verse 1 (16 bars, storytelling)</h3>
+                <p class="verse">
+                    Born in Dahanu, nineteen‑oh‑five,<br>
+                    No postgrad crown, but the math stayed alive.<br>
+                    Wrangler prize earned, sharp mind on display,<br>
+                    From Devlali chalkboards to the world stage today.<br>
+                    Magic squares, harshad joy, numbers singin’ loud,<br>
+                    Self numbers stand alone, but they still make him proud.<br>
+                    They said his math was small, but the grind was deep,<br>
+                    Gardner spread the word, now the constant don’t sleep.<br>
+                    Four digits in the set, not all the same,<br>
+                    Line ‘em up, flip the script, subtraction’s the game.<br>
+                    4321 minus 1234,<br>
+                    Run the loop, keep hustlin’, till you hit that core.<br>
+                    8352, then 6174,<br>
+                    Every hustler on the block know you can’t ignore.<br>
+                    Seven steps max, convergence tight,<br>
+                    Kaprekar’s algorithm — constant in the fight.
+                </p>
+
+                <h3>Bridge (8 bars, layered puns)</h3>
+                <p class="bridge">
+                    Multiples of nine, divine design,<br>
+                    Digits align like hustlers on the line.<br>
+                    Self numbers stand alone, no parent to claim,<br>
+                    But 6174 forever holds the name.<br>
+                    Harshad joy, harsh hustle too,<br>
+                    Every sum of digits givin’ joy to the crew.<br>
+                    From Bombay sun to the math elite,<br>
+                    Kaprekar’s grind put the rhythm on repeat.
+                </p>
+
+                <h3>Verse 2 (12 bars, punchy close)</h3>
+                <p class="verse">
+                    They laughed at first, said his math was small,<br>
+                    But the hustle hit global, Gardner made the call.<br>
+                    From India’s chalkboards to American page,<br>
+                    Kaprekar’s constant lit the world stage.<br>
+                    Now every kid with a pad and pen,<br>
+                    Can flip them digits, reach the same end.<br>
+                    Six-one-seven-four, the pimp of the set,<br>
+                    Numbers bow down, respect the bet.<br>
+                    Dirty South beat, math grind in the flow,<br>
+                    Kaprekar’s name eternal, let the algorithm show.<br>
+                    It’s hard out here, but the constant gon’ stay,<br>
+                    Six-one-seven-four, hustlin’ every day.
+                </p>
+
+                <h3>Hook / Outro (repeat, crowd chant)</h3>
+                <p class="outro">
+                    It’s hard out here for a number, grindin’ digits in the street,<br>
+                    Flip the max, subtract the min, till the constant’s what you meet.<br>
+                    Six-one-seven-four, yeah, the code don’t bend or break,<br>
+                    Kaprekar carved the hustle, every loop gon’ seal your fate.
+                </p>
+            </section>
+
+            <section>
+                <h2>Support the cause</h2>
+                <p>If you enjoy the KaprekarApp and the backing track, and want to support continued development,
+                    consider
+                    sharing, starring the
+                    project in the store, or buying me a coffee, beer or slice below.</p>
+                <section>
+                    <div class="donation-logos"
+                        style="display:flex;gap:20px;align-items:center;margin-top:18px;flex-wrap:wrap;">
+                        <div style="text-align:center;">
+                            <img src="resources/paymarcbyzelle.jpg" alt="Zelle"
+                                style="max-width:220px;height:auto;display:block;margin:0 auto;">
+                            <div style="margin-top:8px;font-weight:600;">ZelleMeAt: NerdFund@Outlook.com</div>
+                        </div>
+
+                        <div style="text-align:center;">
+                            <img src="resources/paymarcbypaypal.jpg" alt="PayPal"
+                                style="max-width:220px;height:auto;display:block;margin:0 auto;">
+                        </div>
+
+                        <div style="text-align:center;">
+                            <img src="resources/paymarcbywechat.jpg" alt="WeChat"
+                                style="max-width:220px;height:auto;display:block;margin:0 auto;">
+                        </div>
+                    </div>
+                </section>
+
+
+                <footer style="margin-top:40px;color:#666">Copyright © MerWare 2025 — KaprekarApp</footer>
+    </div>
+    <audio id="bg-audio" src="resources/HardOutHereForAConstant.mp3" loop preload="none"></audio>
+    <script>
+        (function () {
+            const audio = document.getElementById('bg-audio');
+            const btn = document.getElementById('bg-toggle');
+            if (!btn || !audio) return;
+            btn.addEventListener('click', function () {
+                if (audio.paused) {
+                    audio.play().then(() => {
+                        btn.textContent = 'Background (On)';
+                        btn.setAttribute('aria-pressed', 'true');
+                        btn.style.background = '#3355cc';
+                    }).catch(() => { });
+                } else {
+                    audio.pause();
+                    btn.textContent = 'Background (Off)';
+                    btn.setAttribute('aria-pressed', 'false');
+                    btn.style.background = '#667eea';
+                }
+            });
+        })();
+    </script>
+</body>
+
+</html>
