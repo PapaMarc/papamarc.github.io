@@ -1,78 +1,142 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Avatar Styles — MerWare Test</title>
-  <style>
-    body{font-family:Segoe UI,Helvetica,Arial;margin:30px;color:#222}
-    .container{max-width:1100px;margin:0 auto}
-    .grid{display:flex;gap:28px;flex-wrap:wrap;align-items:flex-start}
-    .card{text-align:center;width:170px}
-    .avatar{width:150px;height:150px;border-radius:50%;overflow:hidden;margin:0 auto}
-    .avatar img{width:100%;height:100%;object-fit:cover;display:block}
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Avatar Styles — MerWare Test</title>
+    <style>
+        body {
+            font-family: Segoe UI, Helvetica, Arial;
+            margin: 30px;
+            color: #222
+        }
 
-    /* Option 1: subtle drop shadow */
-    .opt1{box-shadow:0 6px 18px rgba(0,0,0,0.12)}
+        .container {
+            max-width: 1100px;
+            margin: 0 auto
+        }
 
-    /* Option 2: stronger shadow */
-    .opt2{box-shadow:0 12px 30px rgba(0,0,0,0.25)}
+        .grid {
+            display: flex;
+            gap: 28px;
+            flex-wrap: wrap;
+            align-items: flex-start
+        }
 
-    /* Option 3: thin white ring + subtle shadow */
-    .opt3{border:4px solid rgba(255,255,255,0.9);box-shadow:0 6px 18px rgba(0,0,0,0.12)}
+        .card {
+            text-align: center;
+            width: 170px
+        }
 
-    /* Option 4: colored ring to match theme */
-    .opt4{border:4px solid #667eea;box-shadow:0 8px 24px rgba(102,126,234,0.18)}
+        .avatar {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin: 0 auto
+        }
 
-    /* Option 5: soft glow */
-    .opt5{box-shadow:0 0 18px rgba(102,126,234,0.22),0 6px 20px rgba(0,0,0,0.12)}
+        .avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block
+        }
 
-    /* Option 6: inset frame */
-    .opt6{box-shadow:inset 0 -6px 12px rgba(0,0,0,0.08),0 6px 18px rgba(0,0,0,0.12);border:2px solid rgba(255,255,255,0.06)}
+        /* Option 1: subtle drop shadow */
+        .opt1 {
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12)
+        }
 
-    h1{color:#667eea}
-    .note{margin-top:18px;color:#555}
-    a.back{display:inline-block;margin-top:18px;padding:8px 12px;background:#667eea;color:#fff;border-radius:6px;text-decoration:none}
-  </style>
+        /* Option 2: stronger shadow */
+        .opt2 {
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25)
+        }
+
+        /* Option 3: thin white ring + subtle shadow */
+        .opt3 {
+            border: 4px solid rgba(255, 255, 255, 0.9);
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12)
+        }
+
+        /* Option 4: colored ring to match theme */
+        .opt4 {
+            border: 4px solid #667eea;
+            box-shadow: 0 8px 24px rgba(102, 126, 234, 0.18)
+        }
+
+        /* Option 5: soft glow */
+        .opt5 {
+            box-shadow: 0 0 18px rgba(102, 126, 234, 0.22), 0 6px 20px rgba(0, 0, 0, 0.12)
+        }
+
+        /* Option 6: inset frame */
+        .opt6 {
+            box-shadow: inset 0 -6px 12px rgba(0, 0, 0, 0.08), 0 6px 18px rgba(0, 0, 0, 0.12);
+            border: 2px solid rgba(255, 255, 255, 0.06)
+        }
+
+        h1 {
+            color: #667eea
+        }
+
+        .note {
+            margin-top: 18px;
+            color: #555
+        }
+
+        a.back {
+            display: inline-block;
+            margin-top: 18px;
+            padding: 8px 12px;
+            background: #667eea;
+            color: #fff;
+            border-radius: 6px;
+            text-decoration: none
+        }
+    </style>
 </head>
+
 <body>
-  <div class="container">
-    <h1>Avatar Styles — Test</h1>
-    <p class="note">Preview of the six avatar border/shadow options using <code>resources/mes.jpg</code>.</p>
+    <div class="container">
+        <h1>Avatar Styles — Test</h1>
+        <p class="note">Preview of the six avatar border/shadow options using <code>resources/mes.jpg</code>.</p>
 
-    <div class="grid">
-      <div class="card">
-        <div class="avatar opt1"><img src="resources/mes.jpg" alt="Marc"></div>
-        <div>Option 1<br><small>Subtle drop shadow</small></div>
-      </div>
+        <div class="grid">
+            <div class="card">
+                <div class="avatar opt1"><img src="resources/mes.jpg" alt="Marc"></div>
+                <div>Option 1<br><small>Subtle drop shadow</small></div>
+            </div>
 
-      <div class="card">
-        <div class="avatar opt2"><img src="resources/mes.jpg" alt="Marc"></div>
-        <div>Option 2<br><small>Stronger shadow</small></div>
-      </div>
+            <div class="card">
+                <div class="avatar opt2"><img src="resources/mes.jpg" alt="Marc"></div>
+                <div>Option 2<br><small>Stronger shadow</small></div>
+            </div>
 
-      <div class="card">
-        <div class="avatar opt3"><img src="resources/mes.jpg" alt="Marc"></div>
-        <div>Option 3<br><small>Thin white ring + shadow</small></div>
-      </div>
+            <div class="card">
+                <div class="avatar opt3"><img src="resources/mes.jpg" alt="Marc"></div>
+                <div>Option 3<br><small>Thin white ring + shadow</small></div>
+            </div>
 
-      <div class="card">
-        <div class="avatar opt4"><img src="resources/mes.jpg" alt="Marc"></div>
-        <div>Option 4<br><small>Colored ring</small></div>
-      </div>
+            <div class="card">
+                <div class="avatar opt4"><img src="resources/mes.jpg" alt="Marc"></div>
+                <div>Option 4<br><small>Colored ring</small></div>
+            </div>
 
-      <div class="card">
-        <div class="avatar opt5"><img src="resources/mes.jpg" alt="Marc"></div>
-        <div>Option 5<br><small>Soft glow</small></div>
-      </div>
+            <div class="card">
+                <div class="avatar opt5"><img src="resources/mes.jpg" alt="Marc"></div>
+                <div>Option 5<br><small>Soft glow</small></div>
+            </div>
 
-      <div class="card">
-        <div class="avatar opt6"><img src="resources/mes.jpg" alt="Marc"></div>
-        <div>Option 6<br><small>Inset frame</small></div>
-      </div>
+            <div class="card">
+                <div class="avatar opt6"><img src="resources/mes.jpg" alt="Marc"></div>
+                <div>Option 6<br><small>Inset frame</small></div>
+            </div>
+        </div>
+
+        <a class="back" href="index.html#team">← Back to MerWare Team</a>
     </div>
-
-    <a class="back" href="index.html#team">← Back to MerWare Team</a>
-  </div>
 </body>
+
 </html>
