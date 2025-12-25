@@ -240,6 +240,17 @@
             margin-top: 40px;
         }
 
+        /* Anchor for Marc so fragment URLs like #marc focus this element */
+        #marc {
+            scroll-margin-top: 90px;
+        }
+
+        #marc:target {
+            box-shadow: 0 12px 30px rgba(102, 126, 234, 0.18);
+            transform: translateY(-6px);
+            transition: all 0.25s ease;
+        }
+
         .team-member {
             text-align: center;
             padding: 30px;
@@ -480,7 +491,7 @@
                 with talented people.</p>
 
             <div class="team-grid">
-                <div class="team-member">
+                <div id="marc" class="team-member">
                     <div class="team-avatar"><img src="merware/resources/mes.jpg" alt="Marc"></div>
                     <h3>Marc</h3>
                     <p class="role">Founder, PM/Dev/&Test (exMSFTpcNerd), Papa, TaiChiPlayer 太极拳, KayakDiver, Mushfaker
