@@ -1,2 +1,4 @@
 User-agent: *
-Disallow: /marc/MarcDiveCV.htm
+Disallow: 
+
+Sitemap: https://merware.net/sitemap.xml
