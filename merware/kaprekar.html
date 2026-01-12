@@ -35,15 +35,129 @@
         }
 
         .audio-toggle {
-            display: inline-block;
+            display: inline-flex;
+            align-items: center;
             padding: 6px 10px;
             margin-right: 10px;
             background: #667eea;
             color: #fff;
             border-radius: 6px;
-            border: none;
+            border: 1px solid rgba(0, 0, 0, 0.12);
             cursor: pointer;
             font-size: 0.95rem;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+            transition: transform 120ms ease, box-shadow 120ms ease, background-color 120ms ease;
+            white-space: nowrap;
+            position: relative;
+            z-index: 1;
+        }
+
+        .audio-toggle:hover {
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.16);
+            transform: translateY(-1px);
+        }
+
+        .audio-toggle:active {
+            transform: translateY(0);
+            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.12);
+        }
+
+        .audio-toggle:focus {
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.25), 0 4px 12px rgba(0, 0, 0, 0.12);
+        }
+
+        /* playing state controlled by class instead of inline styles */
+        .audio-toggle.playing {
+            background: #3355cc;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
+        }
+
+        /* Checkbox-driven 3D play/pause control */
+        input#bg-toggle {
+            position: absolute;
+            left: -9999px;
+        }
+
+        .playButton {
+            --ry: 0deg;
+            --clr: #667eea;
+            display: inline-block;
+            width: 84px;
+            height: 44px;
+            border-radius: 10% / 20%;
+            background-color: var(--clr);
+            perspective: 320px;
+            cursor: pointer;
+            vertical-align: middle;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+            transition: background-color .25s ease, box-shadow .25s ease;
+            padding: 0;
+            border: 1px solid rgba(0, 0, 0, 0.12);
+        }
+
+        /* Icon wrapper — will rotate in 3D between play & pause faces */
+        .playButton .icon {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            /* expanded to ensure both faces share the same bounding box */
+            width: 48px;
+            height: 28px;
+            transform: translate(-50%, -50%) rotateY(var(--ry));
+            transform-style: preserve-3d;
+            transition: transform .45s cubic-bezier(.2, .9, .3, 1);
+        }
+
+        .playButton .face {
+            position: absolute;
+            inset: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            backface-visibility: hidden;
+        }
+
+        /* Play triangle */
+        .playButton .face.play::before {
+            content: '';
+            display: block;
+            width: 0;
+            height: 0;
+            /* make triangle base match pause bars total width so footprint remains constant */
+            border-left: 24px solid #fff;
+            border-top: 11px solid transparent;
+            border-bottom: 11px solid transparent;
+            filter: drop-shadow(0 1px 0 #0002);
+        }
+
+        /* Pause bars (back face) */
+        .playButton .face.pause {
+            transform: rotateY(180deg);
+        }
+
+        .playButton .face.pause .bar {
+            width: 10px;
+            height: 22px;
+            background: #fff;
+            margin: 0 3px;
+            display: inline-block;
+            border-radius: 3px;
+            box-shadow: 0 1px 0 #0004 inset;
+        }
+
+        .playButton .face.pause {
+            gap: 4px;
+        }
+
+        /* checked state (input:checked + label .icon) */
+        input#bg-toggle:checked+.playButton {
+            background-color: #3355cc;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
+        }
+
+        input#bg-toggle:checked+.playButton .icon {
+            transform: translate(-50%, -50%) rotateY(180deg);
         }
 
         .small-note {
@@ -110,8 +224,16 @@
                     with privacy and security as core principles.</span>
             </p>
             <section id="lyrics" class="lyrics">
-                <h2><button id="bg-toggle" class="audio-toggle" type="button" aria-pressed="false">Background
-                        (Off)</button> musical lyrics</h2>
+                <h2>
+                    <input id="bg-toggle" type="checkbox" style="position:absolute;left:-9999px;" />
+                    <label for="bg-toggle" class="playButton" aria-pressed="false" title="Play / Pause">
+                        <span class="icon" aria-hidden="true">
+                            <span class="face play"></span>
+                            <span class="face pause"><span class="bar"></span><span class="bar"></span></span>
+                        </span>
+                    </label>
+                    musical lyrics
+                </h2>
 
                 <h2>Hard Out Here for a Constant</h2>
 
@@ -224,22 +346,33 @@
     <script>
         (function () {
             const audio = document.getElementById('bg-audio');
-            const btn = document.getElementById('bg-toggle');
-            if (!btn || !audio) return;
-            btn.addEventListener('click', function () {
-                if (audio.paused) {
+            const checkbox = document.getElementById('bg-toggle');
+            const label = document.querySelector('.playButton');
+            if (!checkbox || !label || !audio) return;
+
+            // sync initial UI to audio state
+            checkbox.checked = !audio.paused;
+            label.setAttribute('aria-pressed', checkbox.checked ? 'true' : 'false');
+
+            // when user toggles checkbox, start/stop audio
+            checkbox.addEventListener('change', function () {
+                if (checkbox.checked) {
                     audio.play().then(() => {
-                        btn.textContent = 'Background (On)';
-                        btn.setAttribute('aria-pressed', 'true');
-                        btn.style.background = '#3355cc';
-                    }).catch(() => { });
+                        label.setAttribute('aria-pressed', 'true');
+                    }).catch(() => {
+                        // on failure (autoplay blocked), reset checkbox
+                        checkbox.checked = false;
+                        label.setAttribute('aria-pressed', 'false');
+                    });
                 } else {
                     audio.pause();
-                    btn.textContent = 'Background (Off)';
-                    btn.setAttribute('aria-pressed', 'false');
-                    btn.style.background = '#667eea';
+                    label.setAttribute('aria-pressed', 'false');
                 }
             });
+
+            // keep checkbox state in sync if audio is paused/played by other means
+            audio.addEventListener('play', () => { checkbox.checked = true; label.setAttribute('aria-pressed', 'true'); });
+            audio.addEventListener('pause', () => { checkbox.checked = false; label.setAttribute('aria-pressed', 'false'); });
         })();
     </script>
 </body>
