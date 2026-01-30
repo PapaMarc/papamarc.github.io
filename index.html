@@ -539,7 +539,8 @@
 
             <div class="team-grid">
                 <div id="marc" class="team-member">
-                    <div class="team-avatar"><img src="merware/resources/mes.jpg" alt="Marc"></div>
+                    <div class="team-avatar"><img src="merware/resources/mes.jpg"
+                            data-srcs='["/merware/resources/mes.jpg","/merware/resources/marc.jpg"]' alt="Marc"></div>
                     <h3>Marc</h3>
                     <p class="role">Founder, PM/Dev/&Test (exMSFTpcNerd), Papa, TaiChiPlayer 太极拳, KayakDiver, Mushfaker
                         & tinker/QuietGames'er</p>
@@ -648,6 +649,23 @@
         });
 
         // Portfolio items link to separate pages (no in-page modals)
+    </script>
+
+    <script>
+        (function () {
+            var imgs = document.querySelectorAll('.team-avatar img[data-srcs]');
+            if (!imgs || !imgs.length) return;
+            imgs.forEach(function (img) {
+                try {
+                    var data = img.getAttribute('data-srcs');
+                    var arr = data ? JSON.parse(data) : [];
+                    if (Array.isArray(arr) && arr.length) {
+                        var choice = arr[Math.floor(Math.random() * arr.length)];
+                        if (choice) img.src = choice;
+                    }
+                } catch (e) { /* ignore parse errors */ }
+            });
+        })();
     </script>
 </body>
 
