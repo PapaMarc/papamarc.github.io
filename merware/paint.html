@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>MerWare - Paint</title>
+    <link rel="canonical" href="https://merware.net/merware/paint.html">
+    <meta name="description" content="Paint — MerWare: a mid-tempo dancehall-inspired pop track with hypnotic
+sensual female vocals, sparse Caribbean percussion, & deep sub-bass.">
+    <style>
+        body {
+            font-family: Segoe UI, Helvetica, Arial;
+            line-height: 1.5;
+            color: #222;
+            padding: 30px
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto
+        }
+
+        header {
+            margin-bottom: 20px
+        }
+
+        a.button {
+            display: inline-block;
+            padding: 10px 16px;
+            background: #667eea;
+            color: #fff;
+            border-radius: 6px;
+            text-decoration: none
+        }
+
+        .audio-toggle {
+            display: inline-flex;
+            align-items: center;
+            padding: 6px 10px;
+            margin-right: 10px;
+            background: #667eea;
+            color: #fff;
+            border-radius: 6px;
+            border: 1px solid rgba(0, 0, 0, 0.12);
+            cursor: pointer;
+            font-size: 0.95rem;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+            transition: transform 120ms ease, box-shadow 120ms ease, background-color 120ms ease;
+            white-space: nowrap;
+            position: relative;
+            z-index: 1;
+        }
+
+        .audio-toggle:hover {
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.16);
+            transform: translateY(-1px);
+        }
+
+        .audio-toggle:active {
+            transform: translateY(0);
+            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.12);
+        }
+
+        .audio-toggle:focus {
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.25), 0 4px 12px rgba(0, 0, 0, 0.12);
+        }
+
+        /* playing state controlled by class instead of inline styles */
+        .audio-toggle.playing {
+            background: #3355cc;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
+        }
+
+        /* Checkbox-driven 3D play/pause control */
+        input#bg-toggle {
+            position: absolute;
+            left: -9999px;
+        }
+
+        .playButton {
+            --ry: 0deg;
+            --clr: #667eea;
+            display: inline-block;
+            width: 84px;
+            height: 44px;
+            border-radius: 10% / 20%;
+            background-color: var(--clr);
+            perspective: 320px;
+            cursor: pointer;
+            vertical-align: middle;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+            transition: background-color .25s ease, box-shadow .25s ease;
+            padding: 0;
+            border: 1px solid rgba(0, 0, 0, 0.12);
+        }
+
+        /* Icon wrapper — will rotate in 3D between play & pause faces */
+        .playButton .icon {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            /* expanded to ensure both faces share the same bounding box */
+            width: 48px;
+            height: 28px;
+            transform: translate(-50%, -50%) rotateY(var(--ry));
+            transform-style: preserve-3d;
+            transition: transform .45s cubic-bezier(.2, .9, .3, 1);
+        }
+
+        .playButton .face {
+            position: absolute;
+            inset: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            backface-visibility: hidden;
+        }
+
+        /* Play triangle */
+        .playButton .face.play::before {
+            content: '';
+            display: block;
+            width: 0;
+            height: 0;
+            /* make triangle base match pause bars total width so footprint remains constant */
+            border-left: 24px solid #fff;
+            border-top: 11px solid transparent;
+            border-bottom: 11px solid transparent;
+            filter: drop-shadow(0 1px 0 #0002);
+        }
+
+        /* Pause bars (back face) */
+        .playButton .face.pause {
+            transform: rotateY(180deg);
+        }
+
+        .playButton .face.pause .bar {
+            width: 10px;
+            height: 22px;
+            background: #fff;
+            margin: 0 3px;
+            display: inline-block;
+            border-radius: 3px;
+            box-shadow: 0 1px 0 #0004 inset;
+        }
+
+        .playButton .face.pause {
+            gap: 4px;
+        }
+
+        /* checked state (input:checked + label .icon) */
+        input#bg-toggle:checked+.playButton {
+            background-color: #3355cc;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
+        }
+
+        input#bg-toggle:checked+.playButton .icon {
+            transform: translate(-50%, -50%) rotateY(180deg);
+        }
+
+        .small-note {
+            font-size: 0.8rem;
+            color: #444;
+        }
+
+        pre {
+            background: #f4f4f4;
+            padding: 12px;
+            border-radius: 6px;
+            overflow: auto
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>Paint</h1>
+            <p>A MerWare project — a mid-tempo dancehall-inspired pop track exploration with hypnotic
+                sensual female vocals, sparse Caribbean percussion, & deep sub-bass.</p>
+            <p><a href="../index.html#portfolio" class="button">← Back to Portfolio</a></p>
+        </header>
+
+        <section>
+            <h2>Overview</h2>
+            <p>
+                Inspired by Kirsten Ruhs, and Rihanna's <em>Work</em>... </i>Paint</i> attempts to paint a picture of <a
+                    href="https://www.kirpaint.com/about.htm#kirsten">Kirsten</a>.</b>
+            </p><br>
+
+            <section id="lyrics" class="lyrics">
+                <h2>
+                    <input id="bg-toggle" type="checkbox" style="position:absolute;left:-9999px;" />
+                    <label for="bg-toggle" class="playButton" aria-pressed="false" title="Play / Pause">
+                        <span class="icon" aria-hidden="true">
+                            <span class="face play"></span>
+                            <span class="face pause"><span class="bar"></span><span class="bar"></span></span>
+                        </span>
+                    </label>
+                    musical lyrics
+                </h2>
+
+                <h2>Paint</h2>
+
+                <h3>[Intro – Female Vocal]</h3>
+                <p class="intro">
+                    Paint, paint, paint, paint, paint, paint,<br>
+                    Paint, paint, paint, paint, paint, paint.<br>
+                    Thinking ‘bout paint, paint, paint, paint, paint, paint…<br>
+                    I’m obsessed with paint, paint, paint, paint, paint, paint…
+                </p>
+
+                <h3>[Verse 1 – Female Vocal]</h3>
+                <p class="verse">
+                    Colors dripping slow, let it slide on me<br>
+                    Canvas in my mind, set my spirit free<br>
+                    Stroke it left to right, let the rhythm breathe<br>
+                    Every shade I choose, it’s a part of me
+                </p>
+
+                <h3>[Pre-Chorus – Female Vocal]</h3>
+                <p class="pre-chorus">
+                    Touch it once, touch it twice, let the feeling stay<br>
+                    Mix it up, blend it down, chase the night away<br>
+                    Every hue, every tone, got me in a daze<br>
+                    I can’t stop, I can’t stop, I’m lost in the waves
+
+                </p>
+
+                <h3>[Chorus – Female Vocal]</h3>
+                <p class="chorus">
+                    [Chorus – Female Vocal]
+                    Paint, paint, paint, paint, paint, paint…<br>
+                    I’m obsessed with paint, paint, paint, paint, paint, paint…<br>
+                    Thinking ‘bout paint, paint, paint, paint, paint, paint…<br>
+                    I’m obsessed with paint, paint, paint, paint, paint, paint…
+
+                </p>
+
+                <h3>[Verse 2 – Male Vocal / Rap (Drake-style feature)]</h3>
+                <p class="verse">
+                    Yeah, splash it on the wall, let the colors talk<br>
+                    Every shade we choose, it’s the way we walk<br>
+                    From the red to the blue, let the feelings spark<br>
+                    We don’t rush, we don’t fade, we just leave our mark.
+
+                </p>
+
+                <h3>[Bridge – Male Vocal]</h3>
+                <p class="bridge">
+                    Dripping, dripping, dripping, can’t escape the flow<br>
+                    Layer after layer, let the passion show<br>
+                    Every brush, every touch, got me needing more<br>
+                    Paint the night, paint the dream, paint forever, yo.
+
+                </p>
+
+                <h3>[Chorus – Female Vocal]</h3>
+                <p class="chorus">
+                    [Chorus – Female Vocal]
+                    Paint, paint, paint, paint, paint, paint…<br>
+                    I’m obsessed with paint, paint, paint, paint, paint, paint…<br>
+                    Thinking ‘bout paint, paint, paint, paint, paint, paint…<br>
+                    I’m obsessed with paint, paint, paint, paint, paint, paint…
+
+                </p>
+
+                <h3>[Outro – Female Vocal, fading]</h3>
+                <p class="outro">
+                    Paint on my body, paint on my soul<br>
+                    Paint in the rhythm, paint makes me whole<br>
+                    Thinking ‘bout paint, paint, paint, paint, paint, paint<br>
+                    Paint paint paint paint paint paint paint…<br>
+                    I’m obsessed with paint, paint, paint, paint, paint, paint.<br>
+                    Paint, paint, paint, paint, paint, paint, paint.<br><br>
+
+                    Paint. Paint. Paint.
+
+                </p>
+            </section>
+
+            <section>
+                <a id="BuyMeABeer"></a><a id="BuyMeACoffee"></a>
+                <h2>Support the cause</h2>
+                <p>If you enjoy these projects and want to see more, please
+                    consider
+                    sharing, or buying me a coffee, beer, slice or gallon of paint below.</p>
+                <section>
+                    <div class="donation-logos"
+                        style="display:flex;gap:20px;align-items:center;margin-top:18px;flex-wrap:wrap;">
+                        <div style="text-align:center;">
+                            <img src="resources/paymarcbyzelle.jpg" alt="Zelle"
+                                style="max-width:220px;height:auto;display:block;margin:0 auto;">
+                            <div style="margin-top:8px;font-weight:600;">ZelleMeAt: NerdFund@Outlook.com</div>
+                        </div>
+
+                        <div style="text-align:center;">
+                            <img src="resources/paymarcbypaypal.jpg" alt="PayPal"
+                                style="max-width:269px;height:auto;display:block;margin:0 auto;">
+                            <a href="https://PayPal.Me/NerdTips" target="_blank" rel="noopener noreferrer">
+                                <div style="margin-top:8px;font-weight:600;">https://PayPal.Me/NerdTips</div>
+                            </a>
+                        </div>
+
+                        <div style="text-align:center;">
+                            <img src="resources/paymarcbywechat.jpg" alt="WeChat"
+                                style="max-width:220px;height:auto;display:block;margin:0 auto;">
+                        </div>
+                    </div>
+                </section>
+
+
+                <footer style="margin-top:40px;color:#888">Copyright © MerWare 2025 — Paint</footer>
+    </div>
+    <audio id="bg-audio" src="resources/paint.mp3" loop preload="none"></audio>
+    <script>
+        (function () {
+            const audio = document.getElementById('bg-audio');
+            const checkbox = document.getElementById('bg-toggle');
+            const label = document.querySelector('.playButton');
+            if (!checkbox || !label || !audio) return;
+
+            // sync initial UI to audio state
+            checkbox.checked = !audio.paused;
+            label.setAttribute('aria-pressed', checkbox.checked ? 'true' : 'false');
+
+            // when user toggles checkbox, start/stop audio
+            checkbox.addEventListener('change', function () {
+                if (checkbox.checked) {
+                    audio.play().then(() => {
+                        label.setAttribute('aria-pressed', 'true');
+                    }).catch(() => {
+                        // on failure (autoplay blocked), reset checkbox
+                        checkbox.checked = false;
+                        label.setAttribute('aria-pressed', 'false');
+                    });
+                } else {
+                    audio.pause();
+                    label.setAttribute('aria-pressed', 'false');
+                }
+            });
+
+            // keep checkbox state in sync if audio is paused/played by other means
+            audio.addEventListener('play', () => { checkbox.checked = true; label.setAttribute('aria-pressed', 'true'); });
+            audio.addEventListener('pause', () => { checkbox.checked = false; label.setAttribute('aria-pressed', 'false'); });
+        })();
+    </script>
+</body>
+
+</html>
