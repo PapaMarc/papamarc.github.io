@@ -1,10 +1,6 @@
-input#bg-toggle {
-  position: absolute;
-  left: -9999px;
-}
-
 .playButton {
   --ry: 0deg;
+  position: relative;
   --clr: #667eea;
   display: inline-block;
   width: 84px;
@@ -20,6 +16,13 @@ input#bg-toggle {
     box-shadow 0.25s ease;
   padding: 0;
   border: 1px solid rgba(0, 0, 0, 0.12);
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.playButton:focus-visible {
+  outline: 2px solid #3355cc;
+  outline-offset: 3px;
 }
 
 .playButton .icon {
@@ -68,11 +71,11 @@ input#bg-toggle {
   box-shadow: 0 1px 0 #0004 inset;
 }
 
-input#bg-toggle:checked + .playButton {
+.playButton[aria-pressed="true"] {
   background-color: #3355cc;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
 }
 
-input#bg-toggle:checked + .playButton .icon {
+.playButton[aria-pressed="true"] .icon {
   transform: translate(-50%, -50%) rotateY(180deg);
 }

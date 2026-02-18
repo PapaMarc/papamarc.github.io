@@ -1,35 +1,36 @@
 (function () {
   const audio = document.getElementById("bg-audio");
-  const checkbox = document.getElementById("bg-toggle");
-  const label = document.querySelector(".playButton");
-  if (!checkbox || !label || !audio) return;
+  const button = document.getElementById("bg-toggle");
+  if (!button || !audio) return;
 
-  checkbox.checked = !audio.paused;
-  label.setAttribute("aria-pressed", checkbox.checked ? "true" : "false");
+  function setState(isPlaying) {
+    button.setAttribute("aria-pressed", isPlaying ? "true" : "false");
+    button.setAttribute(
+      "aria-label",
+      isPlaying ? "Pause background audio" : "Play background audio",
+    );
+  }
 
-  checkbox.addEventListener("change", function () {
-    if (checkbox.checked) {
+  button.addEventListener("click", function () {
+    if (audio.paused) {
       audio
         .play()
-        .then(() => {
-          label.setAttribute("aria-pressed", "true");
-        })
+        .then(() => setState(true))
         .catch(() => {
-          checkbox.checked = false;
-          label.setAttribute("aria-pressed", "false");
+          setState(false);
         });
     } else {
       audio.pause();
-      label.setAttribute("aria-pressed", "false");
+      setState(false);
     }
   });
 
   audio.addEventListener("play", () => {
-    checkbox.checked = true;
-    label.setAttribute("aria-pressed", "true");
+    setState(true);
   });
   audio.addEventListener("pause", () => {
-    checkbox.checked = false;
-    label.setAttribute("aria-pressed", "false");
+    setState(false);
   });
+
+  setState(!audio.paused);
 })();
