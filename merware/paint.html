@@ -8,6 +8,7 @@
     <link rel="canonical" href="https://merware.net/merware/paint.html">
     <meta name="description" content="Paint — MerWare: a mid-tempo dancehall-inspired pop track with hypnotic
 sensual female vocals, sparse Caribbean percussion, & deep sub-bass.">
+    <link rel="stylesheet" href="css/audio-toggle.css">
     <style>
         body {
             font-family: Segoe UI, Helvetica, Arial;
@@ -73,93 +74,6 @@ sensual female vocals, sparse Caribbean percussion, & deep sub-bass.">
             box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
         }
 
-        /* Checkbox-driven 3D play/pause control */
-        input#bg-toggle {
-            position: absolute;
-            left: -9999px;
-        }
-
-        .playButton {
-            --ry: 0deg;
-            --clr: #667eea;
-            display: inline-block;
-            width: 84px;
-            height: 44px;
-            border-radius: 10% / 20%;
-            background-color: var(--clr);
-            perspective: 320px;
-            cursor: pointer;
-            vertical-align: middle;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
-            transition: background-color .25s ease, box-shadow .25s ease;
-            padding: 0;
-            border: 1px solid rgba(0, 0, 0, 0.12);
-        }
-
-        /* Icon wrapper — will rotate in 3D between play & pause faces */
-        .playButton .icon {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            /* expanded to ensure both faces share the same bounding box */
-            width: 48px;
-            height: 28px;
-            transform: translate(-50%, -50%) rotateY(var(--ry));
-            transform-style: preserve-3d;
-            transition: transform .45s cubic-bezier(.2, .9, .3, 1);
-        }
-
-        .playButton .face {
-            position: absolute;
-            inset: 0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            backface-visibility: hidden;
-        }
-
-        /* Play triangle */
-        .playButton .face.play::before {
-            content: '';
-            display: block;
-            width: 0;
-            height: 0;
-            /* make triangle base match pause bars total width so footprint remains constant */
-            border-left: 24px solid #fff;
-            border-top: 11px solid transparent;
-            border-bottom: 11px solid transparent;
-            filter: drop-shadow(0 1px 0 #0002);
-        }
-
-        /* Pause bars (back face) */
-        .playButton .face.pause {
-            transform: rotateY(180deg);
-        }
-
-        .playButton .face.pause .bar {
-            width: 10px;
-            height: 22px;
-            background: #fff;
-            margin: 0 3px;
-            display: inline-block;
-            border-radius: 3px;
-            box-shadow: 0 1px 0 #0004 inset;
-        }
-
-        .playButton .face.pause {
-            gap: 4px;
-        }
-
-        /* checked state (input:checked + label .icon) */
-        input#bg-toggle:checked+.playButton {
-            background-color: #3355cc;
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
-        }
-
-        input#bg-toggle:checked+.playButton .icon {
-            transform: translate(-50%, -50%) rotateY(180deg);
-        }
-
         .small-note {
             font-size: 0.8rem;
             color: #444;
@@ -192,7 +106,7 @@ sensual female vocals, sparse Caribbean percussion, & deep sub-bass.">
 
             <section id="lyrics" class="lyrics">
                 <h2>
-                    <input id="bg-toggle" type="checkbox" style="position:absolute;left:-9999px;" />
+                    <input id="bg-toggle" type="checkbox" />
                     <label for="bg-toggle" class="playButton" aria-pressed="false" title="Play / Pause">
                         <span class="icon" aria-hidden="true">
                             <span class="face play"></span>
@@ -315,38 +229,7 @@ sensual female vocals, sparse Caribbean percussion, & deep sub-bass.">
                 <footer style="margin-top:40px;color:#888">Copyright © MerWare 2025 — Paint</footer>
     </div>
     <audio id="bg-audio" src="resources/paint.mp3" loop preload="none"></audio>
-    <script>
-        (function () {
-            const audio = document.getElementById('bg-audio');
-            const checkbox = document.getElementById('bg-toggle');
-            const label = document.querySelector('.playButton');
-            if (!checkbox || !label || !audio) return;
-
-            // sync initial UI to audio state
-            checkbox.checked = !audio.paused;
-            label.setAttribute('aria-pressed', checkbox.checked ? 'true' : 'false');
-
-            // when user toggles checkbox, start/stop audio
-            checkbox.addEventListener('change', function () {
-                if (checkbox.checked) {
-                    audio.play().then(() => {
-                        label.setAttribute('aria-pressed', 'true');
-                    }).catch(() => {
-                        // on failure (autoplay blocked), reset checkbox
-                        checkbox.checked = false;
-                        label.setAttribute('aria-pressed', 'false');
-                    });
-                } else {
-                    audio.pause();
-                    label.setAttribute('aria-pressed', 'false');
-                }
-            });
-
-            // keep checkbox state in sync if audio is paused/played by other means
-            audio.addEventListener('play', () => { checkbox.checked = true; label.setAttribute('aria-pressed', 'true'); });
-            audio.addEventListener('pause', () => { checkbox.checked = false; label.setAttribute('aria-pressed', 'false'); });
-        })();
-    </script>
+    <script src="js/audio-toggle.js"></script>
 </body>
 
 </html>
