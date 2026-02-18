@@ -345,6 +345,54 @@
             margin-top: 30px;
         }
 
+        /* Three-column layout for contact emails */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(320px, 1fr));
+            gap: 20px;
+            max-width: 1200px;
+            margin: 30px auto 0 auto;
+            align-items: start;
+            text-align: center;
+        }
+
+        .contact-item {
+            padding: 8px 12px;
+        }
+
+        .contact-item p {
+            color: white;
+            margin: 0;
+            white-space: nowrap;
+        }
+
+        .social-icons {
+            margin-top: 12px;
+            display: flex;
+            gap: 12px;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .social-icons img {
+            width: 32px;
+            height: 32px;
+            display: block;
+        }
+
+        /* Responsive: allow wrapping on narrower screens */
+        @media (max-width: 1000px) {
+            .contact-grid {
+                grid-template-columns: 1fr;
+                max-width: 720px;
+            }
+
+            .contact-item p {
+                white-space: normal;
+                word-break: break-word;
+            }
+        }
+
         .contact-info a {
             color: white;
             text-decoration: none;
@@ -604,8 +652,26 @@
             </p>
 
             <div class="contact-info">
-                <p>To connect mailTo: marc((at))merware((dot))com OR marcse((at))exMSFT((dot))com OR
-                    mseinfeld((at))alumni((dot))duke((dot))edu</p>
+                <p>To connect mailTo:</p>
+                <div class="contact-grid" role="list">
+                    <div class="contact-item" role="listitem">
+                        <p>marc((at))merware((dot))com</p>
+                    </div>
+                    <div class="contact-item" role="listitem">
+                        <p>marcse((at))exMSFT((dot))com</p>
+                        <div class="social-icons" aria-label="social links">
+                            <a href="https://github.com/PapaMarc" target="_blank" rel="noopener"><img
+                                    src="/merware/resources/github1.png" alt="GitHub"></a>
+                            <a href="https://twitter.com/W1ndH2O" target="_blank" rel="noopener"><img
+                                    src="/merware/resources/twitter.png" alt="Twitter"></a>
+                            <a href="https://www.instagram.com/H2OWind/" target="_blank" rel="noopener"><img
+                                    src="/merware/resources/instagram.png" alt="Instagram"></a>
+                        </div>
+                    </div>
+                    <div class="contact-item" role="listitem">
+                        <p>mseinfeld((at))alumni((dot))duke((dot))edu</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
