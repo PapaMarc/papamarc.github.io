@@ -1,0 +1,49 @@
+.section-subtitle--tight-italic {
+  margin-top: -40px;
+  font-style: italic;
+}
+
+.section-subtitle--tight-bold {
+  margin-top: -40px;
+  font-weight: bold;
+}
+
+.footer-note {
+  margin-top: 40px;
+  color: #666;
+}
+
+.footer-note--light {
+  color: #888;
+}
+
+.donation-logos {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  margin-top: 18px;
+  flex-wrap: wrap;
+}
+
+.donation-card {
+  text-align: center;
+}
+
+.donation-image {
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.donation-image--220 {
+  max-width: 220px;
+}
+
+.donation-image--269 {
+  max-width: 269px;
+}
+
+.donation-link {
+  margin-top: 8px;
+  font-weight: 600;
+}
