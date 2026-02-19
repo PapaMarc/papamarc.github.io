@@ -8,6 +8,7 @@
     <link rel="canonical" href="https://merware.net/merware/paint.html">
     <meta name="description" content="Paint — MerWare: a mid-tempo dancehall-inspired pop track with hypnotic
 sensual female vocals, sparse Caribbean percussion, & deep sub-bass.">
+    <link rel="stylesheet" href="css/site-components.css">
     <link rel="stylesheet" href="css/audio-toggle.css">
     <style>
         body {
@@ -33,45 +34,6 @@ sensual female vocals, sparse Caribbean percussion, & deep sub-bass.">
             color: #fff;
             border-radius: 6px;
             text-decoration: none
-        }
-
-        .audio-toggle {
-            display: inline-flex;
-            align-items: center;
-            padding: 6px 10px;
-            margin-right: 10px;
-            background: #667eea;
-            color: #fff;
-            border-radius: 6px;
-            border: 1px solid rgba(0, 0, 0, 0.12);
-            cursor: pointer;
-            font-size: 0.95rem;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
-            transition: transform 120ms ease, box-shadow 120ms ease, background-color 120ms ease;
-            white-space: nowrap;
-            position: relative;
-            z-index: 1;
-        }
-
-        .audio-toggle:hover {
-            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.16);
-            transform: translateY(-1px);
-        }
-
-        .audio-toggle:active {
-            transform: translateY(0);
-            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.12);
-        }
-
-        .audio-toggle:focus {
-            outline: none;
-            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.25), 0 4px 12px rgba(0, 0, 0, 0.12);
-        }
-
-        /* playing state controlled by class instead of inline styles */
-        .audio-toggle.playing {
-            background: #3355cc;
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
         }
 
         .small-note {
@@ -202,31 +164,30 @@ sensual female vocals, sparse Caribbean percussion, & deep sub-bass.">
                     consider
                     sharing, or buying me a coffee, beer, slice or gallon of paint below.</p>
                 <section>
-                    <div class="donation-logos"
-                        style="display:flex;gap:20px;align-items:center;margin-top:18px;flex-wrap:wrap;">
-                        <div style="text-align:center;">
+                    <div class="donation-logos">
+                        <div class="donation-card">
                             <img src="resources/paymarcbyzelle.jpg" alt="Zelle"
-                                style="max-width:220px;height:auto;display:block;margin:0 auto;">
-                            <div style="margin-top:8px;font-weight:600;">ZelleMeAt: NerdFund@Outlook.com</div>
+                                class="donation-image donation-image--220">
+                            <div class="donation-link">ZelleMeAt: NerdFund@Outlook.com</div>
                         </div>
 
-                        <div style="text-align:center;">
+                        <div class="donation-card">
                             <img src="resources/paymarcbypaypal.jpg" alt="PayPal"
-                                style="max-width:269px;height:auto;display:block;margin:0 auto;">
+                                class="donation-image donation-image--269">
                             <a href="https://PayPal.Me/NerdTips" target="_blank" rel="noopener noreferrer">
-                                <div style="margin-top:8px;font-weight:600;">https://PayPal.Me/NerdTips</div>
+                                <div class="donation-link">https://PayPal.Me/NerdTips</div>
                             </a>
                         </div>
 
-                        <div style="text-align:center;">
+                        <div class="donation-card">
                             <img src="resources/paymarcbywechat.jpg" alt="WeChat"
-                                style="max-width:220px;height:auto;display:block;margin:0 auto;">
+                                class="donation-image donation-image--220">
                         </div>
                     </div>
                 </section>
 
 
-                <footer style="margin-top:40px;color:#888">Copyright © MerWare 2025 — Paint</footer>
+                <footer class="footer-note footer-note--light">Copyright © MerWare 2025 — Paint</footer>
     </div>
     <audio id="bg-audio" src="resources/paint.mp3" loop preload="none"></audio>
     <script src="js/audio-toggle.js"></script>
