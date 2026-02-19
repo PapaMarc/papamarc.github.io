@@ -61,6 +61,7 @@
             left: 0;
             right: 0;
             background: rgba(0, 40, 85, 0.98);
+            -webkit-backdrop-filter: blur(10px);
             backdrop-filter: blur(10px);
             padding: 15px 0;
             z-index: 1000;
@@ -400,15 +401,6 @@
             border-bottom: 2px solid white;
         }
 
-        /* Footer */
-        footer {
-            background: rgba(0, 40, 85, 0.98);
-            color: white;
-            font-size: 0.7rem;
-            text-align: left;
-            padding: 26px 0;
-        }
-
         /* Animations */
         @keyframes fadeInDown {
             from {
@@ -625,7 +617,8 @@
                         <br></br>
                         Today, Marc serves as the Director of Business Operations and
                         Shop
-                        Foreman for <a href="https://kirpaint.com/about.htm" target="_blank">KirPaint, Inc.</a>
+                        Foreman for <a href="https://kirpaint.com/about.htm" target="_blank" rel="noopener">KirPaint,
+                            Inc.</a>
                         <br></br>
 
                         He holds a B.A. in Economics from Duke University, where he
@@ -679,11 +672,10 @@
     </section>
 
     <!-- Footer -->
-    <footer>
+    <footer class="site-footer">
         <div class="container">
             <p>&copy; MerWare 2025-2026 | All Rights Reserved | Website Created by <a
                     href="https://merware.com">MerWare</a></p>
-            </p>
         </div>
     </footer>
 

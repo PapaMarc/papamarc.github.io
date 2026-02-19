@@ -8,13 +8,30 @@
   font-weight: bold;
 }
 
-.footer-note {
-  margin-top: 40px;
-  color: #666;
+.site-footer {
+  background: rgba(0, 40, 85, 0.98);
+  color: #fff;
+  font-size: 0.7rem;
+  text-align: left;
+  padding: 26px 0;
 }
 
-.footer-note--light {
-  color: #888;
+.site-footer .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.site-footer a,
+.site-footer a:visited {
+  color: #c7ddff;
+  text-decoration: none;
+}
+
+.site-footer a:hover,
+.site-footer a:focus {
+  color: #fff;
+  text-decoration: underline;
 }
 
 .donation-logos {
