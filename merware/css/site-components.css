@@ -137,24 +137,32 @@ body.site-nav-offset {
   align-items: center;
   margin-top: 18px;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .donation-card {
   text-align: center;
+  flex: 1 1 200px;
+  max-width: 388px;
 }
 
 .donation-image {
+  width: 100%;
   height: auto;
   display: block;
   margin: 0 auto;
+}
+
+.donation-image--201 {
+  max-width: 201px;
 }
 
 .donation-image--220 {
   max-width: 220px;
 }
 
-.donation-image--269 {
-  max-width: 269px;
+.donation-image--288 {
+  max-width: 288px;
 }
 
 .donation-link {
