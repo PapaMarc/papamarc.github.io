@@ -258,6 +258,16 @@ header p {
   border-bottom: 2px solid white;
 }
 
+.bio-details {
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.3s ease;
+}
+
+.bio-details.show {
+  /* JS sets max-height dynamically */
+}
+
 @media (max-width: 1000px) {
   .contact-grid {
     grid-template-columns: 1fr;
