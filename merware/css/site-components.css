@@ -61,6 +61,17 @@
   cursor: pointer;
 }
 
+.feature-list {
+  list-style: disc;
+  list-style-position: outside;
+  margin: 1rem 0;
+  padding-left: 1.5rem;
+}
+
+.feature-list li {
+  margin: 0.35rem 0;
+}
+
 .site-nav-back,
 .site-nav-back:visited {
   color: #fff;
