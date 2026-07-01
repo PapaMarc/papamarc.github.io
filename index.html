@@ -15,6 +15,21 @@
 </head>
 
 <body>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const routes = {
+                "#support": "/merware/support.html",
+                "#kaprekar": "/merware/kaprekar.html",
+                "#travotech": "/TravOTechnology/index.html",
+                "#2trackoptionsmind": "https://github.com/PapaMarc/2TrackOptionsMind-Public"
+            };
+
+            const dest = routes[window.location.hash];
+            if (dest) window.location.href = dest;
+        });
+    </script>
+
+
     <!-- Navigation Bar -->
     <nav class="site-nav">
         <div class="container">
@@ -24,7 +39,7 @@
                 <li><a href="#services">Services</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#contact">Contact</a></li>
-                <li><a href="merware/support.html">Support</a></li>
+                <li><a href="#support">Support</a></li>
             </ul>
             <button class="mobile-menu-toggle" aria-label="Toggle menu">☰</button>
         </div>
