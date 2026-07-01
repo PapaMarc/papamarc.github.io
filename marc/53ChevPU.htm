@@ -45,21 +45,62 @@
 
         <h1>Here's Elizabeth...</h1>
 
-        <button onclick="togglePlayPause()">Press to play/pause proper background Theme Music</button>
+        <button id="theme-audio-toggle" type="button" onclick="togglePlayPause()">Press to play background Theme
+            Music</button>
 
         <script>
-            var audio = new Audio('http://www.sitcomsonline.com/sounds/sanfordandsonlp.wav');
+            var audio = new Audio('https://www.sitcomsonline.com/sounds/sanfordandsonlp.wav');
             var isPlaying = false;
+            var toggleButton = document.getElementById('theme-audio-toggle');
+            audio.preload = 'none';
+
+            function setToggleLabel() {
+                if (!toggleButton) {
+                    return;
+                }
+
+                toggleButton.textContent = isPlaying
+                    ? 'Press to pause background Theme Music'
+                    : 'Press to play background Theme Music';
+            }
+
+            audio.addEventListener('ended', function () {
+                isPlaying = false;
+                setToggleLabel();
+            });
+
+            audio.addEventListener('pause', function () {
+                isPlaying = false;
+                setToggleLabel();
+            });
+
+            audio.addEventListener('error', function () {
+                isPlaying = false;
+                setToggleLabel();
+
+                if (toggleButton) {
+                    toggleButton.textContent = 'Audio unavailable at source URL';
+                    toggleButton.disabled = true;
+                }
+            });
 
             function togglePlayPause() {
                 if (isPlaying) {
                     audio.pause();
                     isPlaying = false;
+                    setToggleLabel();
                 } else {
-                    audio.play();
-                    isPlaying = true;
+                    audio.play().then(function () {
+                        isPlaying = true;
+                        setToggleLabel();
+                    }).catch(function () {
+                        isPlaying = false;
+                        setToggleLabel();
+                    });
                 }
             }
+
+            setToggleLabel();
         </script>
 
         <p>1953 1/2 ton Chevy Pickup completely restored ~1990 (frame off restoration)... but still
