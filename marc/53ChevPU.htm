@@ -22,9 +22,8 @@
     <link rel="stylesheet" href="../merware/css/site-components.css">
     <link rel="stylesheet" href="../merware/css/site-home.css">
 
-    <bgsound SRC="http://www.sitcomsonline.com/sounds/sanfordandsonlp.wav">
-        <title>1953 Chevy 1/2 ton pickup</title>
-        <meta name="keywords" content="Seinfeld, CV, Microsoft">
+    <title>1953 Chevy 1/2 ton pickup</title>
+    <meta name="keywords" content="Seinfeld, CV, Microsoft">
 </head>
 
 <body>
@@ -49,8 +48,7 @@
             Music</button>
 
         <script>
-            var audio = new Audio('https://www.sitcomsonline.com/sounds/sanfordandsonlp.wav');
-            var isPlaying = false;
+            var audio = new Audio('../merware/resources/sanfordandsonlp.wav');
             var toggleButton = document.getElementById('theme-audio-toggle');
             audio.preload = 'none';
 
@@ -59,25 +57,25 @@
                     return;
                 }
 
-                toggleButton.textContent = isPlaying
-                    ? 'Press to pause background Theme Music'
-                    : 'Press to play background Theme Music';
+                toggleButton.textContent = audio.paused
+                    ? 'Press to play background Theme Music'
+                    : 'Press to pause background Theme Music';
             }
 
-            audio.addEventListener('ended', function () {
-                isPlaying = false;
+            audio.addEventListener('play', function () {
                 setToggleLabel();
             });
 
             audio.addEventListener('pause', function () {
-                isPlaying = false;
+                setToggleLabel();
+            });
+
+            audio.addEventListener('ended', function () {
+                audio.currentTime = 0;
                 setToggleLabel();
             });
 
             audio.addEventListener('error', function () {
-                isPlaying = false;
-                setToggleLabel();
-
                 if (toggleButton) {
                     toggleButton.textContent = 'Audio unavailable at source URL';
                     toggleButton.disabled = true;
@@ -85,18 +83,15 @@
             });
 
             function togglePlayPause() {
-                if (isPlaying) {
-                    audio.pause();
-                    isPlaying = false;
-                    setToggleLabel();
-                } else {
-                    audio.play().then(function () {
-                        isPlaying = true;
-                        setToggleLabel();
-                    }).catch(function () {
-                        isPlaying = false;
-                        setToggleLabel();
+                if (audio.paused) {
+                    audio.play().catch(function (err) {
+                        if (toggleButton) {
+                            toggleButton.textContent = 'Playback blocked: check browser/site media permissions';
+                        }
+                        console.error(err);
                     });
+                } else {
+                    audio.pause();
                 }
             }
 
