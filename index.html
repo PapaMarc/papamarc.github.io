@@ -299,21 +299,26 @@
         </div>
     </footer>
     <script>
-        window.onload = () => {
-            const routes = {
-                "#support": "/merware/support.html",
-                "#kaprekar": "/merware/kaprekar.html",
-                "#travotech": "/TravOTechnology/index.html",
-                "#2trackoptionsmind": "https://github.com/PapaMarc/2TrackOptionsMind-Public"
-            };
+        const hashRoutes = {
+            "#support": "/merware/support.html",
+            "#kaprekar": "/merware/kaprekar.html",
+            "#travotech": "/TravOTechnology/index.html",
+            "#2trackoptionsmind": "https://github.com/PapaMarc/2TrackOptionsMind-Public"
+        };
 
-            const hash = window.location.hash;
-            const dest = routes[hash];
+        function redirectHashRoute() {
+            const dest = hashRoutes[window.location.hash];
 
             if (dest) {
                 window.location.replace(dest);
+                return true;
             }
-        };
+
+            return false;
+        }
+
+        redirectHashRoute();
+        window.addEventListener('hashchange', redirectHashRoute);
     </script>
 
     <script>
@@ -335,9 +340,16 @@
         // Smooth scrolling for navigation links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
+                const href = this.getAttribute('href');
+
+                if (hashRoutes[href]) {
+                    window.location.hash = href;
+                    return;
+                }
+
+                const target = document.querySelector(href);
                 if (target) {
+                    e.preventDefault();
                     target.scrollIntoView({
                         behavior: 'smooth',
                         block: 'start'
