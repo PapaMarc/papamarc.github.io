@@ -16,7 +16,7 @@
 
 <body>
     <script>
-        document.addEventListener("DOMContentLoaded", () => {
+        window.onload = () => {
             const routes = {
                 "#support": "/merware/support.html",
                 "#kaprekar": "/merware/kaprekar.html",
@@ -24,9 +24,13 @@
                 "#2trackoptionsmind": "https://github.com/PapaMarc/2TrackOptionsMind-Public"
             };
 
-            const dest = routes[window.location.hash];
-            if (dest) window.location.href = dest;
-        });
+            const hash = window.location.hash;
+            const dest = routes[hash];
+
+            if (dest) {
+                window.location.replace(dest);
+            }
+        };
     </script>
 
 
