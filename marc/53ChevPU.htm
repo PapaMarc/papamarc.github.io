@@ -22,6 +22,13 @@
     <link rel="stylesheet" href="../merware/css/site-components.css">
     <link rel="stylesheet" href="../merware/css/site-home.css">
 
+    <style>
+        .page-photo {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+
     <title>1953 Chevy 1/2 ton pickup</title>
     <meta name="keywords" content="Seinfeld, CV, Microsoft">
 </head>
@@ -101,7 +108,8 @@
         <p>1953 1/2 ton Chevy Pickup completely restored ~1990 (frame off restoration)... but still
             ready to <a HREF="53haul.jpg">haul refrigerators just like on TV</a> </p>
 
-        <p><img SRC="53hood.jpg" width="433" height="290"> </p>
+        <p><img src="53hood.jpg" width="433" height="290" alt="Front hood view of the 1953 Chevy pickup"
+                class="page-photo"> </p>
 
         <p>1959 engine block-- <a HREF="53eng.jpg">261cu in. 'straight six' motor</a> (the original '53
             had power pressure splash oiling system which Chevy reengineered in the 59 motor which included a proper oil
@@ -174,7 +182,8 @@
             More recently (Summer '22), after sitting idle for a several years while we were living over in Beijing—I
             did an
             overhaul to the fuel, air and ignition system upon our return. While most of it was fairly straightforward
-            including replacing the <a href="https://amzn.to/3LKGd59" target="_blank">Carter P4070</a> inline electric
+            including replacing the <a href="https://amzn.to/3LKGd59" target="_blank" rel="noopener noreferrer">Carter
+                P4070</a> inline electric
             fuel pump, and all the fuel lines (and oil lines between engine and filter), air filters, and new points and
             condenser in the old Delco-Remy model#1112353 distributor along with new plugs (Champion J6C) and silicone
             cables/boots, coil
@@ -223,75 +232,53 @@
                 sender</a> which no longer had insulation and was shorting out, so i once again have no need to track
             mileage between fill-ups and manually calculate mileage to know i have fuel in the tank! I did also purchase
             a
-            <a href="https://amzn.to/4cavk7j" target="_blank">Pertronix 1168LS</a> electronic ignition unit which at
+            <a href="https://amzn.to/4cavk7j" target="_blank" rel="noopener noreferrer">Pertronix 1168LS</a> electronic
+            ignition unit which at
             some point in the not too distant future I’ll swap into the original Delco-Remy distributor in place of the
             points and condenser, and retune again. <br>
             To round it all out, since I’ve been using it as a daily driver of late… it’s all now rolling on a new set
             of
-            <a href="https://amzn.to/3YokEyz" target="_blank">BFGoodrich 235 60/R15 Radial T/A</a> tires.
+            <a href="https://amzn.to/3YokEyz" target="_blank" rel="noopener noreferrer">BFGoodrich 235 60/R15 Radial
+                T/A</a> tires.
 
         </p>
 
-        <body class="">
-
-        </body>
-        </p>
-
-        <p><img SRC="53rear.jpg" width="433" height="293"> <br>
+        <p><img src="53rear.jpg" width="433" height="293" alt="Rear view of the 1953 Chevy pickup" class="page-photo">
+            <br>
         </p>
 
         <hr>
 
-        </p>
-        <!-- Footer -->
-        <footer class="site-footer">
-            <div class="container">
-                <p>&copy; MerWare 2025-2026 | All Rights Reserved | Website Created by <a
-                        href="https://merware.com">MerWare</a>
-                </p>
-                <p class="marcos-note">
-                    MarcOS v1.0 — under the me
-                    <a href="https://github.com/PapaMarc/marc-os">→ GitHub</a>
-                </p>
-            </div>
-        </footer>
-        <!-- <footer>
-            <ul>  
-                <li><a href="https://bit.ly/2I44CBs">A short CV/bio here.</a> Cheers </li>
-                    <li>
-                        <p><a href="MarcsProducts.htm">Marc's Products here</a>, including some Alexa Home Automation
-                            favorites,
-                            and some coffee musings.
-                        </p>
-                    </li>
-                    <li>
-                        <p>Back to <a href="index.html">Marc's Homepage</a></p>
-                    </li>
-                    <li>
-                        <p>To share comment, mail to marcse((at))exMSFT((dot))com OR
-                            mseinfeld((at))alumni((dot))duke((dot))edu
-                        </p>
-                    </li>
-                <li>
-            </ul>
-        </footer>-->
+    </main>
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; MerWare 2025-2026 | All Rights Reserved | Website Created by <a
+                    href="https://merware.com">MerWare</a>
+            </p>
+            <p class="marcos-note">
+                MarcOS v1.0 — under the me
+                <a href="https://github.com/PapaMarc/marc-os">→ GitHub</a>
+            </p>
+        </div>
+    </footer>
 
-        <script>
-            // Mobile menu toggle
-            const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
-            const navLinks = document.querySelector('.nav-links');
+    <script>
+        // Mobile menu toggle
+        const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+        const navLinks = document.querySelector('.nav-links');
 
-            mobileMenuToggle.addEventListener('click', function () {
-                navLinks.classList.toggle('active');
+        mobileMenuToggle.addEventListener('click', function () {
+            navLinks.classList.toggle('active');
+        });
+
+        // Close mobile menu when a link is clicked
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', function () {
+                navLinks.classList.remove('active');
             });
-
-            // Close mobile menu when a link is clicked
-            document.querySelectorAll('.nav-links a').forEach(link => {
-                link.addEventListener('click', function () {
-                    navLinks.classList.remove('active');
-                });
-            });
-        </script>
+        });
+    </script>
 </body>
 
 </html>
