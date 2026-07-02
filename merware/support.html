@@ -38,7 +38,8 @@ layout: null
     <div class="container">
         <header>
             <h1>Support</h1>
-            <p>No obligation, ever — but if you'd enjoy supporting your friendly neighborhood on‑call tech whisperer or household
+            <p>No obligation, ever — but if you'd enjoy supporting your friendly neighborhood on‑call tech whisperer or
+                household
                 problem‑solver, you’ve found the tip jar.</p>
             <br>
         </header>
@@ -57,6 +58,23 @@ layout: null
                 </p>
             </div>
         </footer>
+
+        <script>
+            // Mobile menu toggle
+            const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+            const navLinks = document.querySelector('.nav-links');
+
+            mobileMenuToggle.addEventListener('click', function () {
+                navLinks.classList.toggle('active');
+            });
+
+            // Close mobile menu when a link is clicked
+            document.querySelectorAll('.nav-links a').forEach(link => {
+                link.addEventListener('click', function () {
+                    navLinks.classList.remove('active');
+                });
+            });
+        </script>
 
 </body>
 
