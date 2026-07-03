@@ -180,6 +180,10 @@ body.site-nav-offset {
     overflow: hidden;
   }
 
+  .site-nav .nav-submenu-item {
+    position: static;
+  }
+
   .site-nav .nav-links.active {
     transform: translateX(0);
   }
@@ -199,6 +203,7 @@ body.site-nav-offset {
     pointer-events: none;
     transition: transform 0.25s ease;
     box-shadow: none;
+    overflow-y: auto;
   }
 
   .site-nav .nav-links.submenu-active .nav-submenu-panel {
