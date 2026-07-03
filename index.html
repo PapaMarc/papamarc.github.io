@@ -327,6 +327,7 @@
             "#support": "/merware/support.html",
             "#kaprekar": "/merware/kaprekar.html",
             "#diveshop": "/TravOTechnology/index.html",
+            "#Coffee": "/marc/Coffee.htm",
             "#53ChevPU": "/marc/53ChevPU.htm",
             "#MarcsProducts": "/marc/MarcsProducts.htm",
             "#2trackoptionsmind": "https://github.com/PapaMarc/2TrackOptionsMind-Public"
@@ -353,9 +354,25 @@
         const navLinks = document.querySelector('.nav-links');
         const submenuItem = document.querySelector('.nav-submenu-item');
         const submenuToggle = document.querySelector('.nav-submenu-toggle');
+        const submenuPanel = document.querySelector('.nav-submenu-panel');
+        let submenuCloseTimer = null;
+
+        function cancelScheduledClose() {
+            if (submenuCloseTimer) {
+                clearTimeout(submenuCloseTimer);
+                submenuCloseTimer = null;
+            }
+        }
+
+        function scheduleDesktopClose() {
+            if (!isDesktopNav()) return;
+            cancelScheduledClose();
+            submenuCloseTimer = setTimeout(closeSubmenu, 140);
+        }
 
         function closeSubmenu() {
             if (!submenuItem || !submenuToggle || !navLinks) return;
+            cancelScheduledClose();
             submenuItem.classList.remove('submenu-open');
             navLinks.classList.remove('submenu-active');
             submenuToggle.setAttribute('aria-expanded', 'false');
@@ -363,6 +380,7 @@
 
         function openSubmenu() {
             if (!submenuItem || !submenuToggle || !navLinks) return;
+            cancelScheduledClose();
             submenuItem.classList.add('submenu-open');
             navLinks.classList.add('submenu-active');
             submenuToggle.setAttribute('aria-expanded', 'true');
@@ -400,9 +418,13 @@
             });
 
             submenuItem.addEventListener('mouseleave', function () {
-                if (!isDesktopNav()) return;
-                closeSubmenu();
+                scheduleDesktopClose();
             });
+
+            if (submenuPanel) {
+                submenuPanel.addEventListener('mouseenter', cancelScheduledClose);
+                submenuPanel.addEventListener('mouseleave', scheduleDesktopClose);
+            }
         }
 
         // Close mobile menu when a link is clicked
