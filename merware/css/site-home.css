@@ -91,6 +91,7 @@ header p {
     transform 0.3s,
     box-shadow 0.3s;
   cursor: pointer;
+  scroll-margin-top: 100px;
 }
 
 .portfolio-item:hover {
