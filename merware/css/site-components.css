@@ -8,6 +8,18 @@
   font-weight: bold;
 }
 
+:root {
+  --site-anchor-offset: 70px;
+}
+
+html {
+  scroll-padding-block-start: var(--site-anchor-offset);
+}
+
+body:has(:target) {
+  padding-block-end: max(0px, calc(100vh - var(--site-anchor-offset)));
+}
+
 .site-nav {
   position: fixed;
   top: 0;
