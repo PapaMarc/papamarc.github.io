@@ -104,10 +104,41 @@
         const bookList = document.getElementById('book-list');
         const catalogStatus = document.getElementById('catalog-status');
 
-        function formatDate(dateRead) {
+        function parseCatalogDate(value) {
+            if (!value) {
+                return null;
+            }
+
+            if (/^\d{4}$/.test(value)) {
+                return new Date(Number(value), 0, 1);
+            }
+
+            const usDate = value.match(/^(\d{1,2})\/(\d{1,2})\/(\d{4})$/);
+            if (usDate) {
+                return new Date(Number(usDate[3]), Number(usDate[1]) - 1, Number(usDate[2]));
+            }
+
+            const isoDate = value.match(/^(\d{4})-(\d{2})-(\d{2})$/);
+            if (isoDate) {
+                return new Date(Number(isoDate[1]), Number(isoDate[2]) - 1, Number(isoDate[3]));
+            }
+
+            return null;
+        }
+
+        function formatDate(value) {
+            if (/^\d{4}$/.test(value)) {
+                return value;
+            }
+
+            const date = parseCatalogDate(value);
+            if (!date || Number.isNaN(date.getTime())) {
+                return value;
+            }
+
             return new Intl.DateTimeFormat(undefined, {
                 dateStyle: 'long'
-            }).format(new Date(`${dateRead}T00:00:00`));
+            }).format(date);
         }
 
         function sortBooks(books) {
@@ -121,7 +152,7 @@
                 if (!right.book.dateRead) {
                     return -1;
                 }
-                return right.book.dateRead.localeCompare(left.book.dateRead);
+                return parseCatalogDate(right.book.dateRead) - parseCatalogDate(left.book.dateRead);
             }).map(entry => entry.book);
         }
 
@@ -133,7 +164,12 @@
                 title.textContent = book.title;
                 item.append(title);
 
-                [book.subtitle, book.author, book.dateRead ? `Read ${formatDate(book.dateRead)}` : null]
+                [
+                    book.subtitle,
+                    book.author,
+                    book.pubDate ? `Published ${formatDate(book.pubDate)}` : null,
+                    book.dateRead ? `Read ${formatDate(book.dateRead)}` : null
+                ]
                     .filter(Boolean)
                     .forEach(detail => {
                         const detailText = document.createElement('span');
