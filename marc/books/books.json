@@ -1,6 +1,7 @@
 {
   "books": [
     {
+      "type": "kindleBook",
       "title": "A Discovery of Witches",
       "subtitle": "A Novel (All Souls Trilogy, Book 1)",
       "author": "Deborah Harkness",
@@ -10,6 +11,24 @@
         "csv": "A Discovery of Witches_ A Novel (All Souls Trilogy_ Book 1)-Notebook.csv",
         "pdf": "A Discovery of Witches_ A Novel (All Souls Trilogy_ Book 1)-Notebook.pdf"
       }
+    },
+    {
+      "type": "onlineRef",
+      "title": "Are You Living in a Computer Simulation?",
+      "subtitle": null,
+      "author": "Nick Bostrom",
+      "pubDate": "2003",
+      "dateRead": "July 2020",
+      "url": "https://simulation-argument.com/simulation.pdf"
+    },
+    {
+      "type": "onlineRef",
+      "title": "On Entropy Leading to Complexity at a Next-Level Scale",
+      "subtitle": "From my perspective, how and why AI, as a new species, may survive mankind, spread across the universe's matter as its compute media (also see God's Debris).",
+      "author": "Carl Sagan",
+      "pubDate": null,
+      "dateRead": null,
+      "url": "https://www.instagram.com/reel/DW_3rV9D_Jl"
     },
     {
       "title": "Agent Storm: My Life Inside al Qaeda and the CIA",
@@ -294,11 +313,11 @@
       }
     },
     {
-      "title": "Wavewalker: The International Bestseller True Story of a Young Girl's Fight for Freedom and Education",
-      "subtitle": null,
-      "author": null,
-      "pubDate": null,
-      "dateRead": null,
+      "title": "Wavewalker",
+      "subtitle": "The International Bestseller True Story of a Young Girl's Fight for Freedom and Education",
+      "author": "Heywood, Suzanne",
+      "pubDate": "2003",
+      "dateRead": "09/2026",
       "files": {
         "html": "Wavewalker THE INTERNATIONAL BESTSELLING TRUE-STO - Notebook.html",
         "pdf": "Notebook - Wavewalker_ THE INTERNATIONAL BESTSELLING TRUE-STORY OF A YOUNG GIRL’S FIGHT FOR FREEDOM AND EDUCATION.pdf"

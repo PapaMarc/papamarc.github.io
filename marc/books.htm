@@ -25,6 +25,16 @@
             margin-bottom: 24px;
         }
 
+        .catalog-section {
+            margin-top: 36px;
+        }
+
+        .catalog-section h2 {
+            text-align: left;
+            font-size: 1.5rem;
+            margin-bottom: 12px;
+        }
+
         .book-list {
             padding-left: 1.5rem;
         }
@@ -73,9 +83,15 @@
 
     <main id="page-top" class="book-catalog">
         <h1>Marc's Reading List</h1>
-        <p>Reading notes and related book materials.</p>
+        <p>Kindle highlights, and reading notes.</p>
         <p id="catalog-status" class="catalog-status" aria-live="polite">Loading books...</p>
-        <ul id="book-list" class="book-list" hidden></ul>
+        <section id="kindle-books-section" class="catalog-section" hidden>
+            <ul id="book-list" class="book-list"></ul>
+        </section>
+        <section id="online-references-section" class="catalog-section" hidden>
+            <h2>Online Papers and Other Thought-Provoking Writings</h2>
+            <ul id="online-reference-list" class="book-list"></ul>
+        </section>
     </main>
 
     <footer class="site-footer">
@@ -106,6 +122,9 @@
         };
         const formatOrder = ['html', 'pdf', 'csv'];
         const bookList = document.getElementById('book-list');
+        const kindleBooksSection = document.getElementById('kindle-books-section');
+        const onlineReferenceList = document.getElementById('online-reference-list');
+        const onlineReferencesSection = document.getElementById('online-references-section');
         const catalogStatus = document.getElementById('catalog-status');
 
         function parseCatalogDate(value) {
@@ -115,6 +134,11 @@
 
             if (/^\d{4}$/.test(value)) {
                 return new Date(Number(value), 0, 1);
+            }
+
+            const monthYear = value.match(/^(\d{1,2})\/(\d{4})$/);
+            if (monthYear) {
+                return new Date(Number(monthYear[2]), Number(monthYear[1]) - 1, 1);
             }
 
             const usDate = value.match(/^(\d{1,2})\/(\d{1,2})\/(\d{4})$/);
@@ -131,7 +155,7 @@
         }
 
         function formatDate(value) {
-            if (/^\d{4}$/.test(value)) {
+            if (/^\d{4}$/.test(value) || /^\d{1,2}\/\d{4}$/.test(value)) {
                 return value;
             }
 
@@ -160,37 +184,42 @@
             }).map(entry => entry.book);
         }
 
-        function renderCatalog(books) {
-            sortBooks(books).forEach(book => {
-                const item = document.createElement('li');
-                const title = document.createElement('strong');
-                title.className = 'book-title';
-                title.textContent = book.title;
-                item.append(title);
+        function appendCatalogEntry(book, list) {
+            const item = document.createElement('li');
+            const title = document.createElement(book.url ? 'a' : 'strong');
+            title.className = 'book-title';
+            title.textContent = book.title;
+            if (book.url) {
+                title.href = book.url;
+                title.target = '_blank';
+                title.rel = 'noopener noreferrer';
+            }
+            item.append(title);
 
-                if (book.subtitle) {
-                    const subtitle = document.createElement('em');
-                    subtitle.className = 'book-subtitle';
-                    subtitle.textContent = ` - ${book.subtitle}`;
-                    item.append(subtitle);
-                }
+            if (book.subtitle) {
+                const subtitle = document.createElement('em');
+                subtitle.className = 'book-subtitle';
+                subtitle.textContent = ` - ${book.subtitle}`;
+                item.append(subtitle);
+            }
 
-                [book.author, book.pubDate ? formatDate(book.pubDate) : null]
-                    .filter(Boolean)
-                    .forEach(detail => {
-                        const detailText = document.createElement('span');
-                        detailText.className = 'book-detail';
-                        detailText.textContent = ` · ${detail}`;
-                        item.append(detailText);
-                    });
+            [book.author, book.pubDate ? formatDate(book.pubDate) : null]
+                .filter(Boolean)
+                .forEach(detail => {
+                    const detailText = document.createElement('span');
+                    detailText.className = 'book-detail';
+                    detailText.textContent = ` · ${detail}`;
+                    item.append(detailText);
+                });
 
-                if (book.dateRead) {
-                    const readDate = document.createElement('span');
-                    readDate.className = 'book-detail book-read-date';
-                    readDate.textContent = `\u00a0\u00a0\u00a0(Read: ${formatDate(book.dateRead)})`;
-                    item.append(readDate);
-                }
+            if (book.dateRead) {
+                const readDate = document.createElement('span');
+                readDate.className = 'book-detail book-read-date';
+                readDate.textContent = `\u00a0\u00a0\u00a0(Read: ${formatDate(book.dateRead)})`;
+                item.append(readDate);
+            }
 
+            if (book.files) {
                 const fileList = document.createElement('ul');
                 fileList.className = 'book-files';
                 formatOrder.forEach(format => {
@@ -205,11 +234,21 @@
                     fileList.append(fileItem);
                 });
                 item.append(fileList);
-                bookList.append(item);
-            });
+            }
 
+            list.append(item);
+        }
+
+        function renderCatalog(entries) {
+            const kindleBooks = entries.filter(entry => !entry.type || entry.type === 'kindleBook');
+            const onlineReferences = entries.filter(entry => entry.type === 'onlineRef');
+
+            sortBooks(kindleBooks).forEach(book => appendCatalogEntry(book, bookList));
+            sortBooks(onlineReferences).forEach(reference => appendCatalogEntry(reference, onlineReferenceList));
+
+            kindleBooksSection.hidden = kindleBooks.length === 0;
+            onlineReferencesSection.hidden = onlineReferences.length === 0;
             catalogStatus.hidden = true;
-            bookList.hidden = false;
         }
 
         fetch('books/books.json')
