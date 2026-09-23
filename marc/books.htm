@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Marc's reading notes and book notebooks.">
-    <title>Marc's Books | MerWare</title>
+    <title>Marc's Reading List | MerWare</title>
     <link rel="stylesheet" href="../merware/css/site-base.css">
     <link rel="stylesheet" href="../merware/css/site-components.css">
     <link rel="stylesheet" href="../merware/css/site-home.css">
@@ -41,6 +41,10 @@
             color: #666;
         }
 
+        .book-subtitle {
+            font-style: italic;
+        }
+
         .book-files {
             margin: 6px 0 0;
             padding-left: 1.5rem;
@@ -68,7 +72,7 @@
     </nav>
 
     <main id="page-top" class="book-catalog">
-        <h1>Marc's Books</h1>
+        <h1>Marc's Reading List</h1>
         <p>Reading notes and related book materials.</p>
         <p id="catalog-status" class="catalog-status" aria-live="polite">Loading books...</p>
         <ul id="book-list" class="book-list" hidden></ul>
@@ -159,24 +163,33 @@
         function renderCatalog(books) {
             sortBooks(books).forEach(book => {
                 const item = document.createElement('li');
-                const title = document.createElement('span');
+                const title = document.createElement('strong');
                 title.className = 'book-title';
                 title.textContent = book.title;
                 item.append(title);
 
-                [
-                    book.subtitle,
-                    book.author,
-                    book.pubDate ? `Published ${formatDate(book.pubDate)}` : null,
-                    book.dateRead ? `Read ${formatDate(book.dateRead)}` : null
-                ]
+                if (book.subtitle) {
+                    const subtitle = document.createElement('em');
+                    subtitle.className = 'book-subtitle';
+                    subtitle.textContent = ` - ${book.subtitle}`;
+                    item.append(subtitle);
+                }
+
+                [book.author, book.pubDate ? formatDate(book.pubDate) : null]
                     .filter(Boolean)
                     .forEach(detail => {
                         const detailText = document.createElement('span');
                         detailText.className = 'book-detail';
-                        detailText.textContent = ` - ${detail}`;
+                        detailText.textContent = ` · ${detail}`;
                         item.append(detailText);
                     });
+
+                if (book.dateRead) {
+                    const readDate = document.createElement('span');
+                    readDate.className = 'book-detail book-read-date';
+                    readDate.textContent = `\u00a0\u00a0\u00a0(Read: ${formatDate(book.dateRead)})`;
+                    item.append(readDate);
+                }
 
                 const fileList = document.createElement('ul');
                 fileList.className = 'book-files';
