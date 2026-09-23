@@ -1,0 +1,281 @@
+{
+  "books": [
+    {
+      "title": "A Discovery of Witches: A Novel (All Souls Trilogy, Book 1)",
+      "subtitle": "A Novel (All Souls Trilogy, Book 1)",
+      "author": "Deborah Harkness",
+      "dateRead": "11/27/2016",
+      "files": {
+        "csv": "A Discovery of Witches_ A Novel (All Souls Trilogy_ Book 1)-Notebook.csv",
+        "pdf": "A Discovery of Witches_ A Novel (All Souls Trilogy_ Book 1)-Notebook.pdf"
+      }
+    },
+    {
+      "title": "Agent Storm: My Life Inside al Qaeda and the CIA",
+      "subtitle": null,
+      "author": null,
+      "dateRead": null,
+      "files": {
+        "csv": "Agent Storm_ My Life Inside al Qaeda and the CIA-Notebook.csv",
+        "pdf": "Agent Storm_ My Life Inside al Qaeda and the CIA-Notebook.pdf"
+      }
+    },
+    {
+      "title": "Altered Carbon (Takeshi Kovacs Novels, Book 1)",
+      "subtitle": null,
+      "author": null,
+      "dateRead": null,
+      "files": {
+        "pdf": "Notebook - Altered Carbon (Takeshi Kovacs Novels Book 1).pdf"
+      }
+    },
+    {
+      "title": "Amped (Vintage Contemporaries)",
+      "subtitle": null,
+      "author": null,
+      "dateRead": null,
+      "files": {
+        "html": "Amped (Vintage Contemporaries) - Notebook.html",
+        "csv": "Amped (Vintage Contemporaries)-Notebook.csv",
+        "pdf": "Amped (Vintage Contemporaries)-Notebook.pdf"
+      }
+    },
+    {
+      "title": "And Shall Machines Surrender (Machine Mandate, Book 1)",
+      "subtitle": null,
+      "author": null,
+      "dateRead": null,
+      "files": {
+        "html": "And Shall Machines Surrender (Machine Mandate Book - Notebook.html",
+        "csv": "And Shall Machines Surrender (Machine Mandate Book 1)-Notebook.csv",
+        "pdf": "And Shall Machines Surrender (Machine Mandate Book 1)-Notebook.pdf"
+      }
+    },
+    {
+      "title": "Apex: Nexus Trilogy, Book 3 (Nexus Arc)",
+      "subtitle": null,
+      "author": null,
+      "dateRead": null,
+      "files": {
+        "html": "Apex Nexus Trilogy Book 3 (Nexus Arc) - Notebook.html",
+        "csv": "Apex_ Nexus Trilogy Book 3 (Nexus Arc)-Notebook.csv",
+        "pdf": "Apex_ Nexus Trilogy Book 3 (Nexus Arc)-Notebook.pdf"
+      }
+    },
+    {
+      "title": "Carrying the Fire: 50th Anniversary Edition",
+      "subtitle": null,
+      "author": null,
+      "dateRead": null,
+      "files": {
+        "csv": "Carrying the Fire_ 50th Anniversary Edition-Notebook.csv",
+        "pdf": "Carrying the Fire_ 50th Anniversary Edition-Notebook.pdf"
+      }
+    },
+    {
+      "title": "Clownfish Blues: A Novel (Serge Storms)",
+      "subtitle": null,
+      "author": null,
+      "dateRead": null,
+      "files": {
+        "csv": "Clownfish Blues_ A Novel (Serge Storms)-Notebook.csv",
+        "pdf": "Clownfish Blues_ A Novel (Serge Storms)-Notebook.pdf"
+      }
+    },
+    {
+      "title": "Crux (The Nexus Trilogy, Book 2)",
+      "subtitle": null,
+      "author": null,
+      "dateRead": null,
+      "files": {
+        "csv": "Crux (The Nexus Trilogy Book 2)-Notebook.csv",
+        "pdf": "Crux (The Nexus Trilogy Book 2)-Notebook.pdf"
+      }
+    },
+    {
+      "title": "Death's End (Remembrance of Earth's Past)",
+      "subtitle": null,
+      "author": null,
+      "dateRead": null,
+      "files": {
+        "csv": "Death's End (Remembrance of Earth's Past)-Notebook.csv",
+        "pdf": "Death's End (Remembrance of Earth's Past)-Notebook.pdf"
+      }
+    },
+    {
+      "title": "Elon Musk: Tesla, SpaceX, and the Quest for a Fantastic Future",
+      "subtitle": null,
+      "author": null,
+      "dateRead": null,
+      "files": {
+        "csv": "Elon Musk_ Tesla_ SpaceX_ and the Quest for a Fantastic Future-Notebook.csv",
+        "pdf": "Elon Musk_ Tesla_ SpaceX_ and the Quest for a Fantastic Future-Notebook.pdf"
+      }
+    },
+    {
+      "title": "Extraterrestrial: The First Sign of Intelligent Life Beyond Earth",
+      "subtitle": null,
+      "author": null,
+      "dateRead": null,
+      "files": {
+        "html": "Extraterrestrial The First Sign of Intelligent Li - Notebook.html",
+        "csv": "Extraterrestrial_ The First Sign of Intelligent Life Beyond Earth-Notebook.csv",
+        "pdf": "Extraterrestrial_ The First Sign of Intelligent Life Beyond Earth-Notebook.pdf"
+      }
+    },
+    {
+      "title": "God's Debris: A Thought Experiment",
+      "subtitle": null,
+      "author": null,
+      "dateRead": null,
+      "files": {
+        "csv": "God's Debris_ A Thought Experiment-Notebook.csv",
+        "pdf": "God's Debris_ A Thought Experiment-Notebook.pdf"
+      }
+    },
+    {
+      "title": "Idea Man: A Memoir by the Cofounder of Microsoft",
+      "subtitle": null,
+      "author": null,
+      "dateRead": null,
+      "files": {
+        "csv": "Idea Man_ A Memoir by the Cofounder of Microsoft-Notebook.csv",
+        "pdf": "Idea Man_ A Memoir by the Cofounder of Microsoft-Notebook.pdf"
+      }
+    },
+    {
+      "title": "Letters from an Astrophysicist",
+      "subtitle": null,
+      "author": null,
+      "dateRead": null,
+      "files": {
+        "html": "Letters from an Astrophysicist - Notebook.html",
+        "csv": "Letters from an Astrophysicist-Notebook.csv",
+        "pdf": "Letters from an Astrophysicist-Notebook.pdf"
+      }
+    },
+    {
+      "title": "Life 3.0: Being Human in the Age of Artificial Intelligence",
+      "subtitle": null,
+      "author": null,
+      "dateRead": null,
+      "files": {
+        "html": "Life 3.0 - Notebook.html",
+        "csv": "Life 3_0_ Being Human in the Age of Artificial Intelligence-Notebook.csv",
+        "pdf": "Life 3_0_ Being Human in the Age of Artificial Intelligence-Notebook.pdf"
+      }
+    },
+    {
+      "title": "Robogenesis: A Novel (Vintage Contemporaries)",
+      "subtitle": null,
+      "author": null,
+      "dateRead": null,
+      "files": {
+        "csv": "Robogenesis_ A Novel (Vintage Contemporaries)-Notebook.csv",
+        "pdf": "Robogenesis_ A Novel (Vintage Contemporaries)-Notebook.pdf"
+      }
+    },
+    {
+      "title": "Robopocalypse: A Novel (Vintage Contemporaries)",
+      "subtitle": null,
+      "author": null,
+      "dateRead": null,
+      "files": {
+        "csv": "Robopocalypse_ A Novel (Vintage Contemporaries)-Notebook.csv",
+        "pdf": "Robopocalypse_ A Novel (Vintage Contemporaries)-Notebook.pdf"
+      }
+    },
+    {
+      "title": "Scam Me If You Can: Simple Strategies to Outsmart Today's Rip-off Artists",
+      "subtitle": null,
+      "author": null,
+      "dateRead": null,
+      "files": {
+        "html": "Scam Me If You Can - Notebook.html",
+        "csv": "Scam Me If You Can_ Simple Strategies to Outsmart Today's Rip-off Artists-Notebook.csv",
+        "pdf": "Scam Me If You Can_ Simple Strategies to Outsmart Today's Rip-off Artists-Notebook.pdf"
+      }
+    },
+    {
+      "title": "Seveneves: A Novel",
+      "subtitle": null,
+      "author": null,
+      "dateRead": null,
+      "files": {
+        "csv": "Seveneves_ A Novel-Notebook.csv",
+        "pdf": "Seveneves_ A Novel-Notebook.pdf"
+      }
+    },
+    {
+      "title": "Supernova Era",
+      "subtitle": null,
+      "author": null,
+      "dateRead": null,
+      "files": {
+        "html": "Supernova Era - Notebook.html"
+      }
+    },
+    {
+      "title": "The Boys in the Boat: Nine Americans and Their Epic Quest for Gold at the 1936 Berlin Olympics",
+      "subtitle": null,
+      "author": null,
+      "dateRead": null,
+      "files": {
+        "csv": "The Boys in the Boat_ Nine Americans and Their Epic Quest for Gold at the 1936 Berlin Olympics-Notebook.csv",
+        "pdf": "The Boys in the Boat_ Nine Americans and Their Epic Quest for Gold at the 1936 Berlin Olympics-Notebook.pdf"
+      }
+    },
+    {
+      "title": "The Dark Forest (Remembrance of Earth's Past)",
+      "subtitle": null,
+      "author": null,
+      "dateRead": null,
+      "files": {
+        "html": "The Dark Forest (Remembrance of Earth's Past) - Notebook.html",
+        "csv": "The Dark Forest (Remembrance of Earth's Past)-Notebook.csv",
+        "pdf": "The Dark Forest (Remembrance of Earth's Past)-Notebook.pdf"
+      }
+    },
+    {
+      "title": "The Singularity Is Near: When Humans Transcend Biology",
+      "subtitle": null,
+      "author": null,
+      "dateRead": null,
+      "files": {
+        "html": "The Singularity Is Near When Humans Transcend Bio - Notebook.html",
+        "csv": "The Singularity Is Near_ When Humans Transcend Biology-Notebook.csv",
+        "pdf": "The Singularity Is Near_ When Humans Transcend Biology-Notebook.pdf"
+      }
+    },
+    {
+      "title": "The Three-Body Problem (Remembrance of Earth's Past)",
+      "subtitle": null,
+      "author": null,
+      "dateRead": null,
+      "files": {
+        "csv": "The Three-Body Problem (Remembrance of Earth's Past)-Notebook.csv",
+        "pdf": "The Three-Body Problem (Remembrance of Earth's Past)-Notebook.pdf"
+      }
+    },
+    {
+      "title": "The Wandering Earth",
+      "subtitle": null,
+      "author": null,
+      "dateRead": null,
+      "files": {
+        "csv": "The Wandering Earth-Notebook.csv",
+        "pdf": "The Wandering Earth-Notebook.pdf"
+      }
+    },
+    {
+      "title": "Wavewalker: The International Bestseller True Story of a Young Girl's Fight for Freedom and Education",
+      "subtitle": null,
+      "author": null,
+      "dateRead": null,
+      "files": {
+        "html": "Wavewalker THE INTERNATIONAL BESTSELLING TRUE-STO - Notebook.html",
+        "pdf": "Notebook - Wavewalker_ THE INTERNATIONAL BESTSELLING TRUE-STORY OF A YOUNG GIRL’S FIGHT FOR FREEDOM AND EDUCATION.pdf"
+      }
+    }
+  ]
+}

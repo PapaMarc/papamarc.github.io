@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Marc's reading notes and book notebooks.">
+    <title>Marc's Books | MerWare</title>
+    <link rel="stylesheet" href="../merware/css/site-base.css">
+    <link rel="stylesheet" href="../merware/css/site-components.css">
+    <link rel="stylesheet" href="../merware/css/site-home.css">
+    <style>
+        .book-catalog {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 30px 20px 60px;
+        }
+
+        .book-catalog h1 {
+            color: #667eea;
+            margin-bottom: 12px;
+        }
+
+        .book-catalog p {
+            margin-bottom: 24px;
+        }
+
+        .book-list {
+            padding-left: 1.5rem;
+        }
+
+        .book-list>li {
+            margin: 16px 0;
+        }
+
+        .book-title {
+            font-weight: 700;
+        }
+
+        .book-detail {
+            color: #666;
+        }
+
+        .book-files {
+            margin: 6px 0 0;
+            padding-left: 1.5rem;
+        }
+
+        .catalog-status {
+            color: #666;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="site-nav">
+        <div class="container">
+            <a href="../index.html" class="logo">MerWare</a>
+            <ul class="nav-links">
+                <li><a href="../index.html#portfolio">Portfolio</a></li>
+                <li><a href="../index.html#creation">Creation</a></li>
+                <li><a href="../index.html#about">About</a></li>
+                <li><a href="../index.html#contact">Contact</a></li>
+                <li><a href="../merware/support.html">Support</a></li>
+            </ul>
+            <button class="mobile-menu-toggle" aria-label="Toggle menu">&#9776;</button>
+        </div>
+    </nav>
+
+    <main id="page-top" class="book-catalog">
+        <h1>Marc's Books</h1>
+        <p>Reading notes and related book materials.</p>
+        <p id="catalog-status" class="catalog-status" aria-live="polite">Loading books...</p>
+        <ul id="book-list" class="book-list" hidden></ul>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; MerWare 2025-2026 | All Rights Reserved | Website Created by <a
+                    href="https://merware.com">MerWare</a></p>
+        </div>
+    </footer>
+
+    <script>
+        const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+        const navLinks = document.querySelector('.nav-links');
+
+        mobileMenuToggle.addEventListener('click', function () {
+            navLinks.classList.toggle('active');
+        });
+
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', function () {
+                navLinks.classList.remove('active');
+            });
+        });
+
+        const formatLabels = {
+            html: 'HTML',
+            pdf: 'PDF',
+            csv: 'CSV'
+        };
+        const formatOrder = ['html', 'pdf', 'csv'];
+        const bookList = document.getElementById('book-list');
+        const catalogStatus = document.getElementById('catalog-status');
+
+        function formatDate(dateRead) {
+            return new Intl.DateTimeFormat(undefined, {
+                dateStyle: 'long'
+            }).format(new Date(`${dateRead}T00:00:00`));
+        }
+
+        function sortBooks(books) {
+            return books.map((book, index) => ({ book, index })).sort((left, right) => {
+                if (!left.book.dateRead && !right.book.dateRead) {
+                    return left.index - right.index;
+                }
+                if (!left.book.dateRead) {
+                    return 1;
+                }
+                if (!right.book.dateRead) {
+                    return -1;
+                }
+                return right.book.dateRead.localeCompare(left.book.dateRead);
+            }).map(entry => entry.book);
+        }
+
+        function renderCatalog(books) {
+            sortBooks(books).forEach(book => {
+                const item = document.createElement('li');
+                const title = document.createElement('span');
+                title.className = 'book-title';
+                title.textContent = book.title;
+                item.append(title);
+
+                [book.subtitle, book.author, book.dateRead ? `Read ${formatDate(book.dateRead)}` : null]
+                    .filter(Boolean)
+                    .forEach(detail => {
+                        const detailText = document.createElement('span');
+                        detailText.className = 'book-detail';
+                        detailText.textContent = ` - ${detail}`;
+                        item.append(detailText);
+                    });
+
+                const fileList = document.createElement('ul');
+                fileList.className = 'book-files';
+                formatOrder.forEach(format => {
+                    if (!book.files[format]) {
+                        return;
+                    }
+                    const fileItem = document.createElement('li');
+                    const link = document.createElement('a');
+                    link.href = `books/${encodeURIComponent(book.files[format])}`;
+                    link.textContent = formatLabels[format];
+                    fileItem.append(link);
+                    fileList.append(fileItem);
+                });
+                item.append(fileList);
+                bookList.append(item);
+            });
+
+            catalogStatus.hidden = true;
+            bookList.hidden = false;
+        }
+
+        fetch('books/books.json')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Unable to load the book catalog.');
+                }
+                return response.json();
+            })
+            .then(catalog => renderCatalog(catalog.books))
+            .catch(() => {
+                catalogStatus.textContent = 'The book catalog is currently unavailable.';
+            });
+    </script>
+</body>
+
+</html>
