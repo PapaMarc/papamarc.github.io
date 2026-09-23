@@ -25,7 +25,12 @@
             margin-bottom: 24px;
         }
 
-        .catalog-section {
+        .book-catalog .catalog-section {
+            margin-top: 0;
+            padding: 0;
+        }
+
+        .book-catalog #online-references-section {
             margin-top: 36px;
         }
 
@@ -82,14 +87,14 @@
     </nav>
 
     <main id="page-top" class="book-catalog">
-        <h1>Marc's Reading List</h1>
-        <p>Kindle highlights, and reading notes.</p>
+        <h1>A Partial Reading List</h1>
+        <p>Highlights, and reading notes as available, <i>for books read on a Kindle.</i></p>
         <p id="catalog-status" class="catalog-status" aria-live="polite">Loading books...</p>
         <section id="kindle-books-section" class="catalog-section" hidden>
             <ul id="book-list" class="book-list"></ul>
         </section>
         <section id="online-references-section" class="catalog-section" hidden>
-            <h2>Online Papers and Other Thought-Provoking Writings</h2>
+            <h2>Online Papers and Other Thought-Provoking Prose</h2>
             <ul id="online-reference-list" class="book-list"></ul>
         </section>
     </main>
