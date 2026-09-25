@@ -187,9 +187,13 @@ body.site-nav-offset {
     gap: 12px;
     border-radius: 8px;
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    max-height: calc(100vh - 90px);
+    max-height: calc(100dvh - 90px);
     transform: translateX(110%);
     transition: transform 0.25s ease;
-    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: auto;
+    overscroll-behavior: contain;
   }
 
   .site-nav .nav-submenu-item {
@@ -218,8 +222,7 @@ body.site-nav-offset {
     max-height: 0;
     transition:
       transform 0.25s ease,
-      opacity 0.2s ease,
-      max-height 0.25s ease;
+      opacity 0.2s ease;
     box-shadow: none;
     overflow: hidden;
   }
@@ -228,7 +231,7 @@ body.site-nav-offset {
     transform: translateX(0);
     opacity: 1;
     pointer-events: auto;
-    max-height: 220px;
+    max-height: none;
   }
 
   .site-nav .nav-submenu-panel li + li {
@@ -243,7 +246,7 @@ body.site-nav-offset {
   .site-nav .nav-submenu-item.submenu-open .nav-submenu-panel {
     transform: translateX(0);
     opacity: 1;
-    max-height: 220px;
+    max-height: none;
   }
 
   .site-nav .mobile-menu-toggle {
