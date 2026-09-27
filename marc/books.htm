@@ -60,6 +60,11 @@
             font-style: italic;
         }
 
+        .book-reaction {
+            display: block;
+            margin-top: 4px;
+        }
+
         .book-files {
             margin: 6px 0 0;
             padding-left: 1.5rem;
@@ -150,6 +155,17 @@
                 return new Date(Number(monthYear[2]), Number(monthYear[1]) - 1, 1);
             }
 
+            const namedMonthYear = value.match(/^([A-Za-z]+)\s+(\d{4})$/);
+            if (namedMonthYear) {
+                const monthName = namedMonthYear[1].toLowerCase();
+                const monthIndex = ['january', 'february', 'march', 'april', 'may', 'june',
+                    'july', 'august', 'september', 'october', 'november', 'december']
+                    .findIndex(name => name === monthName || name.slice(0, 3) === monthName);
+                if (monthIndex !== -1) {
+                    return new Date(Number(namedMonthYear[2]), monthIndex, 1);
+                }
+            }
+
             const usDate = value.match(/^(\d{1,2})\/(\d{1,2})\/(\d{4})$/);
             if (usDate) {
                 return new Date(Number(usDate[3]), Number(usDate[1]) - 1, Number(usDate[2]));
@@ -164,7 +180,7 @@
         }
 
         function formatDate(value) {
-            if (/^\d{4}$/.test(value) || /^\d{1,2}\/\d{4}$/.test(value)) {
+            if (/^\d{4}$/.test(value) || /^\d{1,2}\/\d{4}$/.test(value) || /^[A-Za-z]+\s+\d{4}$/.test(value)) {
                 return value;
             }
 
@@ -180,16 +196,18 @@
 
         function sortBooks(books) {
             return books.map((book, index) => ({ book, index })).sort((left, right) => {
-                if (!left.book.dateRead && !right.book.dateRead) {
+                const leftDate = left.book.dateIngested || left.book.dateRead;
+                const rightDate = right.book.dateIngested || right.book.dateRead;
+                if (!leftDate && !rightDate) {
                     return left.index - right.index;
                 }
-                if (!left.book.dateRead) {
+                if (!leftDate) {
                     return 1;
                 }
-                if (!right.book.dateRead) {
+                if (!rightDate) {
                     return -1;
                 }
-                return parseCatalogDate(right.book.dateRead) - parseCatalogDate(left.book.dateRead);
+                return parseCatalogDate(rightDate) - parseCatalogDate(leftDate);
             }).map(entry => entry.book);
         }
 
@@ -221,11 +239,20 @@
                     item.append(detailText);
                 });
 
-            if (book.dateRead) {
+            const catalogDate = book.dateIngested || book.dateRead;
+            if (catalogDate) {
                 const readDate = document.createElement('span');
                 readDate.className = 'book-detail book-read-date';
-                readDate.textContent = `\u00a0\u00a0\u00a0(Read: ${formatDate(book.dateRead)})`;
+                const label = book.dateIngested ? 'Read, or otherwise ingested' : 'Read';
+                readDate.textContent = `\u00a0\u00a0\u00a0(${label}: ${formatDate(catalogDate)})`;
                 item.append(readDate);
+            }
+
+            if (book.reaction) {
+                const reaction = document.createElement('span');
+                reaction.className = 'book-detail book-reaction';
+                reaction.textContent = book.reaction;
+                item.append(reaction);
             }
 
             if (book.files) {
