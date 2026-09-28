@@ -417,6 +417,7 @@
             </p>
         </div>
     </footer>
+    <script src="/merware/js/hash-resolver.js"></script>
     <script>
         const hashRoutes = {
             "#support": "/merware/support.html",
@@ -431,19 +432,7 @@
             "#2trackoptionsmind": "https://github.com/PapaMarc/2TrackOptionsMind-Public"
         };
 
-        function redirectHashRoute() {
-            const dest = hashRoutes[window.location.hash];
-
-            if (dest) {
-                window.location.replace(dest);
-                return true;
-            }
-
-            return false;
-        }
-
-        redirectHashRoute();
-        window.addEventListener('hashchange', redirectHashRoute);
+        MerWareHashResolver.init(hashRoutes);
     </script>
 
     <script>
