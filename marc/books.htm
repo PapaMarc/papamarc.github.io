@@ -82,6 +82,14 @@
             margin-top: 4px;
         }
 
+        .book-reaction p {
+            margin: 0 0 0.75em;
+        }
+
+        .book-reaction p:last-child {
+            margin-bottom: 0;
+        }
+
         .book-files {
             margin: 6px 0 0;
             padding-left: 1.5rem;
@@ -327,9 +335,13 @@
             }
 
             if (book.reaction) {
-                const reaction = document.createElement('span');
+                const reaction = document.createElement('div');
                 reaction.className = 'book-detail book-reaction';
-                reaction.textContent = book.reaction;
+                book.reaction.split(/\n\s*\n/).forEach(paragraphText => {
+                    const paragraph = document.createElement('p');
+                    paragraph.textContent = paragraphText.trim();
+                    reaction.append(paragraph);
+                });
                 item.append(reaction);
             }
 
