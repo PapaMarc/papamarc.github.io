@@ -275,9 +275,9 @@
             list.append(item);
         }
 
-        function renderCatalog(entries) {
-            const kindleBooks = entries.filter(entry => !entry.type || entry.type === 'kindleBook');
-            const onlineReferences = entries.filter(entry => entry.type === 'onlineRef');
+        function renderCatalog(catalog) {
+            const kindleBooks = catalog.books;
+            const onlineReferences = catalog.onlineReferences;
 
             sortBooks(kindleBooks).forEach(book => appendCatalogEntry(book, bookList));
             sortBooks(onlineReferences).forEach(reference => appendCatalogEntry(reference, onlineReferenceList));
@@ -294,7 +294,7 @@
                 }
                 return response.json();
             })
-            .then(catalog => renderCatalog(catalog.books))
+            .then(catalog => renderCatalog(catalog))
             .catch(() => {
                 catalogStatus.textContent = 'The book catalog is currently unavailable.';
             });

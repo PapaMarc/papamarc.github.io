@@ -1,7 +1,6 @@
 {
   "books": [
     {
-      "type": "kindleBook",
       "title": "A Discovery of Witches",
       "subtitle": "A Novel (All Souls Trilogy, Book 1)",
       "author": "Harkness, Deborah",
@@ -10,27 +9,8 @@
       "files": {
         "csv": "A Discovery of Witches_ A Novel (All Souls Trilogy_ Book 1)-Notebook.csv",
         "pdf": "A Discovery of Witches_ A Novel (All Souls Trilogy_ Book 1)-Notebook.pdf"
-      }
-    },
-    {
-      "type": "onlineRef",
-      "title": "Are You Living in a Computer Simulation?",
-      "subtitle": null,
-      "author": "Bostrom, Nick",
-      "pubDate": "2003",
-      "dateRead": "July 2020",
-      "url": "https://simulation-argument.com/simulation.pdf"
-    },
-    {
-      "type": "onlineRef",
-      "title": "On Entropy Leading to Complexity at a Next-Level Scale",
-      "subtitle": null,
-      "author": "Sagan, Carl",
-      "pubDate": null,
-      "dateRead": null,
-      "dateIngested": "Aug 2026",
-      "reaction": "Reaction: From my perspective, how and why AI, as a new species which we have created, may survive mankind, spread across the universe's matter as its compute media, arriving at next level higher complexity rather than entropy. And as much as we live on in the memory of others, so will we travel the universe embodied in the AI itself which traverses that time and distance. (also see God's Debris).",
-      "url": "https://www.instagram.com/reel/DW_3rV9D_Jl"
+      },
+      "id": "discovery-harkness"
     },
     {
       "title": "Agent Storm",
@@ -41,7 +21,8 @@
       "files": {
         "csv": "Agent Storm_ My Life Inside al Qaeda and the CIA-Notebook.csv",
         "pdf": "Agent Storm_ My Life Inside al Qaeda and the CIA-Notebook.pdf"
-      }
+      },
+      "id": "agent-storm"
     },
     {
       "title": "Altered Carbon",
@@ -51,7 +32,8 @@
       "dateRead": "11/2024",
       "files": {
         "pdf": "Notebook - Altered Carbon (Takeshi Kovacs Novels Book 1).pdf"
-      }
+      },
+      "id": "altered-morgan"
     },
     {
       "title": "Amped",
@@ -63,7 +45,8 @@
         "html": "Amped (Vintage Contemporaries) - Notebook.html",
         "csv": "Amped (Vintage Contemporaries)-Notebook.csv",
         "pdf": "Amped (Vintage Contemporaries)-Notebook.pdf"
-      }
+      },
+      "id": "amped-wilson"
     },
     {
       "title": "And Shall Machines Surrender",
@@ -75,7 +58,8 @@
         "html": "And Shall Machines Surrender (Machine Mandate Book - Notebook.html",
         "csv": "And Shall Machines Surrender (Machine Mandate Book 1)-Notebook.csv",
         "pdf": "And Shall Machines Surrender (Machine Mandate Book 1)-Notebook.pdf"
-      }
+      },
+      "id": "machines-sriduangkaew"
     },
     {
       "title": "Apex",
@@ -87,7 +71,8 @@
         "html": "Apex Nexus Trilogy Book 3 (Nexus Arc) - Notebook.html",
         "csv": "Apex_ Nexus Trilogy Book 3 (Nexus Arc)-Notebook.csv",
         "pdf": "Apex_ Nexus Trilogy Book 3 (Nexus Arc)-Notebook.pdf"
-      }
+      },
+      "id": "apex-naam"
     },
     {
       "title": "Carrying the Fire",
@@ -98,7 +83,8 @@
       "files": {
         "csv": "Carrying the Fire_ 50th Anniversary Edition-Notebook.csv",
         "pdf": "Carrying the Fire_ 50th Anniversary Edition-Notebook.pdf"
-      }
+      },
+      "id": "carrying-collins"
     },
     {
       "title": "Clownfish Blues",
@@ -109,7 +95,8 @@
       "files": {
         "csv": "Clownfish Blues_ A Novel (Serge Storms)-Notebook.csv",
         "pdf": "Clownfish Blues_ A Novel (Serge Storms)-Notebook.pdf"
-      }
+      },
+      "id": "clownfish-dorsey"
     },
     {
       "title": "Crux",
@@ -120,7 +107,8 @@
       "files": {
         "csv": "Crux (The Nexus Trilogy Book 2)-Notebook.csv",
         "pdf": "Crux (The Nexus Trilogy Book 2)-Notebook.pdf"
-      }
+      },
+      "id": "crux-naam"
     },
     {
       "title": "Death's End",
@@ -131,7 +119,8 @@
       "files": {
         "csv": "Death's End (Remembrance of Earth's Past)-Notebook.csv",
         "pdf": "Death's End (Remembrance of Earth's Past)-Notebook.pdf"
-      }
+      },
+      "id": "death-liu"
     },
     {
       "title": "Elon Musk",
@@ -142,7 +131,8 @@
       "files": {
         "csv": "Elon Musk_ Tesla_ SpaceX_ and the Quest for a Fantastic Future-Notebook.csv",
         "pdf": "Elon Musk_ Tesla_ SpaceX_ and the Quest for a Fantastic Future-Notebook.pdf"
-      }
+      },
+      "id": "elon-vance"
     },
     {
       "title": "Extraterrestrial",
@@ -154,7 +144,8 @@
         "html": "Extraterrestrial The First Sign of Intelligent Li - Notebook.html",
         "csv": "Extraterrestrial_ The First Sign of Intelligent Life Beyond Earth-Notebook.csv",
         "pdf": "Extraterrestrial_ The First Sign of Intelligent Life Beyond Earth-Notebook.pdf"
-      }
+      },
+      "id": "extraterrestrial-loeb"
     },
     {
       "title": "God's Debris",
@@ -165,7 +156,8 @@
       "files": {
         "csv": "God's Debris_ A Thought Experiment-Notebook.csv",
         "pdf": "God's Debris_ A Thought Experiment-Notebook.pdf"
-      }
+      },
+      "id": "debris-scott"
     },
     {
       "title": "Idea Man",
@@ -176,7 +168,8 @@
       "files": {
         "csv": "Idea Man_ A Memoir by the Cofounder of Microsoft-Notebook.csv",
         "pdf": "Idea Man_ A Memoir by the Cofounder of Microsoft-Notebook.pdf"
-      }
+      },
+      "id": "ideaMan-allen"
     },
     {
       "title": "Letters from an Astrophysicist",
@@ -188,7 +181,8 @@
         "html": "Letters from an Astrophysicist - Notebook.html",
         "csv": "Letters from an Astrophysicist-Notebook.csv",
         "pdf": "Letters from an Astrophysicist-Notebook.pdf"
-      }
+      },
+      "id": "letters-degrasse"
     },
     {
       "title": "Life 3.0",
@@ -200,7 +194,8 @@
         "html": "Life 3.0 - Notebook.html",
         "csv": "Life 3_0_ Being Human in the Age of Artificial Intelligence-Notebook.csv",
         "pdf": "Life 3_0_ Being Human in the Age of Artificial Intelligence-Notebook.pdf"
-      }
+      },
+      "id": "life3.0-tegmark"
     },
     {
       "title": "Robogenesis",
@@ -211,7 +206,8 @@
       "files": {
         "csv": "Robogenesis_ A Novel (Vintage Contemporaries)-Notebook.csv",
         "pdf": "Robogenesis_ A Novel (Vintage Contemporaries)-Notebook.pdf"
-      }
+      },
+      "id": "robogenesis-wilson"
     },
     {
       "title": "Robopocalypse",
@@ -222,7 +218,8 @@
       "files": {
         "csv": "Robopocalypse_ A Novel (Vintage Contemporaries)-Notebook.csv",
         "pdf": "Robopocalypse_ A Novel (Vintage Contemporaries)-Notebook.pdf"
-      }
+      },
+      "id": "robopocalypse-wilson"
     },
     {
       "title": "Scam Me If You Can",
@@ -234,7 +231,8 @@
         "html": "Scam Me If You Can - Notebook.html",
         "csv": "Scam Me If You Can_ Simple Strategies to Outsmart Today's Rip-off Artists-Notebook.csv",
         "pdf": "Scam Me If You Can_ Simple Strategies to Outsmart Today's Rip-off Artists-Notebook.pdf"
-      }
+      },
+      "id": "ifYouCan-abagnale"
     },
     {
       "title": "Seveneves",
@@ -245,7 +243,8 @@
       "files": {
         "csv": "Seveneves_ A Novel-Notebook.csv",
         "pdf": "Seveneves_ A Novel-Notebook.pdf"
-      }
+      },
+      "id": "seveneves-stephenson"
     },
     {
       "title": "Supernova Era",
@@ -255,18 +254,20 @@
       "dateRead": "01/2024",
       "files": {
         "html": "Supernova Era - Notebook.html"
-      }
+      },
+      "id": "supernova-liu"
     },
     {
       "title": "The Boys in the Boat",
       "subtitle": "Nine Americans and Their Epic Quest for Gold at the 1936 Berlin Olympics",
-      "author": null,
+      "author": "Brown, Daniel James",
       "pubDate": null,
       "dateRead": "11/2016",
       "files": {
         "csv": "The Boys in the Boat_ Nine Americans and Their Epic Quest for Gold at the 1936 Berlin Olympics-Notebook.csv",
         "pdf": "The Boys in the Boat_ Nine Americans and Their Epic Quest for Gold at the 1936 Berlin Olympics-Notebook.pdf"
-      }
+      },
+      "id": "boys-brown"
     },
     {
       "title": "The Dark Forest",
@@ -278,7 +279,8 @@
         "html": "The Dark Forest (Remembrance of Earth's Past) - Notebook.html",
         "csv": "The Dark Forest (Remembrance of Earth's Past)-Notebook.csv",
         "pdf": "The Dark Forest (Remembrance of Earth's Past)-Notebook.pdf"
-      }
+      },
+      "id": "dark-liu"
     },
     {
       "title": "The Singularity Is Near",
@@ -290,7 +292,8 @@
         "html": "The Singularity Is Near When Humans Transcend Bio - Notebook.html",
         "csv": "The Singularity Is Near_ When Humans Transcend Biology-Notebook.csv",
         "pdf": "The Singularity Is Near_ When Humans Transcend Biology-Notebook.pdf"
-      }
+      },
+      "id": "singularity-kurzweil"
     },
     {
       "title": "The Three-Body Problem",
@@ -301,7 +304,8 @@
       "files": {
         "csv": "The Three-Body Problem (Remembrance of Earth's Past)-Notebook.csv",
         "pdf": "The Three-Body Problem (Remembrance of Earth's Past)-Notebook.pdf"
-      }
+      },
+      "id": "threeBody-liu"
     },
     {
       "title": "The Wandering Earth",
@@ -312,7 +316,8 @@
       "files": {
         "csv": "The Wandering Earth-Notebook.csv",
         "pdf": "The Wandering Earth-Notebook.pdf"
-      }
+      },
+      "id": "wandering-liu"
     },
     {
       "title": "Wavewalker",
@@ -323,7 +328,8 @@
       "files": {
         "html": "Wavewalker THE INTERNATIONAL BESTSELLING TRUE-STO - Notebook.html",
         "pdf": "Notebook - Wavewalker_ THE INTERNATIONAL BESTSELLING TRUE-STORY OF A YOUNG GIRL’S FIGHT FOR FREEDOM AND EDUCATION.pdf"
-      }
+      },
+      "id": "wavewalker-heywood"
     },
     {
       "title": "Bird's Aren't Real",
@@ -333,7 +339,30 @@
       "dateRead": "2025",
       "files": {
         "html": "Birds Aren't Real The True Story of Mass Avian Mu - Notebook.html"
-      }
+      },
+      "id": "birdsArentReal-peter"
+    }
+  ],
+  "onlineReferences": [
+    {
+      "title": "Are You Living in a Computer Simulation?",
+      "subtitle": null,
+      "author": "Bostrom, Nick",
+      "pubDate": "2003",
+      "dateRead": "July 2020",
+      "url": "https://simulation-argument.com/simulation.pdf",
+      "id": "ref-simulation-bostrom"
+    },
+    {
+      "title": "On Entropy Leading to Complexity at a Next-Level Scale",
+      "subtitle": null,
+      "author": "Sagan, Carl",
+      "pubDate": null,
+      "dateRead": null,
+      "dateIngested": "Aug 2026",
+      "reaction": "Reaction: From my perspective, how and why AI, as a new species which we have created, may survive mankind, spread across the universe's matter as its compute media, arriving at next level higher complexity rather than entropy. And as much as we live on in the memory of others, so will we travel the universe embodied in the AI itself which traverses that time and distance. (also see God's Debris).",
+      "url": "https://www.instagram.com/reel/DW_3rV9D_Jl",
+      "id": "ref-entropy-sagan"
     }
   ]
 }
