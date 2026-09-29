@@ -90,6 +90,15 @@
             margin-bottom: 0;
         }
 
+        .book-reaction-list {
+            margin: 0 0 0.75em;
+            padding-left: 1.5em;
+        }
+
+        .book-reaction> :last-child {
+            margin-bottom: 0;
+        }
+
         .book-files {
             margin: 6px 0 0;
             padding-left: 1.5rem;
@@ -124,7 +133,7 @@
             <ul id="book-list" class="book-list"></ul>
         </section>
         <section id="online-references-section" class="catalog-section" hidden>
-            <h2>Online Papers and Other Thought-Provoking Prose</h2>
+            <h2>Online Papers, PodCasts and other thought-provoking prose</h2>
             <ul id="online-reference-list" class="book-list"></ul>
         </section>
     </main>
@@ -168,8 +177,85 @@
         const catalogStatus = document.getElementById('catalog-status');
         const shareReactionLimit = 200;
 
+        function findEmphasisEnd(text, markerLength, startIndex) {
+            let markerIndex = text.indexOf('*', startIndex);
+            while (markerIndex !== -1) {
+                let markerEnd = markerIndex + 1;
+                while (text[markerEnd] === '*') {
+                    markerEnd++;
+                }
+
+                if (markerEnd - markerIndex === markerLength) {
+                    return markerIndex;
+                }
+                markerIndex = text.indexOf('*', markerEnd);
+            }
+            return -1;
+        }
+
+        function appendInlineMarkdown(parent, text) {
+            let cursor = 0;
+            while (cursor < text.length) {
+                const markerIndex = text.indexOf('*', cursor);
+                if (markerIndex === -1) {
+                    parent.append(document.createTextNode(text.slice(cursor)));
+                    return;
+                }
+
+                if (markerIndex > cursor) {
+                    parent.append(document.createTextNode(text.slice(cursor, markerIndex)));
+                }
+
+                let markerEnd = markerIndex + 1;
+                while (text[markerEnd] === '*') {
+                    markerEnd++;
+                }
+                const markerLength = markerEnd - markerIndex;
+                const emphasisEnd = markerLength <= 2
+                    ? findEmphasisEnd(text, markerLength, markerEnd)
+                    : -1;
+
+                if (emphasisEnd > markerEnd) {
+                    const isBold = markerLength === 2;
+                    const formattedText = document.createElement(isBold ? 'strong' : 'em');
+                    appendInlineMarkdown(formattedText, text.slice(markerEnd, emphasisEnd));
+                    parent.append(formattedText);
+                    cursor = emphasisEnd + markerLength;
+                } else {
+                    parent.append(document.createTextNode(text.slice(markerIndex, markerEnd)));
+                    cursor = markerEnd;
+                }
+            }
+        }
+
+        function appendReactionMarkdown(container, reaction) {
+            reaction.trim().split(/\n\s*\n/).forEach(block => {
+                const lines = block.split('\n');
+                const isList = lines.every(line => /^\s*-\s+/.test(line));
+
+                if (isList) {
+                    const list = document.createElement('ul');
+                    list.className = 'book-reaction-list';
+                    lines.forEach(line => {
+                        const listItem = document.createElement('li');
+                        appendInlineMarkdown(listItem, line.replace(/^\s*-\s+/, ''));
+                        list.append(listItem);
+                    });
+                    container.append(list);
+                    return;
+                }
+
+                const paragraph = document.createElement('p');
+                appendInlineMarkdown(paragraph, lines.map(line => line.trim()).join(' '));
+                container.append(paragraph);
+            });
+        }
+
         function clipShareReaction(reaction) {
-            const preview = reaction.replace(/\s+/g, ' ').trim();
+            const plainReaction = reaction
+                .replace(/\*\*(.+?)\*\*/g, '$1')
+                .replace(/\*([^*\n]+?)\*/g, '$1');
+            const preview = plainReaction.replace(/\s+/g, ' ').trim();
             if (preview.length <= shareReactionLimit) {
                 return preview;
             }
@@ -337,11 +423,7 @@
             if (book.reaction) {
                 const reaction = document.createElement('div');
                 reaction.className = 'book-detail book-reaction';
-                book.reaction.split(/\n\s*\n/).forEach(paragraphText => {
-                    const paragraph = document.createElement('p');
-                    paragraph.textContent = paragraphText.trim();
-                    reaction.append(paragraph);
-                });
+                appendReactionMarkdown(reaction, book.reaction);
                 item.append(reaction);
             }
 
