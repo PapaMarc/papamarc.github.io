@@ -149,6 +149,7 @@
     </footer>
 
     <script src="/merware/js/hash-resolver.js"></script>
+    <script src="/merware/js/copy-link.js"></script>
     <script>
         const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
         const navLinks = document.querySelector('.nav-links');
@@ -161,6 +162,15 @@
             link.addEventListener('click', function () {
                 navLinks.classList.remove('active');
             });
+        });
+
+        document.querySelectorAll('.anchor-catalog li').forEach(item => {
+            const destinationLink = item.querySelector('a[href*="#"]');
+            if (!destinationLink) {
+                return;
+            }
+
+            item.append(MerWareCopyLink.createButton(() => new URL(destinationLink.href, window.location.href).href));
         });
     </script>
     <script>MerWareHashResolver.init();</script>
