@@ -2,7 +2,7 @@
   "use strict";
 
   const scriptUrl = document.currentScript.src;
-  const iconUrl = new URL("../resources/icons/copy-link.svg", scriptUrl).href;
+  const iconUrl = new URL("../resources/icons/copyLink.png", scriptUrl).href;
 
   async function writeClipboardText(text) {
     if (navigator.clipboard && navigator.clipboard.writeText) {
