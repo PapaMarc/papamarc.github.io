@@ -46,6 +46,20 @@
 
         .book-list>li {
             margin: 16px 0;
+            scroll-margin-top: 6rem;
+        }
+
+        .book-list>li.copy-link-target {
+            animation: catalog-link-highlight 2.2s ease-out;
+        }
+
+        @keyframes catalog-link-highlight {
+            0%, 100% {
+                background-color: transparent;
+            }
+            20% {
+                background-color: #e8f4eb;
+            }
         }
 
         .book-title {
@@ -115,6 +129,7 @@
         </div>
     </footer>
 
+    <script src="../merware/js/copy-link.js"></script>
     <script>
         const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
         const navLinks = document.querySelector('.nav-links');
@@ -140,6 +155,58 @@
         const onlineReferenceList = document.getElementById('online-reference-list');
         const onlineReferencesSection = document.getElementById('online-references-section');
         const catalogStatus = document.getElementById('catalog-status');
+        const sharePreviewLimit = 200;
+
+        function clipSharePreview(text) {
+            const preview = text.replace(/\s+/g, ' ').trim();
+            if (preview.length <= sharePreviewLimit) {
+                return preview;
+            }
+
+            const contentLimit = sharePreviewLimit - 3;
+            let clipped = preview.slice(0, contentLimit);
+            const lastSpace = clipped.lastIndexOf(' ');
+            if (lastSpace > contentLimit * 0.65) {
+                clipped = clipped.slice(0, lastSpace);
+            }
+            return `${clipped.trimEnd()}...`;
+        }
+
+        function createShareText(book) {
+            const fallbackPreview = [book.title, book.subtitle, book.author ? `by ${book.author}` : null]
+                .filter(Boolean)
+                .join(' - ');
+            const preview = clipSharePreview(book.reaction || fallbackPreview);
+            const shareUrl = new URL(window.location.href);
+            shareUrl.hash = book.id;
+            return `${preview}\n${shareUrl.href}`;
+        }
+
+        function scrollToCatalogEntry() {
+            if (!window.location.hash) {
+                return;
+            }
+
+            let entryId;
+            try {
+                entryId = decodeURIComponent(window.location.hash.slice(1));
+            } catch {
+                entryId = window.location.hash.slice(1);
+            }
+
+            const item = document.getElementById(entryId);
+            if (!item || (item.parentElement !== bookList && item.parentElement !== onlineReferenceList)) {
+                return;
+            }
+
+            item.scrollIntoView({ block: 'start' });
+            item.classList.remove('copy-link-target');
+            void item.offsetWidth;
+            item.classList.add('copy-link-target');
+            window.setTimeout(() => item.classList.remove('copy-link-target'), 2300);
+        }
+
+        window.addEventListener('hashchange', scrollToCatalogEntry);
 
         function parseCatalogDate(value) {
             if (!value) {
@@ -213,6 +280,10 @@
 
         function appendCatalogEntry(book, list) {
             const item = document.createElement('li');
+            if (book.id) {
+                item.id = book.id;
+            }
+
             const title = document.createElement(book.url ? 'a' : 'strong');
             title.className = 'book-title';
             title.textContent = book.title;
@@ -246,6 +317,10 @@
                 const label = book.dateIngested ? 'Read, or otherwise ingested' : 'Read';
                 readDate.textContent = `\u00a0\u00a0\u00a0(${label}: ${formatDate(catalogDate)})`;
                 item.append(readDate);
+            }
+
+            if (book.id) {
+                item.append(MerWareCopyLink.createButton(() => createShareText(book)));
             }
 
             if (book.reaction) {
@@ -285,6 +360,7 @@
             kindleBooksSection.hidden = kindleBooks.length === 0;
             onlineReferencesSection.hidden = onlineReferences.length === 0;
             catalogStatus.hidden = true;
+            scrollToCatalogEntry();
         }
 
         fetch('books/books.json')
