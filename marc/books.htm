@@ -149,8 +149,12 @@
         </div>
     </footer>
 
+    <script src="../merware/js/disclosure.js"></script>
+    <script src="../merware/js/disclosure.js"></script>
     <script src="../merware/js/copy-link.js"></script>
     <script>
+        MerWareDisclosure.init();
+
         const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
         const navLinks = document.querySelector('.nav-links');
 
@@ -377,6 +381,7 @@
 
         function appendCatalogEntry(book, list) {
             const item = document.createElement('li');
+            let reactionDisclosure = null;
             if (book.id) {
                 item.id = book.id;
             }
@@ -421,10 +426,27 @@
             }
 
             if (book.reaction) {
+                const reactionId = `${book.id}-reaction`;
+                const reactionContainer = document.createElement('div');
+                reactionContainer.className = 'book-reaction-disclosure';
+
                 const reaction = document.createElement('div');
-                reaction.className = 'book-detail book-reaction';
+                reaction.id = reactionId;
+                reaction.className = 'book-detail book-reaction disclosure-panel';
                 appendReactionMarkdown(reaction, book.reaction);
-                item.append(reaction);
+
+                const toggle = document.createElement('button');
+                toggle.className = 'disclosure-toggle';
+                toggle.type = 'button';
+                toggle.setAttribute('aria-controls', reactionId);
+                toggle.setAttribute('aria-expanded', 'false');
+                toggle.setAttribute('aria-label', 'Expand reaction');
+                toggle.textContent = '+';
+                toggle.hidden = true;
+
+                reactionContainer.append(reaction, toggle);
+                item.append(reactionContainer);
+                reactionDisclosure = { panel: reaction, toggle };
             }
 
             if (book.files) {
@@ -445,17 +467,25 @@
             }
 
             list.append(item);
+            if (reactionDisclosure) {
+                MerWareDisclosure.enhanceByLines(
+                    reactionDisclosure.panel,
+                    reactionDisclosure.toggle,
+                    5
+                );
+            }
         }
 
         function renderCatalog(catalog) {
             const kindleBooks = catalog.books;
             const onlineReferences = catalog.onlineReferences;
 
+            kindleBooksSection.hidden = kindleBooks.length === 0;
+            onlineReferencesSection.hidden = onlineReferences.length === 0;
+
             sortBooks(kindleBooks).forEach(book => appendCatalogEntry(book, bookList));
             sortBooks(onlineReferences).forEach(reference => appendCatalogEntry(reference, onlineReferenceList));
 
-            kindleBooksSection.hidden = kindleBooks.length === 0;
-            onlineReferencesSection.hidden = onlineReferences.length === 0;
             catalogStatus.hidden = true;
             scrollToCatalogEntry();
         }

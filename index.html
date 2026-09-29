@@ -281,10 +281,11 @@
                         domain related filings (additional <a
                             href="https://typeset.io/authors/marc-e-seinfeld-2azhxt5bbj">SCISPACE
                             citations reference</a>).
-                        <button class="bio-toggle" aria-expanded="false" aria-controls="marc-bio-details"
+                        <button class="bio-toggle disclosure-toggle" data-disclosure-label="biography"
+                            aria-expanded="false" aria-controls="marc-bio-details"
                             aria-label="Expand biography">+</button>
                     </p>
-                    <div id="marc-bio-details" class="bio-details" hidden>
+                    <div id="marc-bio-details" class="bio-details disclosure-panel" hidden>
                         <p>In addition to his own inventions, he chaired his organization’s patent committee,
                             driving the filing of several times more patents for his teams and shaping a deep,
                             strategically valuable IP portfolio—one designed both to create hard‑to‑replicate
@@ -580,60 +581,8 @@
             });
         })();
     </script>
-    <!-- accordion behavior -->
-    <script>
-        (function () {
-            function togglePanel(btn) {
-                const id = btn.getAttribute('aria-controls');
-                const panel = document.getElementById(id);
-                if (!panel) return;
-
-                const expanded = btn.getAttribute('aria-expanded') === 'true';
-                if (expanded) {
-                    btn.setAttribute('aria-expanded', 'false');
-                    btn.textContent = '+';
-
-                    panel.style.maxHeight = panel.scrollHeight + 'px';
-                    requestAnimationFrame(() => {
-                        panel.style.maxHeight = '0px';
-                    });
-
-                    function onEnd() {
-                        panel.setAttribute('hidden', '');
-                        panel.classList.remove('show');
-                        panel.removeEventListener('transitionend', onEnd);
-                    }
-                    panel.addEventListener('transitionend', onEnd);
-
-                } else {
-                    btn.setAttribute('aria-expanded', 'true');
-                    btn.textContent = '−';
-
-                    panel.removeAttribute('hidden');
-                    panel.classList.add('show');
-
-                    // force reflow so maxHeight applies correctly
-                    panel.style.maxHeight = panel.scrollHeight + 'px';
-                }
-            }
-
-            document.addEventListener('click', function (e) {
-                const btn = e.target.closest('.bio-toggle');
-                if (!btn) return;
-                togglePanel(btn);
-            });
-
-            document.addEventListener('keydown', function (e) {
-                if (e.key === 'Enter' || e.key === ' ') {
-                    const btn = document.activeElement;
-                    if (btn && btn.classList && btn.classList.contains('bio-toggle')) {
-                        e.preventDefault();
-                        togglePanel(btn);
-                    }
-                }
-            });
-        })();
-    </script>
+    <script src="merware/js/disclosure.js"></script>
+    <script>MerWareDisclosure.init();</script>
 </body>
 
 </html>

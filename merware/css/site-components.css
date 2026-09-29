@@ -169,6 +169,11 @@ body:has(:target) {
   text-decoration: underline;
 }
 
+.disclosure-panel {
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
 .copy-link-control {
   display: inline-flex;
   margin-inline-start: 0.35rem;
