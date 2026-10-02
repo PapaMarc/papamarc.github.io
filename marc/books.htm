@@ -201,6 +201,23 @@
             let cursor = 0;
             while (cursor < text.length) {
                 const markerIndex = text.indexOf('*', cursor);
+                const linkPattern = /\[([^\]]+)\]\((https?:\/\/[^\s)]+)\)/g;
+                linkPattern.lastIndex = cursor;
+                const linkMatch = linkPattern.exec(text);
+
+                if (linkMatch && (markerIndex === -1 || linkMatch.index < markerIndex)) {
+                    if (linkMatch.index > cursor) {
+                        parent.append(document.createTextNode(text.slice(cursor, linkMatch.index)));
+                    }
+
+                    const link = document.createElement('a');
+                    link.href = linkMatch[2];
+                    appendInlineMarkdown(link, linkMatch[1]);
+                    parent.append(link);
+                    cursor = linkMatch.index + linkMatch[0].length;
+                    continue;
+                }
+
                 if (markerIndex === -1) {
                     parent.append(document.createTextNode(text.slice(cursor)));
                     return;
